@@ -1,108 +1,216 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# **La Fraschetta**
 
-Welcome Carla Buongiorno,
+[View the live site here]()
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![Final project image home page]()
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+## **Contents**
 
-## Gitpod Reminders
+[User Experience (UX)](#user-experience-ux)
+* [User Stories](#user-stories)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+[Design](#design)
+* [Colour Scheme](#colour-scheme)
+* [Typography](#typography)
+* [Imagery](#imagery)
+* [Wireframes](#wireframes)
+* [Features](#features)
+* [Future Features](#future-features)
 
-`python3 -m http.server`
+[Information Architecture](#information-architecture)
+* [Database Design](#database-design)
 
-A blue button should appear to click: _Make Public_,
+[Technologies Used](#technologies-used)
+* [Languages Used](#languages-used)
+* [Workspace](#workspace)
+* [Version Control](#version-control)
+* [Wireframing](#wireframing)
+* [Responsive Design](#responsive-design)
+* [Site Design](#site-design)
+* [Database Design Technologies](#database-design-technologies)
+* [Frameworks, Libraries and Others](#frameworks-libraries-and-others)
+* [Testing](#testing)
 
-Another blue button should appear to click: _Open Browser_.
+[Deployment](#deployment)
+* [Requirements for Deployment](#requirements-for-deployment)
+* [Initial Deployment](#initial-deployment)
+* [How to Fork it](#how-to-fork-it)
+* [Making a Local Clone](#making-a-local-clone)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+[Testing and Project Barrier Solutions](#testing-and-project-barrier-solutions)
 
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
-------
-
-## Release History
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+[Credits](#credits)
+* [Code](#code)
+* [Content](#content)
+* [Media](#media)
+* [Acknowledgements](#acknowledgements)
 
 ---
 
-Happy coding!
+## **User Experience (UX)**
+
+### User Stories
+
+#### First Time Visitor Goals
+
+
+#### Returning Visitor Goals
+
+
+#### Admin Goals
+
+
+[Back to Top](#la-fraschetta)
+
+---
+
+## **Design**
+
+### Colour Scheme
+
+* 
+
+### Typography
+
+* 
+
+### Imagery
+
+* 
+
+### Wireframes
+
+
+
+## Features
+
+* 
+
+---
+
+### Future Features
+
+* 
+
+[Back to Top](#la-fraschetta)
+
+---
+
+## **Information Architecture**
+
+### Navigation bar
+
+### Database Design
+
+[Back to Top](#la-fraschetta)
+
+---
+
+## **Technologies Used**
+
+### Languages Used
+
+* [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
+* [CSS3](https://developer.mozilla.org/en-US/docs/Archive/CSS3#:~:text=CSS3%20is%20the%20latest%20evolution,flexible%20box%20or%20grid%20layouts.)
+* [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+* [Python](https://www.python.org/)
+
+### Workspace
+
+* [Gitpod](https://gitpod.io/) was used as a virtual IDE workspace to build this site.
+
+### Version Control
+
+* [Git](https://git-scm.com/) was used for version control by utilizing the Gitpod terminal to add and commit to Git and push to GitHub.
+* [GitHub](https://github.com/) is used to store the code for this project after being pushed from Git.
+
+### Wireframing
+
+* 
+
+### Responsive Design
+
+* 
+
+### Site Design
+
+* 
+
+### Database Design Technologies
+
+* 
+
+### Frameworks, Libraries and Others
+
+* 
+
+### Testing
+
+* 
+
+[Back to Top](#la-fraschetta)
+
+---
+
+## **Deployment**
+
+### Requirements for Deployment
+
+* Python
+* GitHub account
+* Heroku account
+
+### Initial Deployment
+
+* 
+
+### How to Fork it
+
+1. Login or Sign Up to [GitHub](www.github.com).
+2. On GitHub, go to [CarlaBuongiorno/la_fraschetta](https://github.com/CarlaBuongiorno/la_fraschetta).
+3. In the top right, click "Fork".
+
+### Making a Local Clone
+
+1. Log in to [GitHub](https://www.github.com) and locate the [Repository](https://github.com/CarlaBuongiorno/la_fraschetta) for this site.
+2. Under the repository name, above the list of files, click "Code".
+3. Here you can either Clone or Download the repository.
+4. You should clone the repository using HTTPS, clicking on the icon to copy the link.
+5. Open Git Bash.
+6. Change the current working directory to the new location, where you want the cloned directory to be.
+7. Type `git clone`, and then paste the URL that was copied in Step 4.
+    * `git clone https://github.com/CarlaBuongiorno/la_fraschetta.git`
+8. Press Enter, and your local clone will be created.
+
+Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/CarlaBuongiorno/la_fraschetta)
+
+[Back to Top](#la-fraschetta)
+
+---
+
+## **Testing And Project Barrier Solutions**
+
+All testing and project barriers and solutions has been documented here - [TESTING.md](https://github.com/CarlaBuongiorno/la_fraschetta/blob/master/TESTING.md)
+
+[Back to Top](#la-fraschetta)
+
+---
+
+## **Credits**
+
+### Code
+
+* [Code Institute](https://codeinstitute.net/) was the main source of information used to create this project, specifically the Boutique Ado Mini Project Walkthrough by Chris Zielinski.
+* [Bootstrap](https://getbootstrap.com/) throughout the site, to create a beautiful, responsive site.
+
+### Media
+
+* 
+
+### Acknowledgements
+
+* 
+
+[Back to Top](#la-fraschetta)
