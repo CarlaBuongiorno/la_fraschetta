@@ -75,6 +75,15 @@
     * I wish to be able to view a list of search results so that I can see if the product I want is available to purchase.
     * I wish to be able to easily see what I've searched for and the number of results so that I can quickly decide whether the product I'm looking for is available.
 
+### Purchasing and Checkout
+* As a Shopper:
+    * I wish to buy products online as a guest so that I can checkout without having to create an account.
+    * I wish to easily add, update the quantity, or delete products in my bag so that I can adjust my purchase to fit my preferences before checkout.
+    Easily enter my payment information	Have a smooth checkout experience
+    * I wish to be able to easily enter my payment information so that I can have a smooth checkout experience.
+    * I wish to experience that my payment and personal information are secure so that I can be confident enough to provide the neccessary information to purchase products securely.
+    * I wish to view a summary of my order before completing my purchase so that I can check that I havn't made any mistakes.
+    * I wish to receive a confirmation email of my purchase so that I can be confident that the purchase has been made successfully and view my order details.
 
 [Back to Top](#la-fraschetta)
 
