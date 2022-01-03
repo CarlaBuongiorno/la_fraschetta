@@ -51,13 +51,20 @@
 
 ### User Stories
 
-#### First Time Visitor Goals
+#### Viewing and Navigation
+* As a Shopper:
+    * I wish to easily navigate the site so that I can have a good user experience.
+    * I wish to view all the products so that I can choose some to buy.
+    * I wish to search for a specific product or category so that I may find the item that I want.
+    * I wish to view full product information so that I can see the details of a specific product including the price, description, product rating and product image.
+    * I wish to easily see my bag total so that I can stick to my budget.
 
-
-#### Returning Visitor Goals
-
-
-#### Admin Goals
+#### Registration and User Accounts
+* As a Site User:
+    * I wish to create an account for future purchases so that I can view my order history and confirmations, and save my payment information.
+    * I wish to easily login or logout so that I can access my profile and manage my personal details.
+    * I wish to be able to request a password reset so that I can receive an email to reset my password incase I forget it.
+    * I wish to get an email confirmation after registering so that I can verify my registration was successful.
 
 
 [Back to Top](#la-fraschetta)
