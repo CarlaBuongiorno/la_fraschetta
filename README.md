@@ -85,6 +85,13 @@
     * I wish to view a summary of my order before completing my purchase so that I can check that I havn't made any mistakes.
     * I wish to receive a confirmation email of my purchase so that I can be confident that the purchase has been made successfully and view my order details.
 
+### Admin and Store Management
+* As a Store Owner:
+    * I wish to be able to add a new product so that I can add new products to my store.
+    * I wish to be able to edit any product so that I can update the details of products.
+    * I wish to be able to delete any product so that I can remove old items from my store.
+
+
 [Back to Top](#la-fraschetta)
 
 ---
