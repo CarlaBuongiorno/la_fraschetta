@@ -54,6 +54,7 @@
 #### Viewing and Navigation
 * As a Shopper:
     * I wish to easily navigate the site so that I can have a good user experience.
+    * I wish to get visual feedback so that I see when an action has been completed.
     * I wish to view all the products so that I can choose some to buy.
     * I wish to search for a specific product or category so that I may find the item that I want.
     * I wish to view full product information so that I can see the details of a specific product including the price, description, product rating and product image.
@@ -65,6 +66,14 @@
     * I wish to easily login or logout so that I can access my profile and manage my personal details.
     * I wish to be able to request a password reset so that I can receive an email to reset my password incase I forget it.
     * I wish to get an email confirmation after registering so that I can verify my registration was successful.
+
+#### Reviews and Wishlist
+* As a Registered User:
+    * I wish to be able to add my own reviews to products so that I may share my experience.
+    * I wish to be able to edit/delete my reviews so that I can amend any errors or, in case I change my opinion.
+    * I wish to be able to add products to my wishlist so that I can view those products later.
+    * I wish to be able to remove products from my wishlist so that my wishlist only consists of products I want to have saved.
+
 
 ### Sorting and Searching
 * As a Shopper:
