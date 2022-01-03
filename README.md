@@ -74,8 +74,7 @@
     * I wish to be able to add products to my wishlist so that I can view those products later.
     * I wish to be able to remove products from my wishlist so that my wishlist only consists of products I want to have saved.
 
-
-### Sorting and Searching
+#### Sorting and Searching
 * As a Shopper:
     * I wish to be able to sort the list of available products so that I can sort relevant products alphabetically, by name or by price.
     * I wish to be able to sort a category of products so that I can sort relevant products alphabetically, by name or by price.
@@ -84,7 +83,7 @@
     * I wish to be able to view a list of search results so that I can see if the product I want is available to purchase.
     * I wish to be able to easily see what I've searched for and the number of results so that I can quickly decide whether the product I'm looking for is available.
 
-### Purchasing and Checkout
+#### Purchasing and Checkout
 * As a Shopper:
     * I wish to buy products online as a guest so that I can checkout without having to create an account.
     * I wish to easily add, update the quantity, or delete products in my bag so that I can adjust my purchase to fit my preferences before checkout.
@@ -94,12 +93,11 @@
     * I wish to view a summary of my order before completing my purchase so that I can check that I havn't made any mistakes.
     * I wish to receive a confirmation email of my purchase so that I can be confident that the purchase has been made successfully and view my order details.
 
-### Admin and Store Management
+#### Admin and Store Management
 * As a Store Owner:
     * I wish to be able to add a new product so that I can add new products to my store.
     * I wish to be able to edit any product so that I can update the details of products.
     * I wish to be able to delete any product so that I can remove old items from my store.
-
 
 [Back to Top](#la-fraschetta)
 

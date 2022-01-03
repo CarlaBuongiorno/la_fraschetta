@@ -1,0 +1,231 @@
+# **Testing And Project Barrier Solutions**
+
+[Return to README.md](https://github.com/CarlaBuongiorno/The-Collector/blob/master/README.md)
+
+[View the live site here](https://the-collector-project.herokuapp.com/)
+
+![Final project image home page](docs/screenshots/amiresponsive.png)
+
+## **Contents**
+
+[Testing User Stories](#testing-user-stories)
+
+[Automated Testing](#automated-testing)
+
+[Code Validation](#code-validation)
+
+[Responsiveness And Compatibility](#responsiveness-and-compatibility)
+
+[Testing Performance](#testing-performance)
+* [Lighthouse](#lighthouse)
+
+[Project Barriers and Solutions](#project-barriers-and-solutions)
+* [Solved Bugs](#solved-bugs)
+* [Known Bugs](#known-bugs)
+
+---
+
+## **Testing User Stories**
+
+### Viewing and Navigation
+* #### As a Shopper:
+    * I wish to easily navigate the site so that I can have a good user experience.
+    * I wish to get visual feedback so that I see when an action has been completed.
+    * I wish to view all the products so that I can choose some to buy.
+    * I wish to search for a specific product or category so that I may find the item that I want.
+    * I wish to view full product information so that I can see the details of a specific product including the price, description, product rating and product image.
+    * I wish to easily see my bag total so that I can stick to my budget.
+
+---
+
+### Registration and User Accounts
+* #### As a Site User:
+    * I wish to create an account for future purchases so that I can view my order history and confirmations, and save my payment information.
+    * I wish to easily login or logout so that I can access my profile and manage my personal details.
+    * I wish to be able to request a password reset so that I can receive an email to reset my password incase I forget it.
+    * I wish to get an email confirmation after registering so that I can verify my registration was successful.
+
+---
+
+### Reviews and Wishlist
+* #### As a Registered User:
+    * I wish to be able to add my own reviews to products so that I may share my experience.
+    * I wish to be able to edit/delete my reviews so that I can amend any errors or, in case I change my opinion.
+    * I wish to be able to add products to my wishlist so that I can view those products later.
+    * I wish to be able to remove products from my wishlist so that my wishlist only consists of products I want to have saved.
+
+---
+
+### Sorting and Searching
+* #### As a Shopper:
+    * I wish to be able to sort the list of available products so that I can sort relevant products alphabetically, by name or by price.
+    * I wish to be able to sort a category of products so that I can sort relevant products alphabetically, by name or by price.
+    * I wish to be able to sort multiple categories simultaneously so that I can find the best rated or priced products across broad categories.
+    * I wish to be able to search for a specific product by name or description so that I can quickly find items I'm interested in. 
+    * I wish to be able to view a list of search results so that I can see if the product I want is available to purchase.
+    * I wish to be able to easily see what I've searched for and the number of results so that I can quickly decide whether the product I'm looking for is available.
+
+---
+
+### Purchasing and Checkout
+* #### As a Shopper:
+    * I wish to buy products online as a guest so that I can checkout without having to create an account.
+    * I wish to easily add, update the quantity, or delete products in my bag so that I can adjust my purchase to fit my preferences before checkout.
+    Easily enter my payment information	Have a smooth checkout experience
+    * I wish to be able to easily enter my payment information so that I can have a smooth checkout experience.
+    * I wish to experience that my payment and personal information are secure so that I can be confident enough to provide the neccessary information to purchase products securely.
+    * I wish to view a summary of my order before completing my purchase so that I can check that I havn't made any mistakes.
+    * I wish to receive a confirmation email of my purchase so that I can be confident that the purchase has been made successfully and view my order details.
+
+---
+
+### Admin and Store Management
+* #### As a Store Owner:
+    * I wish to be able to add a new product so that I can add new products to my store.
+    * I wish to be able to edit any product so that I can update the details of products.
+    * I wish to be able to delete any product so that I can remove old items from my store.
+
+[Back to Top](#testing-and-project-barrier-solutions)
+
+---
+
+## **Automated Testing**
+
+
+[Back to Top](#testing-and-project-barrier-solutions)
+
+---
+
+## **Code Validation**
+
+### W3C Markup Validation Service:
+
+
+---
+
+### W3C CSS Validation Service:
+
+
+---
+
+### JSHint:
+
+
+---
+
+### Python 8:
+
+
+[Back to Top](#testing-and-project-barrier-solutions)
+
+---
+
+## **Responsiveness And Compatibility**
+
+The website was tested through the following browsers:
+
+### Google Chrome
+
+* 
+    * ![]()
+
+### Microsoft Edge
+
+* 
+    * 
+
+### Mozilla Firefox
+
+* 
+
+### Safari
+
+* 
+
+---
+
+DevTools were used to test the site across a range of widths:
+
+### Mobiles: 
+
+* iphone5(320px)
+    * 
+        * ![]()
+    
+* Moto G4 (340px)
+    * 
+
+* iPhone 6/7/8 (375px)
+    * 
+
+* iPhone 6/7/8 Plus (414px)
+    * 
+
+---
+
+### Tablets:
+
+* iPad (768px)
+    * 
+
+* iPad Pro (1024px)
+    * 
+
+---
+
+### Desktops:
+
+* Laptop (1200px)
+    * 
+
+* Desktop screen (1400px)
+    * 
+
+
+---
+
+The site was tested on the following physical devices:
+
+### Mobiles: 
+
+* Huawei P30
+    * 
+
+* Sony Xperia 1 II
+    * 
+
+* iPhone X
+    * 
+
+---
+
+### Laptops:
+
+* MacBook Pro 13inch
+    * 
+        * ![]()
+
+[Back to Top](#testing-and-project-barrier-solutions)
+
+---
+
+## **Testing Performance**
+
+### Lighthouse
+
+
+[Back to Top](#testing-and-project-barrier-solutions)
+
+---
+
+## **Project Barriers and Solutions**
+
+### Solved Bugs
+
+1. 
+
+### Known Bugs
+
+* 
+
+[Back to Top](#testing-and-project-barrier-solutions)
