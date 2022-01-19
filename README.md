@@ -152,6 +152,8 @@ The wireframes for desktop, mobile and tablet for this project can be found belo
 ### Navigation bar
 
 ### Database Design
+The diagram below illustrates the database structure used in this project.
+![Database Schema](documentation/database/database.png)
 
 [Back to Top](#la-fraschetta)
 
@@ -177,7 +179,7 @@ The wireframes for desktop, mobile and tablet for this project can be found belo
 
 ### Wireframing
 
-* 
+* [Balsamiq](https://balsamiq.com/) was used to create the wireframes during the design process.
 
 ### Responsive Design
 
@@ -189,7 +191,7 @@ The wireframes for desktop, mobile and tablet for this project can be found belo
 
 ### Database Design Technologies
 
-* 
+* [drawSQL](https://drawsql.app/) was used to design the schema of the relational database.
 
 ### Frameworks, Libraries and Others
 
