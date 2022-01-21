@@ -1,6 +1,51 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
 {% block content %}
-    <h1 class="display-4 text-success">It works!</h1>
+    <!-- Carousel Hero Section -->
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="media/carousel1.jpeg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-sm-block">
+                    <h5 class="display-4">The Taste Of Tradition On Your Table</h5>
+                    <div class="my-5">
+                        <h4>
+                            <a href="" class="shop-now-button btn btn-lg text-white text-uppercase py-3">Shop Now</a>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="media/carousel2.jpeg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-sm-block">
+                    <h5 class="display-4">The Taste Of Tradition On Your Table</h5>
+                    <div class="my-5">
+                        <h4>
+                            <a href="" class="shop-now-button btn btn-lg text-white text-uppercase py-3">Shop Now</a>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="media/carousel3.jpeg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-sm-block">
+                    <h5 class="display-4">The Taste Of Tradition On Your Table</h5>
+                    <div class="my-5">
+                        <h4>
+                            <a href="" class="shop-now-button btn btn-lg text-white text-uppercase py-3">Shop Now</a>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
