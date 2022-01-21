@@ -122,15 +122,17 @@ The wireframes for desktop, mobile and tablet for this project can be found belo
 * [Home](documentation/wireframes/home.png)
 * [Our Story](documentation/wireframes/our_story.png)
 * [Contact Us](documentation/wireframes/contact.png)
+* [Sign Up](documentation/wireframes/signup.png)
+* [Log In](documentation/wireframes/login.png)
+* [My Profile](documentation/wireframes/profile.png)
+* [Wishlist](documentation/wireframes/wishlist.png)
 * [Products and Categories](documentation/wireframes/products_and_categories.png)
 * [Product and Reviews](documentation/wireframes/product_and_reviews.png)
 * [Shopping Cart](documentation/wireframes/shopping_cart.png)
 * [Checkout](documentation/wireframes/checkout.png)
-* [Sign Up](documentation/wireframes/sign_up.png)
-* [Log In](documentation/wireframes/login.png)
-* [My Profile](documentation/wireframes/profile.png)
-* [Wishlist](documentation/wireframes/wishlist.png)
-* [Manage Products](documentation/wireframes/.png)
+* [Order Success](documentation/wireframes/order_success.png)
+* [Add Categories](documentation/wireframes/add_category.png)
+* [Add Products](documentation/wireframes/add_product.png)
 
 
 ## Features
