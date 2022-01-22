@@ -6,16 +6,13 @@ html {
     color: #415712;
 }
 
-.cream {
-    color: #fff7dc;
-}
-
 .header-container {
     padding-top: 160px;
 }
 
 #delivery-banner {
-background-color: #886839;
+    background-color: #886839;
+    color: #fff7dc;
 }
 
 .logo {
@@ -26,10 +23,8 @@ background-color: #886839;
     background-color: #fff7dc;
 }
 
-#main-nav {
+.main-site-nav {
     background-color: #770D15;
-    padding: 0;
-    margin: 0;
 }
 
 #home-link,
