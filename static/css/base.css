@@ -3,17 +3,20 @@ html {
 }
 
 .header-container {
-    padding-top: 50px;
+    padding-top: 200px;
 }
 
 .logo {
     width: 250px;
-    position: absolute;
-    top: -110px;
+    /* position: absolute;
+    top: -30px;
     left: 0; 
     right: 0; 
     margin-left: auto; 
-    margin-right: auto; 
+    margin-right: auto;
+} */
+
+#main-nav {
     z-index: 3;
 }
 
