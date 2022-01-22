@@ -6,6 +6,17 @@ html {
     padding-top: 50px;
 }
 
+.logo {
+    width: 250px;
+    position: absolute;
+    top: -110px;
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    z-index: 3;
+}
+
 /* from Bulma */
 .icon {
     align-items: center;
