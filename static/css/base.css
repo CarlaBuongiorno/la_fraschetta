@@ -2,22 +2,41 @@ html {
     height: 100%;
 }
 
+.green {
+    color: #415712;
+}
+
+.cream {
+    color: #fff7dc;
+}
+
 .header-container {
-    padding-top: 200px;
+    padding-top: 160px;
+}
+
+#delivery-banner {
+background-color: #886839;
 }
 
 .logo {
     width: 250px;
-    /* position: absolute;
-    top: -30px;
-    left: 0; 
-    right: 0; 
-    margin-left: auto; 
-    margin-right: auto;
-} */
+}
+
+#topnav {
+    background-color: #fff7dc;
+}
 
 #main-nav {
-    z-index: 3;
+    background-color: #770D15;
+    padding: 0;
+    margin: 0;
+}
+
+#home-link,
+#delicatessen-link,
+#our-story-link,
+#contact-link {
+    color: #D3B786;
 }
 
 /* from Bulma */

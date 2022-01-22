@@ -38,11 +38,11 @@
   <body>
     <header class="container-fluid fixed-top p-0">
 		<div class="row text-center" id="delivery-banner">
-			<div class="col bg-success">
-				<p class="mb-0">Free Delivery From €{{ free_deliver_threshold }} Within The Netherlands!</p>
+			<div class="col">
+				<p class="mb-0 text-white">Free Delivery From €{{ free_deliver_threshold }} Within The Netherlands!</p>
 			</div>
 		</div>
-		<div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
+		<div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
 			<div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
 				<form method="GET" action="">
                     <div class="input-group w-100">
@@ -67,8 +67,8 @@
 					<li class="list-inline-item dropdown">
 						<a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
-                                <div><i class="fas fa-user fa-lg"></i></div>
-                                <p class="my-0">My Account</p>
+                                <div><i class="fas fa-user fa-lg green"></i></div>
+                                <p class="my-0 green">My Account</p>
                             </div>
                         </a>
 						<div class="dropdown-menu border-0" aria-labelledby="user-options">
@@ -88,16 +88,16 @@
 					<li class="list-inline-item">
 						<a class="nav-link" href="#">
                             <div class="text-center">
-                                <div><i class="fas fa-heart fa-lg"></i></div>
-                                <p class="my-0">Wishlist</p>
+                                <div><i class="fas fa-heart fa-lg green"></i></div>
+                                <p class="my-0 green">Wishlist</p>
                             </div>
                         </a>
 					</li>
 					<li class="list-inline-item">
 						<a class="{% if grand_total %}font-weight-bold{% endif %} nav-link" href="">
                             <div class="text-center">
-                                <div><i class="fas fa-shopping-basket fa-lg"></i></div>
-                                <p class="my-0">
+                                <div><i class="fas fa-shopping-basket fa-lg green"></i></div>
+                                <p class="my-0 green">
                                     {% if grand_total %}
                                         ${{ grand_total|floatformat:2 }}
                                     {% else %}
@@ -110,8 +110,8 @@
 				</ul>
 			</div>
 		</div>
-        <div class="row bg-white">
-            <nav class="navbar navbar-expand-lg navbar-light w-100">
+        <div class="row">
+            <nav class="navbar navbar-expand-lg navbar-light p-0 w-100">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
