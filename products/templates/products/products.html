@@ -52,11 +52,11 @@
                     <div class="col-sm-6 col-md-6 col-lg-3">
                         <div class="card h-100">
                             {% if product.image %}
-                            <a href="">
+                            <a href="{% url 'product_detail' product.id %}">
                                 <img src="{{ product.image.url }}" alt="{{ product.name }}" class="card-img-top img-fluid">
                             </a>
                             {% else %}
-                            <a href="">
+                            <a href="{% url 'product_detail' product.id %}">
                                 <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" class="card-img-top img-fluid">
                             </a>
                             {% endif %}
@@ -66,7 +66,7 @@
                             <div class="card-footer bg-white pt-0 border-0 text-left">
                                 <div class="row">
                                     <div class="col">
-                                        <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
+                                        <p class="lead mb-0 text-left font-weight-bold">€{{ product.price }}</p>
                                         {% if product.reviews %}
                                             <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.reviews }} / 5</small>
                                         {% else %}

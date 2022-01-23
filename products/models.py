@@ -38,9 +38,9 @@ class Product(models.Model):
     image = models.ImageField(null=True, blank=True)
     price = models.DecimalField(max_digits=6, decimal_places=2)
     reviews = models.DecimalField(max_digits=4,
-                                 decimal_places=2,
-                                 null=True,
-                                 blank=True)
+                                  decimal_places=2,
+                                  null=True,
+                                  blank=True)
     # Positive Integer -> https://docs.djangoproject.com/en/4.0/ref/models/fields/
     stock = models.PositiveSmallIntegerField(default=1,
                                              validators=[
