@@ -27,11 +27,32 @@ html {
     background-color: #770D15;
 }
 
-#home-link,
-#delicatessen-link,
-#our-story-link,
-#contact-link {
+#main-nav .nav-link {
     color: #D3B786;
+}
+
+#main-nav .nav-link:hover {
+    color: #fff7dc;
+}
+
+.side-categories-nav {
+    background-color: #770D15;
+    color: #D3B786;
+    font-size: 24px;
+}
+
+.side-categories-items {
+    color: #D3B786;
+    font-size: 18px;
+}
+
+.side-categories-items:hover {
+    color: #fff7dc;
+}
+
+hr {
+    border-top: solid 2px #D3B786;
+    width: 100%;
 }
 
 /* from Bulma */
@@ -45,4 +66,27 @@ html {
 
 .carousel .carousel-item {
     height: 400px;
+}
+
+.sort-select-wrapper-categories,
+.sort-select-wrapper-sort-by {
+    width: 80%;
+}
+
+/* ------------------------------------ Media Queries */
+
+@media (min-width: 768px) {
+    .sort-select-wrapper-categories {
+        width: 50%;
+    }
+
+    .sort-select-wrapper-sort-by {
+        width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    .sort-select-wrapper-sort-by {
+        width: 50%;
+    }
 }
