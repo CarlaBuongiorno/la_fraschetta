@@ -19,34 +19,47 @@
     </div>
     <!-- Categories dropdown sm and md screens -->
     <div class="row">
-        <div class="col d-lg-none">
-            <form action="">
-                <div class="form-group col-md-6">
-                    <label for="exampleFormControlSelect1">Categories</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
-                    </select>
-                  </div>
-            </form>
+        <div class="col d-lg-none my-auto d-flex justify-content-center justify-content-md-start">
+            <div class="sort-select-wrapper-categories">
+                <select name="" id="sort-selector" class="custom-select custom-select-sm border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                    <option value="categories" disabled>Categories</option>
+                    {% for cat in category_list %}
+                        <option>
+                            <a href="{% url 'products' %}?category={{ cat.backend_name }}" class="nav-link">{{ cat.friendly_name }}</a>
+                        </option>
+                    {% endfor %}
+                </select>
+            </div>
         </div>
     </div>
     <!-- Delicatessen|10 Products ------- Sort By (lg & md screen)-->
-    <div class="row">
-        <div class="col-sm-12 col-md-6 order-md-2">Sort By</div>
+    <div class="row my-3">
+        <div class="col-sm-12 col-md-6 col-lg-5 order-md-2 my-auto d-flex justify-content-center justify-content-md-end">
+            <div class="sort-select-wrapper-sort-by">
+                <select name="" id="sort-selector" class="custom-select custom-select-sm border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                    <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+                    <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
+                    <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
+                    <option value="reviews_asc" {% if current_sorting == 'reviews_asc' %}selected{% endif %}>Reviews (low to high)</option>
+                    <option value="reviews_desc" {% if current_sorting == 'reviews_desc' %}selected{% endif %}>Reviews (high to low)</option>
+                    <option value="backend_name_asc" {% if current_sorting == 'backend_name_asc' %}selected{% endif %}>Name (A - Z)</option>
+                    <option value="backend_name_desc" {% if current_sorting == 'backend_name_desc' %}selected{% endif %}>Name (Z - A)</option>
+                    <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A - Z)</option>
+                    <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z - A)</option>
+                </select>
+            </div>
+        </div>
         <div class="col-sm-12 col-md-6 order-md-1">Delicatessen|10 Products</div>
     </div>
     <div class="row">
-        <!-- Categories lg screen -->
-        <div class="d-none d-lg-block col-lg-3 ">
-            <p>Categories</p>
-            <nav class="nav flex-column">
-                <a href="{% url 'products' %}" class="nav-link active">All Products</a>
+        <!-- Categories outer container lg screen -> side categories navbar -->
+        <div class="d-none d-lg-block col-lg-2">
+            <nav class="nav flex-column side-categories-nav">
+                <p class="ml-3 mt-3">Categories</p>
+                <hr class="mt-0">
+                <a href="{% url 'products' %}" class="nav-link side-categories-items active">All Products</a>
                 {% for cat in category_list %}
-                    <a href="{% url 'products' %}?category={{ cat.backend_name }}" class="nav-link">{{ cat.friendly_name }}</a>
+                    <a href="{% url 'products' %}?category={{ cat.backend_name }}" class="nav-link side-categories-items">{{ cat.friendly_name }}</a>
                 {% endfor %}
             </nav>
         </div>
