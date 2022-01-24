@@ -42,7 +42,16 @@
     <div class="row">
         <!-- Categories lg screen -->
         <div class="d-none d-lg-block col-lg-3 ">
-            Categories
+            <p>Categories</p>
+            <nav class="nav flex-column">
+                <a href="{% url 'products' %}" class="nav-link active">All Products</a>
+                <a href="{% url 'products' %}?category=fresh_foods" class="nav-link">Fresh Foods</a>
+                <a href="{% url 'products' %}?category=pasta_risotto" class="nav-link">Pasta &amp; Risotto</a>
+                <a href="{% url 'products' %}?category=antipasti" class="nav-link">Antipasti</a>
+                <a href="{% url 'products' %}?category=charcuterie" class="nav-link">Charcuterie</a>
+                <a href="{% url 'products' %}?category=cheese" class="nav-link">Cheese</a>
+                <a href="{% url 'products' %}?category=dolci" class="nav-link">Dolci</a>
+            </nav>
         </div>
         <!-- Products outer container lg screen -->
         <div class="col-lg-9">
