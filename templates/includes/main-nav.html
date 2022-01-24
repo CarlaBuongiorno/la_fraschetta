@@ -10,13 +10,10 @@
                 Delicatessen
             </a>
             <div class="dropdown-menu" aria-labelledby="delicatessen-link">
-                <a href="{% url 'products' %}?category=fresh_foods" class="dropdown-item">Fresh Foods</a>
-                <a href="{% url 'products' %}?category=pasta_risotto" class="dropdown-item">Pasta &amp; Risotto</a>
-                <a href="{% url 'products' %}?category=antipasti" class="dropdown-item">Antipasti</a>
-                <a href="{% url 'products' %}?category=charcuterie" class="dropdown-item">Charcuterie</a>
-                <a href="{% url 'products' %}?category=cheese" class="dropdown-item">Cheese</a>
-                <a href="{% url 'products' %}?category=dolci" class="dropdown-item">Dolci</a>
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
+                {% for cat in category_list %}
+                    <a href="{% url 'products' %}?category={{ cat.backend_name }}" class="dropdown-item">{{ cat.friendly_name }}</a>
+                {% endfor %}
             </div>
         </li>
         <li class="nav-item">

@@ -45,12 +45,9 @@
             <p>Categories</p>
             <nav class="nav flex-column">
                 <a href="{% url 'products' %}" class="nav-link active">All Products</a>
-                <a href="{% url 'products' %}?category=fresh_foods" class="nav-link">Fresh Foods</a>
-                <a href="{% url 'products' %}?category=pasta_risotto" class="nav-link">Pasta &amp; Risotto</a>
-                <a href="{% url 'products' %}?category=antipasti" class="nav-link">Antipasti</a>
-                <a href="{% url 'products' %}?category=charcuterie" class="nav-link">Charcuterie</a>
-                <a href="{% url 'products' %}?category=cheese" class="nav-link">Cheese</a>
-                <a href="{% url 'products' %}?category=dolci" class="nav-link">Dolci</a>
+                {% for cat in category_list %}
+                    <a href="{% url 'products' %}?category={{ cat.backend_name }}" class="nav-link">{{ cat.friendly_name }}</a>
+                {% endfor %}
             </nav>
         </div>
         <!-- Products outer container lg screen -->

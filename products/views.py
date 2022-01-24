@@ -7,9 +7,13 @@ from .models import Product, Category
 
 
 def all_products(request):
-    """ A view to show all products, including sorting and search queries """
+    """
+        A view to show all products, including sorting and search queries.
+        Also enables all categories to render in the menus.
+    """
 
     products = Product.objects.all()
+    category_list = Category.objects.all()
     query = None
     categories = None
 
@@ -31,6 +35,7 @@ def all_products(request):
         'products': products,
         'search_term': query,
         'current_categories': categories,
+        'category_list': category_list,
     }
 
     return render(request, 'products/products.html', context)
