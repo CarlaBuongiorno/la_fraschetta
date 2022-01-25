@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
+from django.db.models.functions import Lower
+
 from .models import Product, Category
 
 # Create your views here.
@@ -23,11 +25,11 @@ def all_products(request):
         if 'sort' in request.GET:
             product_sort_key = request.GET['sort']
             template_sort_key = product_sort_key
-            if product_sort_key == 'name':
+            if product_sort_key == 'backend_name':
                 product_sort_key = 'lower_name'
-                products = products.annotate(lower_name=Lower('name'))
+                products = products.annotate(lower_name=Lower('backend_name'))
             if product_sort_key == 'category':
-                product_sort_key = 'category__name'
+                product_sort_key = 'category__backend_name'
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':

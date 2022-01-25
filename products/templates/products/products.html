@@ -21,7 +21,7 @@
     <div class="row">
         <div class="col d-lg-none my-auto d-flex justify-content-center justify-content-md-start">
             <div class="sort-select-wrapper-categories">
-                <select name="" id="sort-selector" class="custom-select custom-select-sm border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                <select name="" class="custom-select custom-select-sm">
                     <option value="categories" disabled>Categories</option>
                     {% for cat in category_list %}
                         <option>
@@ -36,14 +36,14 @@
     <div class="row my-3">
         <div class="col-sm-12 col-md-6 col-lg-5 order-md-2 my-auto d-flex justify-content-center justify-content-md-end">
             <div class="sort-select-wrapper-sort-by">
-                <select name="" id="sort-selector" class="custom-select custom-select-sm border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                <select name="" id="sort-selector" class="custom-select custom-select-sm">
                     <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
                     <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
                     <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
                     <option value="reviews_asc" {% if current_sorting == 'reviews_asc' %}selected{% endif %}>Reviews (low to high)</option>
                     <option value="reviews_desc" {% if current_sorting == 'reviews_desc' %}selected{% endif %}>Reviews (high to low)</option>
-                    <option value="backend_name_asc" {% if current_sorting == 'backend_name_asc' %}selected{% endif %}>Name (A - Z)</option>
-                    <option value="backend_name_desc" {% if current_sorting == 'backend_name_desc' %}selected{% endif %}>Name (Z - A)</option>
+                    <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A - Z)</option>
+                    <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z - A)</option>
                     <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A - Z)</option>
                     <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z - A)</option>
                 </select>
@@ -108,4 +108,37 @@
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+        $('.btt-link').click(function(e) {
+            window.scrollTo(0,0);
+        });
+    </script>
+
+    <script type="text/javascript">
+        $('#sort-selector').change(function() {
+            var selector = $(this);
+            var currentUrl = new URL(window.location);
+
+            var selectedVal = selector.val();
+            if(selectedVal != "reset") {
+                var sort = selectedVal.split("_")[0];
+                var direction = selectedVal.split("_")[1];
+
+                currentUrl.searchParams.set("sort", sort);
+                currentUrl.searchParams.set("direction", direction);
+
+                window.location.replace(currentUrl);
+            } else {
+                currentUrl.searchParams.delete("sort");
+                currentUrl.searchParams.delete("direction");
+
+                window.location.replace(currentUrl);
+            }
+        });
+    </script>
+
 {% endblock %}
