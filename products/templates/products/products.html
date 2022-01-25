@@ -10,104 +10,109 @@
 {% endblock %}
 
 {% block content %}
-<div class="container-fluid">
-    <div class="row">
-        <!-- Shop image -->
-        <div class="col text-center mt-3">
-            <h2 class="">Delicatessen</h2>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Shop image -->
+            <div class="col text-center mt-3">
+                <h2 class="">Delicatessen</h2>
+            </div>
         </div>
-    </div>
-    <!-- Categories dropdown sm and md screens -->
-    <div class="row">
-        <div class="col d-lg-none my-auto d-flex justify-content-center justify-content-md-start">
-            <div class="sort-select-wrapper-categories">
-                <select name="" class="custom-select custom-select-sm">
-                    <option value="categories" disabled>Categories</option>
+        <!-- Categories dropdown sm and md screens -->
+        <div class="row">
+            <div class="col d-lg-none my-auto d-flex justify-content-center justify-content-md-start">
+                <div class="sort-select-wrapper-categories">
+                    <select name="" class="custom-select custom-select-sm">
+                        <option value="categories" disabled>Categories</option>
+                        {% for cat in category_list %}
+                            <option>
+                                <a href="{% url 'products' %}?category={{ cat.backend_name }}" class="nav-link">{{ cat.friendly_name }}</a>
+                            </option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+        </div>
+        <!-- Delicatessen|10 Products ------- Sort By (lg & md screen)-->
+        <div class="row my-3">
+            <div class="col-sm-12 col-md-6 col-lg-5 order-md-2 my-auto d-flex justify-content-center justify-content-md-end">
+                <div class="sort-select-wrapper-sort-by">
+                    <select name="" id="sort-selector" class="custom-select custom-select-sm">
+                        <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+                        <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
+                        <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
+                        <option value="reviews_asc" {% if current_sorting == 'reviews_asc' %}selected{% endif %}>Reviews (low to high)</option>
+                        <option value="reviews_desc" {% if current_sorting == 'reviews_desc' %}selected{% endif %}>Reviews (high to low)</option>
+                        <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A - Z)</option>
+                        <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z - A)</option>
+                        <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A - Z)</option>
+                        <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z - A)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 order-md-1 ml-5">
+                <p class="text-muted mt-3 text-center text-md-left">
+                    {% if search_term or current_categories or current_sorting != 'None_None' %}
+                        <span class="small"><a href="{% url 'products' %}">Delicatessen</a> | </span>
+                    {% endif %}
+                    {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Categories outer container lg screen -> side categories navbar -->
+            <div class="d-none d-lg-block col-lg-2 ml-5">
+                <nav class="nav flex-column side-categories-nav">
+                    <p class="ml-3 mt-3">Categories</p>
+                    <hr class="mt-0">
+                    <a href="{% url 'products' %}" class="nav-link side-categories-items active">All Products</a>
                     {% for cat in category_list %}
-                        <option>
-                            <a href="{% url 'products' %}?category={{ cat.backend_name }}" class="nav-link">{{ cat.friendly_name }}</a>
-                        </option>
+                        <a href="{% url 'products' %}?category={{ cat.backend_name }}" class="nav-link side-categories-items">{{ cat.friendly_name }}</a>
                     {% endfor %}
-                </select>
+                </nav>
             </div>
-        </div>
-    </div>
-    <!-- Delicatessen|10 Products ------- Sort By (lg & md screen)-->
-    <div class="row my-3">
-        <div class="col-sm-12 col-md-6 col-lg-5 order-md-2 my-auto d-flex justify-content-center justify-content-md-end">
-            <div class="sort-select-wrapper-sort-by">
-                <select name="" id="sort-selector" class="custom-select custom-select-sm">
-                    <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
-                    <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
-                    <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
-                    <option value="reviews_asc" {% if current_sorting == 'reviews_asc' %}selected{% endif %}>Reviews (low to high)</option>
-                    <option value="reviews_desc" {% if current_sorting == 'reviews_desc' %}selected{% endif %}>Reviews (high to low)</option>
-                    <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A - Z)</option>
-                    <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z - A)</option>
-                    <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A - Z)</option>
-                    <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z - A)</option>
-                </select>
-            </div>
-        </div>
-        <div class="col-sm-12 col-md-6 order-md-1 ml-5">
-            <p class="text-muted mt-3 text-center text-md-left">
-                {% if search_term or current_categories or current_sorting != 'None_None' %}
-                    <span class="small"><a href="{% url 'products' %}">Delicatessen</a> | </span>
-                {% endif %}
-                {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
-            </p>
-        </div>
-    </div>
-    <div class="row">
-        <!-- Categories outer container lg screen -> side categories navbar -->
-        <div class="d-none d-lg-block col-lg-2 ml-5">
-            <nav class="nav flex-column side-categories-nav">
-                <p class="ml-3 mt-3">Categories</p>
-                <hr class="mt-0">
-                <a href="{% url 'products' %}" class="nav-link side-categories-items active">All Products</a>
-                {% for cat in category_list %}
-                    <a href="{% url 'products' %}?category={{ cat.backend_name }}" class="nav-link side-categories-items">{{ cat.friendly_name }}</a>
-                {% endfor %}
-            </nav>
-        </div>
-        <!-- Products outer container lg screen -->
-        <div class="col-lg-9">
-            <!-- Products inner container lg screen -->
-            <div class="row">
-                {% for product in products %}
-                    <div class="col-sm-6 col-md-6 col-lg-3">
-                        <div class="card h-100">
-                            {% if product.image %}
-                            <a href="{% url 'product_detail' product.id %}">
-                                <img src="{{ product.image.url }}" alt="{{ product.name }}" class="card-img-top img-fluid">
-                            </a>
-                            {% else %}
-                            <a href="{% url 'product_detail' product.id %}">
-                                <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" class="card-img-top img-fluid">
-                            </a>
-                            {% endif %}
-                            <div class="card-body pb-0">
-                                <p class="mb-0">{{ product.name }}</p>
-                            </div>
-                            <div class="card-footer bg-white pt-0 border-0 text-left">
-                                <div class="row">
-                                    <div class="col">
-                                        <p class="lead mb-0 text-left font-weight-bold">€{{ product.price }}</p>
-                                        {% if product.reviews %}
-                                            <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.reviews }} / 5</small>
-                                        {% else %}
-                                            <small class="text-muted">No Reviews</small>
-                                        {% endif %}
+            <!-- Products outer container lg screen -->
+            <div class="col-lg-9">
+                <!-- Products inner container lg screen -->
+                <div class="row">
+                    {% for product in products %}
+                        <div class="col-sm-6 col-md-6 col-lg-3">
+                            <div class="card h-100">
+                                {% if product.image %}
+                                <a href="{% url 'product_detail' product.id %}">
+                                    <img src="{{ product.image.url }}" alt="{{ product.name }}" class="card-img-top img-fluid">
+                                </a>
+                                {% else %}
+                                <a href="{% url 'product_detail' product.id %}">
+                                    <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" class="card-img-top img-fluid">
+                                </a>
+                                {% endif %}
+                                <div class="card-body pb-0">
+                                    <p class="mb-0">{{ product.name }}</p>
+                                </div>
+                                <div class="card-footer bg-white pt-0 border-0 text-left">
+                                    <div class="row">
+                                        <div class="col">
+                                            <p class="lead mb-0 text-left font-weight-bold">€{{ product.price }}</p>
+                                            {% if product.reviews %}
+                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.reviews }} / 5</small>
+                                            {% else %}
+                                                <small class="text-muted">No Reviews</small>
+                                            {% endif %}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                {% endfor %}
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </div>
-</div>
+    <div class="btt-button border">
+        <a class="btt-link d-flex h-100">
+            <i class="fas fa-arrow-up mx-auto my-auto"></i>
+        </a>
+    </div>
 {% endblock %}
 
 {% block postloadjs %}

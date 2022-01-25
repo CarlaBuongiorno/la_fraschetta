@@ -73,6 +73,18 @@ hr {
     width: 80%;
 }
 
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+}
+
+.btt-link {
+    cursor: pointer;
+}
+
 /* ------------------------------------ Media Queries */
 
 @media (min-width: 768px) {
