@@ -43,7 +43,7 @@
 			</div>
 		</div>
 		<div id="topnav" class="row pt-lg-2 d-none d-lg-flex">
-			<div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+			<div class="col-12 col-lg-3 offset-1 my-auto py-1 py-lg-0">
 				<form method="GET" action="{% url 'products' %}">
                     <div class="input-group w-100">
                         <input class="form-control border border-black" type="text" name="q" placeholder="Search our site">
@@ -62,7 +62,7 @@
                     <img class="logo" src="media/logo.png" alt="">
                 </a>
 			</div>
-			<div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+			<div class="col-12 col-lg-3 my-auto py-1 py-lg-0">
 				<ul class="list-inline list-unstyled text-center text-lg-right my-0">
 					<li class="list-inline-item dropdown">
 						<a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -112,7 +112,7 @@
 		</div>
         <div class="row">
             <nav class="navbar navbar-expand-lg navbar-light p-0 w-100 main-site-nav">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler ml-5" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
                 {% include 'includes/mobile-top-header.html' %}
