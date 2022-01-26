@@ -14,6 +14,10 @@ html {
     color: #415712;
 }
 
+.red {
+    color: #770D15;
+}
+
 .header-container {
     padding-top: 160px;
 }
@@ -91,6 +95,11 @@ hr {
 
 .btt-link {
     cursor: pointer;
+}
+
+.add-review:hover {
+    color: #415712;
+    text-decoration-color: #415712;
 }
 
 .add-to-bag-btn {

@@ -28,22 +28,23 @@
                     </div>
                     <div class="col-6 mt-5">
                         <p class="text-right">
-                            <span class="d-none d-lg-inline-block">Add To Wishlist: </span>
-                            <i class="far fa-heart ml-1"></i>
+                            <span class="d-none d-lg-inline-block green">Add To Wishlist: </span>
+                            <i class="far fa-heart fa-lg ml-1 green"></i>
+                            <i class="fas fa-heart fa-lg ml-1 red d-none"></i>
                         </p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
                     {% if product.reviews == 5 %}
-                        <p>
+                        <p class="">
                             <small class="text-muted">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
-                                ({{ product.reviews|length }} reviews) | <a href="">Add Your Review</a>
+                                ({{ product.reviews|length }} reviews) | <a class="green add-review" href="">Add Your Review</a>
                             </small>
                         </p>
                     {% elif product.reviews == 4 %}
@@ -54,7 +55,7 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="far fa-star"></i>
-                                ({{ product.reviews|length }} reviews) | <a href="">Add Your Review</a>
+                                ({{ product.reviews|length }} reviews) | <a class="green add-review" href="">Add Your Review</a>
                             </small>
                         </p>
                     {% elif product.reviews == 3 %}
@@ -65,7 +66,7 @@
                                 <i class="fas fa-star"></i>
                                 <i class="far fa-star"></i>
                                 <i class="far fa-star"></i>
-                                ({{ product.reviews|length }} reviews) | <a href="">Add Your Review</a>
+                                ({{ product.reviews|length }} reviews) | <a class="green add-review" href="">Add Your Review</a>
                             </small>
                         </p>
                     {% elif product.reviews == 2 %}
@@ -76,7 +77,7 @@
                                 <i class="far fa-star"></i>
                                 <i class="far fa-star"></i>
                                 <i class="far fa-star"></i>
-                                ({{ product.reviews|length }} reviews) | <a href="">Add Your Review</a>
+                                ({{ product.reviews|length }} reviews) | <a class="green add-review" href="">Add Your Review</a>
                             </small>
                         </p>
                     {% elif product.reviews == 1 %}
@@ -87,7 +88,7 @@
                                 <i class="far fa-star"></i>
                                 <i class="far fa-star"></i>
                                 <i class="far fa-star"></i>
-                                ({{ product.reviews|length }} reviews) | <a href="">Add Your Review</a>
+                                ({{ product.reviews|length }} reviews) | <a class="green add-review" href="">Add Your Review</a>
                             </small>
                         </p>
                     {% else %}
@@ -105,7 +106,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-3">
+                    <div class="col-3 d-none d-lg-block">
                     {% if product.category %}
                         <p class="my-auto">Category:</p>
                     </div>
@@ -119,18 +120,18 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-3">
+                    <div class="col-3 d-none d-lg-block">
                         <p class="">Description:</p>
                     </div>
                     <div class="col-9">
                         <p class="small text-muted">{{ product.description }}</p>
                     </div>
                 </div>
-                <form class="form" action="" method="POST">
+                <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                     <div class="row">
                         {% csrf_token %}
                         <!-- <div class="form-row"> -->
-                        <div class="col-3">
+                        <div class="col-3 d-none d-lg-block">
                             <p class="">Quantity:</p>
                         </div>
                         <div class="col-5">
