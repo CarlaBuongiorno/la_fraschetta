@@ -2,6 +2,14 @@ html {
     height: 100%;
 }
 
+.brown {
+    color: #886839;
+}
+
+.cream {
+    color: #fff7dc;
+}
+
 .green {
     color: #415712;
 }
@@ -84,6 +92,21 @@ hr {
 .btt-link {
     cursor: pointer;
 }
+
+.add-to-bag-btn {
+    background-color: #415712;
+    color: #fff7dc;
+}
+
+.add-to-bag-btn:hover {
+    background-color: #886839;
+    color: #fff7dc;
+}
+
+.continue-shopping-btn:hover {
+    text-decoration-color: #886839;
+}
+
 
 /* ------------------------------------ Media Queries */
 
