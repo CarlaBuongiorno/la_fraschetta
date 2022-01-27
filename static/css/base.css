@@ -93,8 +93,18 @@ hr {
     right: 20px;
 }
 
-.btt-link {
+.btt-link,
+.update-link,
+.remove-item {
     cursor: pointer;
+}
+
+.update-link:hover {
+    color: #415712;
+}
+
+.remove-item i {
+    color: #770D15;
 }
 
 .add-review:hover {

@@ -130,7 +130,6 @@
                 <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                     <div class="row">
                         {% csrf_token %}
-                        <!-- <div class="form-row"> -->
                         <div class="col-3 d-none d-lg-block">
                             <p class="">Quantity:</p>
                         </div>
