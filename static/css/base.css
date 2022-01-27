@@ -136,6 +136,22 @@ hr {
     color: #fff7dc;
 }
 
+/* ------------------------------------ bootstrap toasts */
+
+.message-container {
+    position: fixed;
+    top: 90px;
+    right: 15px;
+    z-index: 999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 4px;
+}
 
 /* ------------------------------------ Media Queries */
 
