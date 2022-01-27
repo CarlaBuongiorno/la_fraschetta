@@ -116,6 +116,16 @@ hr {
     text-decoration-color: #886839;
 }
 
+.btn-red {
+    background-color: #770D15;
+    color: #fff7dc;
+}
+
+.btn-green {
+    background-color: #415712;
+    color: #fff7dc;
+}
+
 
 /* ------------------------------------ Media Queries */
 
