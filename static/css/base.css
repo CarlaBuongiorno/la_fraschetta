@@ -2,68 +2,78 @@ html {
     height: 100%;
 }
 
-.brown {
-    color: #886839;
-}
+/* ------------------------------------ colours */
 
 .cream {
-    color: #fff7dc;
+    color: #fffaea;
 }
 
 .green {
-    color: #415712;
+    color: #0f5520;
 }
 
 .red {
-    color: #770D15;
+    color: #990b16;
 }
+
+.bg-cream {
+    background-color: #fffaea;
+}
+
+.bg-green {
+    background-color: #0f5520;
+}
+
+.bg-red {
+    background-color: #990b16;
+}
+
+/* ------------------------------------ btn colours */
+
+.btn-red {
+    background-color: #990b16;
+    color: #fffaea;
+}
+
+.btn-green {
+    background-color: #0f5520;
+    color: #fffaea;
+}
+
+/* ------ */
 
 .header-container {
     padding-top: 160px;
-}
-
-#delivery-banner {
-    background-color: #886839;
-    color: #fff7dc;
 }
 
 .logo {
     width: 250px;
 }
 
-#topnav {
-    background-color: #fff7dc;
-}
-
-.main-site-nav {
-    background-color: #770D15;
-}
-
-#main-nav .nav-link {
-    color: #D3B786;
-}
-
 #main-nav .nav-link:hover {
-    color: #fff7dc;
+    text-decoration: underline;
+    text-decoration-color: #fffaea;
 }
 
 .side-categories-nav {
-    background-color: #770D15;
-    color: #D3B786;
+    background-color: #990b16;
+    color: #fffaea;
     font-size: 24px;
 }
 
 .side-categories-items {
-    color: #D3B786;
+    color: #fffaea;
     font-size: 18px;
 }
 
 .side-categories-items:hover {
-    color: #fff7dc;
+    text-decoration: underline;
+    text-decoration-color: #fffaea;
+    color: #fffaea;
 }
 
 hr {
-    border-top: solid 2px #D3B786;
+    border-top: solid 2px;
     width: 100%;
 }
 
@@ -100,47 +110,38 @@ hr {
 }
 
 .update-link:hover {
-    color: #415712;
+    color: #0f5520;
 }
 
 .remove-item i {
-    color: #770D15;
+    color: #990b16;
 }
 
 .add-review:hover {
-    color: #415712;
-    text-decoration-color: #415712;
+    color: #0f5520;
+    text-decoration-color: #0f5520;
 }
 
 .add-to-bag-btn {
-    background-color: #415712;
-    color: #fff7dc;
+    background-color: #0f5520;
+    color: #fffaea;
 }
 
 .add-to-bag-btn:hover {
-    background-color: #886839;
-    color: #fff7dc;
+    border-color: #0f5520;
+    background-color: #fff;
+    color: #0f5520;
 }
 
 .continue-shopping-btn:hover {
     text-decoration-color: #886839;
 }
 
-.btn-red {
-    background-color: #770D15;
-    color: #fff7dc;
-}
-
-.btn-green {
-    background-color: #415712;
-    color: #fff7dc;
-}
-
 /* ------------------------------------ bootstrap toasts */
 
 .message-container {
     position: fixed;
-    top: 90px;
+    top: 95px;
     right: 15px;
     z-index: 999999;
 }
@@ -150,7 +151,7 @@ hr {
 }
 
 .toast-capper {
-    height: 4px;
+    height: 6px;
 }
 
 /* ------------------------------------ Media Queries */
