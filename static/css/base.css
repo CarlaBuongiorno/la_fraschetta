@@ -40,7 +40,40 @@ html {
     color: #fffaea;
 }
 
-/* ------ */
+.border-green {
+    border: 1px solid #0f5520 !important;
+}
+
+/* ------------------------------------ navbar */
+.navbar-light .navbar-nav .nav-link {
+    color: #0f5520;
+}
+
+.navbar-light .navbar-nav .show>.nav-link {
+    color: #0f5520;
+}
+
+.dropdown-menu {
+    border: none;
+}
+
+@media (min-width: 992px) {
+    .navbar-main-lg {
+        background-color: #990b16;
+    }
+
+    .navbar-light .navbar-nav .nav-link {
+        color: #fffaea;
+        padding-top: 1px;
+        padding-bottom: 1px;
+    }
+
+    .navbar-light .navbar-nav .nav-link:hover {
+        color: #fffaea;
+        padding-top: 1px;
+        padding-bottom: 1px;
+    }
+}
 
 .header-container {
     padding-top: 160px;

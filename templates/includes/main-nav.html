@@ -1,28 +1,28 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item">
-            <a class="nav-link mr-5" href="{% url 'home' %}" id="home-link">
+            <a class="font-weight-bold nav-link ml-4 mr-lg-5" href="{% url 'home' %}" id="home-link">
                 Home
             </a>
         </li>
         <li class="nav-item dropdown">
-            <a class="font-weight-bold nav-link mr-5" href="#" id="delicatessen-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="font-weight-bold nav-link ml-4 mr-lg-5" href="#" id="delicatessen-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Delicatessen
             </a>
-            <div class="dropdown-menu" aria-labelledby="delicatessen-link">
-                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
+            <div class="dropdown-menu bg-cream" aria-labelledby="delicatessen-link">
+                <a href="{% url 'products' %}" class="dropdown-item ml-4 green">All Products</a>
                 {% for cat in category_list %}
-                    <a href="{% url 'products' %}?category={{ cat.backend_name }}" class="dropdown-item">{{ cat.friendly_name }}</a>
+                    <a href="{% url 'products' %}?category={{ cat.backend_name }}" class="dropdown-item ml-4 green">{{ cat.friendly_name }}</a>
                 {% endfor %}
             </div>
         </li>
         <li class="nav-item">
-            <a class="nav-link mr-5" href="" id="our-story-link">
+            <a class="font-weight-bold nav-link ml-4 mr-lg-5" href="" id="our-story-link">
                 Our Story
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link mr-5" href="" id="contact-link">
+            <a class="font-weight-bold nav-link ml-4 mr-lg-5" href="" id="contact-link">
                 Contact
             </a>
         </li>
