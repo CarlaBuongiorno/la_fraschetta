@@ -71,17 +71,17 @@
                                 <p class="my-0 green">My Account</p>
                             </div>
                         </a>
-						<div class="dropdown-menu border-0" aria-labelledby="user-options">
+						<div class="dropdown-menu border-0 bg-cream" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
-                                    <a href="" class="dropdown-item">Add Category</a>
-                                    <a href="" class="dropdown-item">Add Product</a>
+                                    <a href="" class="dropdown-item green">Add Category</a>
+                                    <a href="" class="dropdown-item green">Add Product</a>
                                 {% endif %}
-                                <a href="" class="dropdown-item">My Profile</a>
-                                <a href="" class="dropdown-item">Logout</a>
+                                <a href="" class="dropdown-item green">My Profile</a>
+                                <a href="" class="dropdown-item green">Logout</a>
                             {% else %}
-                                <a href="" class="dropdown-item">Register</a>
-                                <a href="" class="dropdown-item">Login</a>
+                                <a href="" class="dropdown-item green">Register</a>
+                                <a href="" class="dropdown-item green">Login</a>
                             {% endif %}
                         </div>
 					</li>
