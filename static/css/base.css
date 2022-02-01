@@ -86,6 +86,10 @@ html {
         background-color: #990b16;
     }
 
+    .list-inline-item:not(:last-child) {
+        margin-right: 0;
+    }
+
     .navbar-light .navbar-nav .nav-link,
     .navbar-light .navbar-nav .nav-link:hover,
     .navbar-light .navbar-nav .nav-link:active,
@@ -215,8 +219,8 @@ hr {
 
 .message-container {
     position: fixed;
-    top: 95px;
-    right: 15px;
+    top: 90px;
+    right: -60px;
     z-index: 999999;
 }
 
@@ -226,6 +230,41 @@ hr {
 
 .toast-capper {
     height: 6px;
+}
+
+/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+
+.arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 10px solid black;
+    position: absolute;
+    top: -10px;
+    right: 20px;
+}
+
+.arrow-green {
+    border-bottom-color: #0f5520 !important;
+}
+
+.arrow-red {
+    border-bottom-color: #990b16 !important;
+}
+
+.arrow-warning {
+    border-bottom-color: #ffc107 !important;
+}
+
+.arrow-info {
+    border-bottom-color: #17a2b8 !important;
+}
+
+.bag-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 /* ------------------------------------ Media Queries */
@@ -247,5 +286,9 @@ hr {
 
     .header-container {
         padding-top: 154px;
+    }
+
+    .message-container {
+        top: 110px;
     }
 }
