@@ -38,7 +38,7 @@
         <div class="row mb-3">
             <div class="col-sm-12 col-md-6 col-lg-5 order-md-2 my-auto d-flex justify-content-center justify-content-md-end">
                 <div class="sort-select-wrapper-sort-by">
-                    <select name="" id="sort-selector" class="custom-select custom-select-sm">
+                    <select name="" id="sort-selector" class="custom-select custom-select-sm border-green green">
                         <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
                         <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
                         <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
@@ -77,8 +77,8 @@
                 <!-- Products inner container lg screen -->
                 <div class="row">
                     {% for product in products %}
-                        <div class="col-sm-6 col-md-6 col-lg-3">
-                            <div class="card h-100">
+                        <div class="col-sm-6 col-md-6 col-lg-3 mb-4">
+                            <div class="card h-100 border-green">
                                 {% if product.image %}
                                 <a href="{% url 'product_detail' product.id %}">
                                     <img src="{{ product.image.url }}" alt="{{ product.name }}" class="card-img-top img-fluid">
@@ -89,12 +89,12 @@
                                 </a>
                                 {% endif %}
                                 <div class="card-body pb-0">
-                                    <p class="mb-0">{{ product.name }}</p>
+                                    <p class="mb-0 green">{{ product.name }}</p>
                                 </div>
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
                                     <div class="row">
                                         <div class="col">
-                                            <p class="lead mb-0 text-left font-weight-bold">€{{ product.price }}</p>
+                                            <p class="lead mb-0 text-left font-weight-bold green">€{{ product.price }}</p>
                                             {% if product.reviews %}
                                                 <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.reviews }} / 5</small>
                                             {% else %}

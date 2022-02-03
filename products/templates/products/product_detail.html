@@ -101,14 +101,14 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col">
+                    <div class="col green">
                         <p class="lead text-left font-weight-bold">€{{ product.price }}</p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-3 d-none d-lg-block">
                     {% if product.category %}
-                        <p class="my-auto">Category:</p>
+                        <p class="my-auto green">Category:</p>
                     </div>
                     <div class="col-9">
                         <p class="my-auto">
@@ -121,7 +121,7 @@
                 </div>
                 <div class="row">
                     <div class="col-3 d-none d-lg-block">
-                        <p class="">Description:</p>
+                        <p class="green">Description:</p>
                     </div>
                     <div class="col-9">
                         <p class="small text-muted">{{ product.description }}</p>
@@ -131,7 +131,7 @@
                     <div class="row">
                         {% csrf_token %}
                         <div class="col-3 d-none d-lg-block">
-                            <p class="">Quantity:</p>
+                            <p class="green">Quantity:</p>
                         </div>
                         <div class="col-5">
                             <div class="form-group">
@@ -144,7 +144,7 @@
                                             </span>
                                         </button>
                                     </div>
-                                    <input class="form-control qty_input" type="number"
+                                    <input class="form-control qty_input border-green" type="number"
                                         name="quantity" value="1" min="1" max="99"
                                         data-item_id="{{ product.id }}"
                                         id="id_qty_{{ product.id }}">
@@ -165,16 +165,16 @@
                     </div>
                     <div class="row">
                         <div class="col">
-                            <p class="text-danger">Temporarily out of stock</p>
+                            <p class="red">Temporarily out of stock</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
                             <a href="{% url 'products' %}" class="continue-shopping-btn">
                                 <span class="icon">
-                                    <i class="fas fa-chevron-left brown"></i>
+                                    <i class="fas fa-chevron-left green"></i>
                                 </span>
-                                <span class="brown">Continue Shopping</span>
+                                <span class="green">Continue Shopping</span>
                             </a>
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
