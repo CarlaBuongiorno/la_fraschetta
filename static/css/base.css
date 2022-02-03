@@ -12,6 +12,10 @@ html {
     color: #0f5520;
 }
 
+.green:hover {
+    color: #0f5520;
+}
+
 .red {
     color: #990b16;
 }
@@ -152,6 +156,7 @@ html {
 
 hr {
     border-top: solid 2px;
+    color: #0f5520;
     width: 100%;
 }
 
