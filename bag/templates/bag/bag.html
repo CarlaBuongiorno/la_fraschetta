@@ -42,7 +42,6 @@
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                                        <p class="my-0 small text-muted">SKU: {{ item.product.sku|upper }}</strong></p>
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0">€{{ item.product.price }}</p>
@@ -99,7 +98,7 @@
                                         </span>
                                         <span class="brown">Continue Shopping</span>
                                     </a>
-                                    <a href="" class="btn add-to-bag-btn">
+                                    <a href="{% url 'checkout' %}" class="btn add-to-bag-btn">
                                         <span class="">Secure Checkout</span>
                                         <span class="icon">
                                             <i class="fas fa-lock cream"></i>
@@ -115,7 +114,7 @@
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                         </span>
-                        <span class="text-uppercase">keep shopping</span>
+                        <span class="">Keep Shopping</span>
                     </a>
                 {% endif %}
             </div>

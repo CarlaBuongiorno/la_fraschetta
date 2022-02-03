@@ -28,6 +28,7 @@ class OrderForm(forms.ModelForm):
             'delivery_town_or_city': 'Town or City',
             'delivery_street_address1': 'Street Address 1',
             'delivery_street_address2': 'Street Address 2',
+            'delivery_country': 'Country',
         }
 
         self.fields['full_name'].widget.attrs['autofocus'] = True
