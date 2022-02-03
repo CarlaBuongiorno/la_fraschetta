@@ -10,10 +10,10 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container-fluid">
+    <div class="container mb-2">
         <div class="row">
             <!-- Shop image -->
-            <div class="col text-center mt-3">
+            <div class="col my-4 text-center">
                 <hr>
                 <h2 class="">Delicatessen</h2>
                 <hr>
@@ -35,7 +35,7 @@
             </div>
         </div>
         <!-- Delicatessen|10 Products ------- Sort By (lg & md screen)-->
-        <div class="row my-3">
+        <div class="row mb-3">
             <div class="col-sm-12 col-md-6 col-lg-5 order-md-2 my-auto d-flex justify-content-center justify-content-md-end">
                 <div class="sort-select-wrapper-sort-by">
                     <select name="" id="sort-selector" class="custom-select custom-select-sm">
@@ -62,10 +62,10 @@
         </div>
         <div class="row">
             <!-- Categories outer container lg screen -> side categories navbar -->
-            <div class="d-none d-lg-block col-lg-2 ml-5">
+            <div class="d-none d-lg-block col-lg-2 ml-5 px-0">
                 <nav class="nav flex-column side-categories-nav">
                     <p class="ml-3 mt-3">Categories</p>
-                    <hr class="mt-0">
+                    <hr class="mt-0 cream">
                     <a href="{% url 'products' %}" class="nav-link side-categories-items active">All Products</a>
                     {% for cat in category_list %}
                         <a href="{% url 'products' %}?category={{ cat.backend_name }}" class="nav-link side-categories-items">{{ cat.friendly_name }}</a>
@@ -73,7 +73,7 @@
                 </nav>
             </div>
             <!-- Products outer container lg screen -->
-            <div class="col-lg-9">
+            <div class="col-lg-9 mb-4">
                 <!-- Products inner container lg screen -->
                 <div class="row">
                     {% for product in products %}
