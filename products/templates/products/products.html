@@ -52,7 +52,7 @@
                 </div>
             </div>
             <div class="col-sm-12 col-md-6 order-md-1 ml-5">
-                <p class="text-muted mt-3 text-center text-md-left">
+                <p class="green-muted mt-3 text-center text-md-left">
                     {% if search_term or current_categories or current_sorting != 'None_None' %}
                         <span class="small"><a href="{% url 'products' %}">Delicatessen</a> | </span>
                     {% endif %}
@@ -96,9 +96,9 @@
                                         <div class="col">
                                             <p class="lead mb-0 text-left font-weight-bold green">€{{ product.price }}</p>
                                             {% if product.reviews %}
-                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.reviews }} / 5</small>
+                                                <small class="green-muted"><i class="fas fa-star mr-1"></i>{{ product.reviews }} / 5</small>
                                             {% else %}
-                                                <small class="text-muted">No Reviews</small>
+                                                <small class="green-muted">No Reviews</small>
                                             {% endif %}
                                         </div>
                                     </div>

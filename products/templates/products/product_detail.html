@@ -38,7 +38,7 @@
                     <div class="col">
                     {% if product.reviews == 5 %}
                         <p class="">
-                            <small class="text-muted">
+                            <small class="green-muted">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -49,7 +49,7 @@
                         </p>
                     {% elif product.reviews == 4 %}
                         <p>
-                            <small class="text-muted">
+                            <small class="green-muted">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -60,7 +60,7 @@
                         </p>
                     {% elif product.reviews == 3 %}
                         <p>
-                            <small class="text-muted">
+                            <small class="green-muted">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
@@ -71,7 +71,7 @@
                         </p>
                     {% elif product.reviews == 2 %}
                         <p>
-                            <small class="text-muted">
+                            <small class="green-muted">
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="far fa-star"></i>
@@ -82,7 +82,7 @@
                         </p>
                     {% elif product.reviews == 1 %}
                         <p>
-                            <small class="text-muted">
+                            <small class="green-muted">
                                 <i class="fas fa-star"></i>
                                 <i class="far fa-star"></i>
                                 <i class="far fa-star"></i>
@@ -93,7 +93,7 @@
                         </p>
                     {% else %}
                         <p>
-                            <small class="text-muted">
+                            <small class="green-muted">
                                 No Reviews | <a href="">Add Your Review</a>
                             </small>
                         </p>
@@ -112,7 +112,7 @@
                     </div>
                     <div class="col-9">
                         <p class="my-auto">
-                            <a href="{% url 'products' %}?category={{ product.category.name }}" class="text-muted">
+                            <a href="{% url 'products' %}?category={{ product.category.name }}" class="green-muted">
                                 <p class="small my-auto">{{ product.category.friendly_name }}</p>
                             </a>
                         </p>
@@ -124,7 +124,7 @@
                         <p class="green">Description:</p>
                     </div>
                     <div class="col-9">
-                        <p class="small text-muted">{{ product.description }}</p>
+                        <p class="small green-muted">{{ product.description }}</p>
                     </div>
                 </div>
                 <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
