@@ -37,3 +37,13 @@
     color: #0f5520;
     border: 1px solid #0f5520;
 }
+
+select,
+select option {
+  color: #0f5520;
+}
+
+select:invalid,
+select option[value=""] {
+  color: #819c88 !important;
+}

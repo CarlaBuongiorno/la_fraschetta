@@ -62,6 +62,9 @@ h6 {
 }
 
 /* ------------------------------------ navbar */
+.site-search::placeholder {
+    color: #819c88;
+}
 
 .navbar-light .navbar-nav .nav-link,
 .navbar-light .navbar-nav .nav-link:hover,
