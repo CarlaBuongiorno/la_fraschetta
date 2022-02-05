@@ -1,0 +1,164 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container mb-2 pb-3">
+        <div class="row">
+            <div class="col my-4 text-center">
+                <hr>
+                <h2 class="mb-4">Thank You</h2>
+                <hr>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-12 col-lg-7 green">
+                <p class="mb-0">Thank you for your order.</p>
+                <p class="mb-0">Your order number is <strong>{{ order.order_number }}</strong>.</p> 
+                <p>A confirmation email has been sent to <strong>{{ order.email }}</strong> on <strong>{{ order.order_date|date:"j F Y" }}</strong>.</p>
+    
+                <div class="row">
+                    <div class="col-12 col-lg-6 order-lg-last">
+                        <p class="green-muted">Order summary ({{ product_count }})</p>
+                    </div>
+                </div>
+                <div class="row mb-0">
+                    <div class="col-6">
+                        <p class="mb-1 mt-0 small green-muted">Items</p>
+                    </div>
+                    <div class="col-3">
+                        <p class="mb-1 mt-0 small green-muted">Qty</p>
+                    </div>
+                    <div class="col-3 text-right">
+                        <p class="mb-1 mt-0 small green-muted">Subtotal</p>
+                    </div>
+                </div>
+                <hr class="green-muted mt-0">
+                {% for item in order.lineitems.all %}
+                <div class="row mb-0">
+                    <div class="col-3 mb-1">
+                        <div>
+                            {% if item.product.image %}
+                                <img src="{{ item.product.image.url }}" alt="{{ product.name }}" class="w-100">
+                            {% else %}
+                                <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" class="w-100">
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <p class="small green">
+                            {{ item.product.name }}
+                        </p>
+                    </div>
+                    <div class="col-3">
+                        <p class="small green">
+                            {{ item.quantity }}
+                        </p>
+                    </div>
+                    <div class="col-3 text-right">
+                        <p class="small green">€{{ item.product.price }}</p>
+                    </div>
+                </div>
+                <hr class="green-muted mt-2">
+                {% endfor %}
+                
+                <div class="row">
+                    <div class="col">
+                        <small class="green-muted">Deliver To:</small>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <p class="mb-0 green font-weight-bold">{{ order.full_name }}</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <p class="mb-0 green font-weight-bold">{{ order.delivery_street_address1 }}</p>
+                    </div>
+                </div>
+
+                {% if order.delivery_street_address2 %}
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <p class="mb-0 text-black font-weight-bold">{{ order.delivery_street_address2 }}</p>
+                    </div>
+                </div>
+                {% endif %}
+
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <p class="mb-0 green font-weight-bold">{{ order.delivery_town_or_city }}</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <p class="mb-0 green font-weight-bold">{{ order.delivery_postcode }}</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <p class="mb-0 green font-weight-bold">{{ order.delivery_country }}</p>
+                    </div>
+                </div>
+
+                <hr class="green-muted mt-2">
+
+                <div class="row">
+                    <div class="col">
+                        <small class="green-muted">Billing Info:</small>
+                    </div>
+                </div>
+                    
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <p class="mb-0 green font-weight-bold">{{ order.order_date|date:"j F Y" }}</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <p class="mb-0 green font-weight-bold">Cart Total</p>
+                    </div>
+                    <div class="col-12 col-md-8 text-md-right">
+                        <p class="mb-0">{{ order.subtotal }}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <p class="mb-0 green font-weight-bold">Delivery</p>
+                    </div>
+                    <div class="col-12 col-md-8 text-md-right">
+                        <p class="mb-0">{{ order.delivery_cost }}</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <p class="mb-0 green font-weight-bold">Grand Total</p>
+                    </div>
+                    <div class="col-12 col-md-8 text-md-right">
+                        <p class="mb-0 font-weight-bold">{{ order.grand_total }}</p>
+                    </div>
+                </div>
+                <hr class="green-muted mt-2">
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
