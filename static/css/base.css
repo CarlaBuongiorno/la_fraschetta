@@ -55,6 +55,12 @@ h6 {
     color: #fffaea;
 }
 
+.btn-red:hover {
+    background-color: #fffaea;
+    color: #990b16;
+    border-color: #990b16;
+}
+
 .btn-green {
     border: 2px solid #0f5520;
     background-color: #0f5520;
@@ -79,7 +85,7 @@ h6 {
 }
 
 .border-green {
-    border: 1px solid #0f5520 !important;
+    border: 2px solid #0f5520 !important;
 }
 
 /* ------------------------------------ navbar */
@@ -172,7 +178,6 @@ input[name='q']::placeholder {
     width: 250px;
 }
 
-
 .side-categories-nav {
     background-color: #990b16;
     color: #fffaea;
@@ -221,6 +226,21 @@ hr {
     position: fixed;
     bottom: 10px;
     right: 20px;
+}
+
+.decrement-qty:hover {
+    background-color: #a32f38;
+    color: #fffaea;
+ }
+
+.increment-qty:hover {
+    background-color: #1e5f2e;
+    color: #fffaea;
+}
+
+.qty_input {
+    border-top: 2px solid #0f5520;
+    border-bottom: 2px solid #0f5520;
 }
 
 .btt-link,
