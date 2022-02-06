@@ -40,6 +40,10 @@ h6 {
     background-color: #0f5520;
 }
 
+.bg-muted-green {
+    background-color: #819c88;
+}
+
 .bg-red {
     background-color: #990b16;
 }
@@ -238,11 +242,6 @@ hr {
     text-decoration-color: #0f5520;
 }
 
-
-.continue-shopping-btn:hover {
-    text-decoration-color: #886839;
-}
-
 /* ------------------------------------ bootstrap toasts */
 
 .message-container {
@@ -285,8 +284,8 @@ hr {
     border-bottom-color: #ffc107 !important;
 }
 
-.arrow-info {
-    border-bottom-color: #17a2b8 !important;
+.arrow-muted-green {
+    border-bottom-color: #819c88 !important;
 }
 
 .bag-notification-wrapper {
@@ -294,6 +293,58 @@ hr {
     overflow-x: hidden;
     overflow-y: auto;
 }
+
+/* ------------------------------------ Allauth form formatting */
+.allauth-form-inner-content p {
+    margin-top: 1.5rem; /* mt-4 */
+    color: #0f5520;
+}
+
+.allauth-form-inner-content input {
+    border-color: #0f5520;
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: #819c88;
+}
+
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type='submit'] {
+    /* btn */
+    display: inline-block;
+    font-weight: 400;
+    color: #fffaea;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #0f5520;
+    border: 2px solid #0f5520;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+
+    /* standard bootstrap btn transitions */
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.allauth-form-inner-content button:hover,
+.allauth-form-inner-content input[type='submit']:hover {
+    color: #0f5520;
+    background-color: #fffaea;
+    border-color: #0f5520;
+}
+
+.allauth-form-inner-content a {
+    color: #0f5520;
+}
+
 
 /* ------------------------------------ Media Queries */
 
