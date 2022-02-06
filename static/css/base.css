@@ -83,7 +83,7 @@ h6 {
 }
 
 /* ------------------------------------ navbar */
-.site-search::placeholder {
+input[name='q']::placeholder {
     color: #819c88;
 }
 
