@@ -71,16 +71,17 @@
                 </div>
             </div>
             <div class="col-12 col-lg-6">
-                <p class="green-muted">Please fill out the form below to complete your order</p>
+                <p class="green-muted">Please fill out the form below to complete your order.</p>
                 <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                     {% csrf_token %}
-                    <fieldset class="rounded px-3 mb-5">
-                        <legend class="fieldset-label small px-2 w-auto">Details</legend>
+                    <fieldset class="rounded mb-5">
+                        <legend class="fieldset-label small px-2 w-auto">Contact Details</legend>
                         {{ order_form.full_name | as_crispy_field }}
                         {{ order_form.email | as_crispy_field }}
                     </fieldset>
-                    <fieldset class="rounded px-3 mb-5">
-                        <legend class="fieldset-label small px-2 w-auto">Delivery</legend>
+                    <p class="green-muted">Please note we only delivery to the The Netherlands only.</p>
+                    <fieldset class="rounded mb-5">
+                        <legend class="fieldset-label small px-2 w-auto">Delivery Deltails</legend>
                         {{ order_form.delivery_street_address1 | as_crispy_field }}
                         {{ order_form.delivery_street_address2 | as_crispy_field }}
                         {{ order_form.delivery_town_or_city | as_crispy_field }}
@@ -98,7 +99,7 @@
                             {% endif %}
                         </div>
                     </fieldset>
-                    <fieldset class="px-3">
+                    <fieldset>
                         <legend class="fieldset-label small px-2 w-auto">Payment</legend>
                         <!-- A Stripe card element will go here -->
                         <div class="mb-3" id="card-element"></div>

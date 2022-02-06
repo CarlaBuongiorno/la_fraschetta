@@ -28,15 +28,15 @@ class OrderForm(forms.ModelForm):
             'delivery_town_or_city': 'Town or City',
             'delivery_street_address1': 'Street Address 1',
             'delivery_street_address2': 'Street Address 2',
-            'delivery_country': 'Country',
         }
 
         self.fields['full_name'].widget.attrs['autofocus'] = True
         for field in self.fields:
-            if self.fields[field].required:
-                placeholder = f'{placeholders[field]} *'
-            else:
-                placeholder = placeholders[field]
-            self.fields[field].widget.attrs['placeholder'] = placeholder
+            if field != 'delivery_country':
+                if self.fields[field].required:
+                    placeholder = f'{placeholders[field]} *'
+                else:
+                    placeholder = placeholders[field]
+                self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].widget.attrs['class'] = 'stripe-style-input'
             self.fields[field].label = False
