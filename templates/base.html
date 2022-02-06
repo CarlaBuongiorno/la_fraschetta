@@ -76,14 +76,14 @@
 						<div class="dropdown-menu border-0 bg-cream" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
-                                    <a href="" class="dropdown-item green">Add Category</a>
-                                    <a href="" class="dropdown-item green">Add Product</a>
+                                    <a href="{% url 'account_logout' %}" class="dropdown-item green">Add Category</a>
+                                    <a href="{% url 'account_logout' %}" class="dropdown-item green">Add Product</a>
                                 {% endif %}
                                 <a href="" class="dropdown-item green">My Profile</a>
-                                <a href="" class="dropdown-item green">Logout</a>
+                                <a href="{% url 'account_logout' %}" class="dropdown-item green">Logout</a>
                             {% else %}
-                                <a href="" class="dropdown-item green">Register</a>
-                                <a href="" class="dropdown-item green">Login</a>
+                                <a href="{% url 'account_signup' %}" class="dropdown-item green">Register</a>
+                                <a href="{% url 'account_login' %}" class="dropdown-item green">Login</a>
                             {% endif %}
                         </div>
 					</li>

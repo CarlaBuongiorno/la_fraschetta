@@ -52,6 +52,24 @@ h6 {
 }
 
 .btn-green {
+    border: 2px solid #0f5520;
+    background-color: #0f5520;
+    color: #fffaea;
+}
+
+.btn-green:hover {
+    border: 2px solid #0f5520;
+    background-color: #fffaea;
+    color: #0f5520;
+}
+
+.btn-cream {
+    border: 2px solid #0f5520;
+    background-color: #fffaea;
+    color: #0f5520;
+}
+
+.btn-cream:hover {
     background-color: #0f5520;
     color: #fffaea;
 }
@@ -220,16 +238,6 @@ hr {
     text-decoration-color: #0f5520;
 }
 
-.add-to-bag-btn {
-    background-color: #0f5520;
-    color: #fffaea;
-}
-
-.add-to-bag-btn:hover {
-    border-color: #0f5520;
-    background-color: #fff;
-    color: #0f5520;
-}
 
 .continue-shopping-btn:hover {
     text-decoration-color: #886839;
