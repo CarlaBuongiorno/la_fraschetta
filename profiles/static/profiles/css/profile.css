@@ -1,10 +1,7 @@
-/* .profile-form-input::placeholder {
-    color: #819c88;
+.order-history {
+    max-height: 512px; /* height of profile form + submit button */
+    overflow-y: auto;
 }
-
-#profile-update-form .form-control {
-    color: #0f5520;
-} */
 
 #profile-update-form .form-control {
     color: #0f5520;
