@@ -1,0 +1,20 @@
+Hello {{ order.full_name }}!
+
+This is a confirmation of your order at La Fraschetta. Your order information is below:
+
+Order Number: {{ order.order_number }}
+Order Date: {{ order.order_date }}
+
+Order Total: €{{ order.subtotal }}
+Delivery: €{{ order.delivery_cost }}
+Grand Total: €{{ order.grand_total }}
+
+Your order will be shipped to {{ order.delivery_street_address1 }} in {{ order.delivery_town_or_city }}, {{ order.delivery_country }}.
+
+If you have any questions, feel free to contact us at {{ contact_email }}.
+
+Thank you for your order!
+
+Sincerely,
+
+La Fraschetta
