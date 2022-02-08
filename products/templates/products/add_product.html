@@ -37,6 +37,12 @@
             <!-- Add Category -->
             <div class="col-12 col-md-6">
                 <h5 class="green">Add a Category</h5>
+                <form action="" method="POST" class="form mb-2" enctype="multipart/form-data">
+                    <div class="text-right">
+                        <a href="{% url 'products' %}" class="btn btn-red">Cancel</a>
+                        <button class="btn btn-green" type="submit">Add Product</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
