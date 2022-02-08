@@ -98,7 +98,13 @@
                             </small>
                         </p>
                     {% endif %}
-                    </div>
+                </div>
+                {% if request.user.is_superuser %}
+                    <small class="">
+                        <a href="{% url 'edit_product' product.id %}">Edit</a> |
+                        <a href="{% url 'delete_product' product.id %}" class="text-danger">Delete</a>
+                    </small>
+                {% endif %}
                 </div>
                 <div class="row">
                     <div class="col green">
