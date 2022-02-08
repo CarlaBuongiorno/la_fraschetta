@@ -365,6 +365,30 @@ hr {
     color: #0f5520;
 }
 
+/* ------------------------------------ Product Form */
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-checkbox .custom-control-label::before {
+    border-color: #990b16;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #990b16;
+    border-color: #990b16;
+}
 
 /* ------------------------------------ Media Queries */
 
