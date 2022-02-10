@@ -187,7 +187,7 @@ if 'USE_AWS' in os.environ:
         'CacheControl': 'max-age=94608000'
     }
 
-     # Bucket Config
+    # Bucket Config
     AWS_STORAGE_BUCKET_NAME = 'la-fraschetta'
     AWS_S3_REGION_NAME = 'eu-central-1'
     AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
@@ -200,7 +200,7 @@ if 'USE_AWS' in os.environ:
     DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
     MEDIAFILES_LOCATION = 'media'
 
-     # Override static and media URLs in production
+    # Override static and media URLs in production
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
 
