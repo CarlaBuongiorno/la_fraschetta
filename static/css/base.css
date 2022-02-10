@@ -390,6 +390,25 @@ hr {
     border-color: #990b16;
 }
 
+/* ------------------------------------ Gallery */
+
+#gallery {
+    column-count: 2;
+    line-height: 0;
+}
+
+@media (min-width: 768px) {
+    #gallery {
+        column-count: 3;
+    }
+}
+
+@media (min-width: 1200px) {
+    #gallery {
+        column-count: 4;
+    }
+}
+
 /* ------------------------------------ Media Queries */
 
 @media (min-width: 768px) {
