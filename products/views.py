@@ -6,6 +6,9 @@ from django.db.models.functions import Lower
 
 from .models import Product, Category
 from .forms import ProductForm
+from reviews.models import Review
+from reviews.forms import ReviewForm
+from profiles.models import UserProfile
 
 
 def all_products(request):
@@ -63,14 +66,44 @@ def all_products(request):
 
 def product_detail(request, product_id):
     """ A view to show individual product details """
-
     product = get_object_or_404(Product, pk=product_id)
+    reviews = Review.objects.all()
+    if not request.user.is_authenticated:
 
-    context = {
-        'product': product,
-    }
+        template = 'products/product_detail.html'
+        context = {
+            'product': product,
+            'reviews': reviews,
+        }
+        return render(request, template, context)
 
-    return render(request, 'products/product_detail.html', context)
+    else:
+        user_profile = get_object_or_404(UserProfile, user=request.user)
+        if request.method == 'POST':
+            form = ReviewForm(request.POST)
+            if form.is_valid():
+                Review.objects.create(
+                    user_profile=user_profile,
+                    product=product,
+                    rating=request.POST.get('rating'),
+                    review=request.POST.get('review'))
+                messages.success(request, 'Successfully added review.')
+                return redirect(reverse('product_detail', args=[product_id]))
+            else:
+                messages.error(request, 'Failed to add review. \
+                        Please check the form is valid and try again.')
+        else:
+            form = ReviewForm()
+
+        template = 'products/product_detail.html'
+        context = {
+            'form': form,
+            'product': product,
+            'user_profile': user_profile,
+            'reviews': reviews,
+        }
+
+        return render(request, template, context)
 
 
 @login_required

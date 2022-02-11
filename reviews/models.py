@@ -24,4 +24,4 @@ class Review(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return self.title
+        return f'User: {self.user_profile} | Product: {self.product} | Rating: {self.rating}'
