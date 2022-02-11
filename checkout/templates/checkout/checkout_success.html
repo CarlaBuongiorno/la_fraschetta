@@ -22,13 +22,15 @@
                 <hr>
             </div>
         </div>
-        
+
         <div class="row">
             <div class="col-12 col-lg-7 green">
                 <p class="mb-0">Thank you for your order.</p>
-                <p class="mb-0">Your order number is <strong>{{ order.order_number }}</strong>.</p> 
-                <p>A confirmation email has been sent to <strong>{{ order.email }}</strong> on <strong>{{ order.order_date|date:"j F Y" }}</strong>.</p>
-    
+                <p class="mb-0">Your order number is <strong>{{ order.order_number }}</strong>.</p>
+                <p>
+                    A confirmation email has been sent to <strong>{{ order.email }}</strong>
+                    on <strong>{{ order.order_date|date:"j F Y" }}</strong>.
+                </p>
                 <div class="row">
                     <div class="col-12 col-lg-6 order-lg-last">
                         <p class="green-muted">Order summary ({{ product_count }})</p>
@@ -47,91 +49,80 @@
                 </div>
                 <hr class="green-muted mt-0">
                 {% for item in order.lineitems.all %}
-                <div class="row mb-0">
-                    <div class="col-3 mb-1">
-                        <div>
-                            {% if item.product.image %}
-                                <img src="{{ item.product.image.url }}" alt="{{ product.name }}" class="w-100">
-                            {% else %}
-                                <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" class="w-100">
-                            {% endif %}
+                    <div class="row mb-0">
+                        <div class="col-3 mb-1">
+                            <div>
+                                {% if item.product.image %}
+                                    <img src="{{ item.product.image.url }}" alt="{{ product.name }}" class="w-100">
+                                {% else %}
+                                    <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" class="w-100">
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <p class="small green">
+                                {{ item.product.name }}
+                            </p>
+                        </div>
+                        <div class="col-3">
+                            <p class="small green">
+                                {{ item.quantity }}
+                            </p>
+                        </div>
+                        <div class="col-3 text-right">
+                            <p class="small green">€{{ item.product.price }}</p>
                         </div>
                     </div>
-                    <div class="col-3">
-                        <p class="small green">
-                            {{ item.product.name }}
-                        </p>
-                    </div>
-                    <div class="col-3">
-                        <p class="small green">
-                            {{ item.quantity }}
-                        </p>
-                    </div>
-                    <div class="col-3 text-right">
-                        <p class="small green">€{{ item.product.price }}</p>
-                    </div>
-                </div>
-                <hr class="green-muted mt-2">
+                    <hr class="green-muted mt-2">
                 {% endfor %}
-                
                 <div class="row">
                     <div class="col">
                         <small class="green-muted">Deliver To:</small>
                     </div>
                 </div>
-
                 <div class="row">
                     <div class="col-12 col-md-4">
                         <p class="mb-0 green font-weight-bold">{{ order.full_name }}</p>
                     </div>
                 </div>
-
                 <div class="row">
                     <div class="col-12 col-md-4">
                         <p class="mb-0 green font-weight-bold">{{ order.delivery_street_address1 }}</p>
                     </div>
                 </div>
-
                 {% if order.delivery_street_address2 %}
-                <div class="row">
-                    <div class="col-12 col-md-4">
-                        <p class="mb-0 text-black font-weight-bold">{{ order.delivery_street_address2 }}</p>
+                    <div class="row">
+                        <div class="col-12 col-md-4">
+                            <p class="mb-0 text-black font-weight-bold">{{ order.delivery_street_address2 }}</p>
+                        </div>
                     </div>
-                </div>
                 {% endif %}
-
                 <div class="row">
                     <div class="col-12 col-md-4">
                         <p class="mb-0 green font-weight-bold">{{ order.delivery_town_or_city }}</p>
                     </div>
                 </div>
-
                 <div class="row">
                     <div class="col-12 col-md-4">
                         <p class="mb-0 green font-weight-bold">{{ order.delivery_postcode }}</p>
                     </div>
                 </div>
-
                 <div class="row">
                     <div class="col-12 col-md-4">
                         <p class="mb-0 green font-weight-bold">{{ order.delivery_country }}</p>
                     </div>
                 </div>
-
                 <hr class="green-muted mt-2">
-
                 <div class="row">
                     <div class="col">
                         <small class="green-muted">Billing Info:</small>
                     </div>
                 </div>
-                    
                 <div class="row">
                     <div class="col-12 col-md-4">
                         <p class="mb-0 green font-weight-bold">{{ order.order_date|date:"j F Y" }}</p>
                     </div>
                 </div>
-
                 <div class="row">
                     <div class="col-12 col-md-4">
                         <p class="mb-0 green font-weight-bold">Cart Total</p>
@@ -157,27 +148,26 @@
                     </div>
                 </div>
                 <hr class="green-muted mt-2">
-                </div>
             </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-12 col-lg-7 text-right">
-            {% if from_profile %}
-                <a href="{% url 'profile' %}" class="btn btn-green my-2">
-                    <span class="icon mr-2">
-                        <i class="fas fa-angle-left"></i>
-                    </span>
-                    <span>Back to Profile</span>
-                </a>
-            {% else %}
-                <a href="{% url 'products' %}" class="btn btn-green my-2">
-                    <span class="icon mr-2">
-                        <i class="fas fa-shopping-basket"></i>
-                    </span>
-                    <span>Delicatessen</span>
-                </a>
-            {% endif %}
+        <div class="row">
+            <div class="col-12 col-lg-7 text-right">
+                {% if from_profile %}
+                    <a href="{% url 'profile' %}" class="btn btn-green my-2">
+                        <span class="icon mr-2">
+                            <i class="fas fa-angle-left"></i>
+                        </span>
+                        <span>Back to Profile</span>
+                    </a>
+                {% else %}
+                    <a href="{% url 'products' %}" class="btn btn-green my-2">
+                        <span class="icon mr-2">
+                            <i class="fas fa-shopping-basket"></i>
+                        </span>
+                        <span>Delicatessen</span>
+                    </a>
+                {% endif %}
+            </div>
         </div>
     </div>
 {% endblock %}
