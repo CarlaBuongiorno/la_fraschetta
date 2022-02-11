@@ -3,6 +3,18 @@ from .widgets import CustomClearableFileInput
 from .models import Product, Category
 
 
+class CategoryForm(forms.ModelForm):
+    """
+    Set up model form to add a category
+    """
+    class Meta:
+        """Set fields from category model"""
+        model = Category
+        fields = '__all__'
+
+    image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
+
+
 class ProductForm(forms.ModelForm):
     """
     Set up model form to add a product
@@ -11,6 +23,7 @@ class ProductForm(forms.ModelForm):
         """Set fields from product model"""
         model = Product
         fields = '__all__'
+        exclude = ('reviews',)
 
     image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
 

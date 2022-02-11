@@ -5,7 +5,7 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 
 from .models import Product, Category
-from .forms import ProductForm
+from .forms import ProductForm, CategoryForm
 from reviews.models import Review
 from reviews.forms import ReviewForm
 from profiles.models import UserProfile
@@ -174,3 +174,28 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+
+@login_required
+def add_category(request):
+    """Add a category to the store"""
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
+    if request.method == 'POST':
+        form = CategoryForm(request.POST, request.FILES)
+        if form.is_valid():
+            category = form.save()
+            messages.success(request, 'Successfully added category!')
+            return redirect(reverse('products'))
+        else:
+            messages.error(request, 'Failed to add category. Please ensure the form is valid.')
+    else:
+        form = CategoryForm()
+    template = 'products/add_category.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
