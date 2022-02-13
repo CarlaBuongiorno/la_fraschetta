@@ -11,6 +11,7 @@ class CategoryForm(forms.ModelForm):
         """Set fields from category model"""
         model = Category
         fields = '__all__'
+        exclude = ('backend_name',)
 
     image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
 

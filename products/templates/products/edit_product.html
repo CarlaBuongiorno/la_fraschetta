@@ -19,11 +19,10 @@
             </div>
         </div>
         
-        
         <div class="row">
             <!-- Add Product -->
             <div class="col-12 col-md-6">
-                <h5 class="green">Add a Product</h5>
+                <h5 class="green">Edit a Product</h5>
                 <form action="{% url 'edit_product' product.id %}" method="POST" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
                     {% for field in form %}
@@ -36,17 +35,6 @@
                     <div class="text-right">
                         <a href="{% url 'products' %}" class="btn btn-red">Cancel</a>
                         <button class="btn btn-green" type="submit">Update Product</button>
-                    </div>
-                </form>
-            </div>
-            
-            <!-- Add Category -->
-            <div class="col-12 col-md-6">
-                <h5 class="green">Add a Category</h5>
-                <form action="" method="POST" class="form mb-2" enctype="multipart/form-data">
-                    <div class="text-right">
-                        <a href="{% url 'products' %}" class="btn btn-red">Cancel</a>
-                        <button class="btn btn-green" type="submit">Update Category</button>
                     </div>
                 </form>
             </div>
