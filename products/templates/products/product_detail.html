@@ -12,8 +12,8 @@
 {% block content %}
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 col-md-6 col-lg-4 offset-lg-2 mb-3">
-                <div class="image-container my-5">
+            <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+                <div class="image-container mt-5 mb-3">
                     {% if product.image %}
                         <img src="{{ product.image.url }}" alt="{{ product.name }}" class="card-img-top img-fluid">
                     {% else %}
@@ -21,7 +21,7 @@
                     {% endif %}
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4 mb-3">
+            <div class="col-12 col-md-6 col-lg-4 mb-5">
                 <div class="row">
                     <div class="col-6 mt-5">
                         <h1 class="">{{ product.name }}</h1>
@@ -36,7 +36,7 @@
                 </div>
                 <div class="row">
                     <div class="col">
-                    {% if product.reviews == 5 %}
+                    {% if avg_rating == 5 %}
                         <p class="">
                             <small class="green-muted">
                                 <i class="fas fa-star"></i>
@@ -44,10 +44,10 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
-                                ({{ product.reviews|length }} reviews) | <a class="green add-review" href="">Add Your Review</a>
+                                ({{ reviews.count }} reviews) | <a class="green add-review" href="">Add Your Review</a>
                             </small>
                         </p>
-                    {% elif product.reviews == 4 %}
+                    {% elif avg_rating == 4 %}
                         <p>
                             <small class="green-muted">
                                 <i class="fas fa-star"></i>
@@ -55,10 +55,10 @@
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="far fa-star"></i>
-                                ({{ product.reviews|length }} reviews) | <a class="green add-review" href="">Add Your Review</a>
+                                ({{ reviews.count }} reviews) | <a class="green add-review" href="">Add Your Review</a>
                             </small>
                         </p>
-                    {% elif product.reviews == 3 %}
+                    {% elif avg_rating == 3 %}
                         <p>
                             <small class="green-muted">
                                 <i class="fas fa-star"></i>
@@ -66,10 +66,10 @@
                                 <i class="fas fa-star"></i>
                                 <i class="far fa-star"></i>
                                 <i class="far fa-star"></i>
-                                ({{ product.reviews|length }} reviews) | <a class="green add-review" href="">Add Your Review</a>
+                                ({{ reviews.count }} reviews) | <a class="green add-review" href="">Add Your Review</a>
                             </small>
                         </p>
-                    {% elif product.reviews == 2 %}
+                    {% elif avg_rating == 2 %}
                         <p>
                             <small class="green-muted">
                                 <i class="fas fa-star"></i>
@@ -77,10 +77,10 @@
                                 <i class="far fa-star"></i>
                                 <i class="far fa-star"></i>
                                 <i class="far fa-star"></i>
-                                ({{ product.reviews|length }} reviews) | <a class="green add-review" href="">Add Your Review</a>
+                                ({{ reviews.count }} reviews) | <a class="green add-review" href="">Add Your Review</a>
                             </small>
                         </p>
-                    {% elif product.reviews == 1 %}
+                    {% elif avg_rating == 1 %}
                         <p>
                             <small class="green-muted">
                                 <i class="fas fa-star"></i>
@@ -88,7 +88,7 @@
                                 <i class="far fa-star"></i>
                                 <i class="far fa-star"></i>
                                 <i class="far fa-star"></i>
-                                ({{ product.reviews|length }} reviews) | <a class="green add-review" href="">Add Your Review</a>
+                                ({{ reviews.count }} reviews) | <a class="green add-review" href="">Add Your Review</a>
                             </small>
                         </p>
                     {% else %}
@@ -101,8 +101,8 @@
                 </div>
                 {% if request.user.is_superuser %}
                     <small class="">
-                        <a href="{% url 'edit_product' product.id %}">Edit</a> |
-                        <a href="{% url 'delete_product' product.id %}" class="text-danger">Delete</a>
+                        <a href="{% url 'edit_product' product.id %}" class="green">Edit</a> |
+                        <a href="{% url 'delete_product' product.id %}" class="red">Delete</a>
                     </small>
                 {% endif %}
                 </div>
@@ -197,14 +197,14 @@
             </div>        
         </div>
 
-        <div class="row mt-5">
+        <div class="row mt-0">
             <div class="col-12 col-md-5 offset-lg-1">
                 Reviews for...
                 {% for review in reviews %}
-                {{ review.rating }}
-                {{ review.review }}
-                {{ review.user_profile.user }}
-                {{ review.created_on }}
+                    {{ review.rating }}
+                    {{ review.review }}
+                    {{ review.user_profile.user }}
+                    {{ review.created_on }}
                 {% endfor %}
                 <br>
             </div>

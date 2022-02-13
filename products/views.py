@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
+from django.db.models import Avg
 
 from .models import Product, Category
 from .forms import ProductForm, CategoryForm
@@ -16,12 +17,14 @@ def all_products(request):
         A view to show all products, including sorting and search queries.
         Also enables all categories to render in the menus.
     """
-
     products = Product.objects.all()
     query = None
     categories = None
     template_sort_key = None
     direction = None
+
+    reviews = Review.objects.all().filter()
+    avg_rating = reviews.aggregate(Avg('rating'))['rating__avg']
 
     if request.GET:
         if 'sort' in request.GET:
@@ -58,7 +61,9 @@ def all_products(request):
         'products': products,
         'search_term': query,
         'current_categories': categories,
-        'current_sorting': current_sorting
+        'current_sorting': current_sorting,
+        'avg_rating': avg_rating,
+        'reviews': reviews,
     }
 
     return render(request, 'products/products.html', context)
@@ -67,13 +72,14 @@ def all_products(request):
 def product_detail(request, product_id):
     """ A view to show individual product details """
     product = get_object_or_404(Product, pk=product_id)
-    reviews = Review.objects.all()
+    reviews = Review.objects.all().filter(product=product)
+    avg_rating = reviews.aggregate(Avg('rating'))['rating__avg']
     if not request.user.is_authenticated:
-
         template = 'products/product_detail.html'
         context = {
             'product': product,
             'reviews': reviews,
+            'avg_rating': avg_rating,
         }
         return render(request, template, context)
 
@@ -82,7 +88,7 @@ def product_detail(request, product_id):
         if request.method == 'POST':
             form = ReviewForm(request.POST)
             if form.is_valid():
-                Review.objects.create(
+                reviews.create(
                     user_profile=user_profile,
                     product=product,
                     rating=request.POST.get('rating'),
@@ -101,6 +107,7 @@ def product_detail(request, product_id):
             'product': product,
             'user_profile': user_profile,
             'reviews': reviews,
+            'avg_rating': avg_rating,
         }
 
         return render(request, template, context)
