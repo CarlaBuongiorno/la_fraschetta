@@ -16,3 +16,12 @@ class ReviewForm(forms.ModelForm):
                             'rows': '4',
                             'placeholder': 'Add a review'})
     )
+
+    def __init__(self, *args, **kwargs):
+        """
+            Add classes
+        """
+        super().__init__(*args, **kwargs)
+
+        for field in self.fields:
+            self.fields[field].widget.attrs['class'] = 'border-green green'
