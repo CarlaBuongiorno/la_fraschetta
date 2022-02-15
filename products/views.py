@@ -158,9 +158,6 @@ def edit_product(request, product_id):
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
 
-    form = ProductForm(instance=product)
-    messages.info(request, f'You are editing {product.name}')
-
     template = 'products/edit_product.html'
     context = {
         'form': form,
