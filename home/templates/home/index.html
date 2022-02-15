@@ -25,9 +25,9 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="media/carousel2.jpeg" class="d-block w-100" alt="...">
+                <img src="{{ MEDIA_URL }}carousel2.jpg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-sm-block">
-                    <h5 class="display-4 cream">The Taste Of Tradition On Your Table</h5>
+                    <h5 class="display-4 red">The Taste Of Tradition On Your Table</h5>
                     <div class="my-5">
                         <h4>
                             <a href="{% url 'products' %}" class="shop-now-button btn btn-lg text-white text-uppercase py-3">Shop Now</a>
@@ -36,7 +36,7 @@
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="media/carousel3.jpeg" class="d-block w-100" alt="...">
+                <img src="{{ MEDIA_URL }}carousel3.jpeg" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-sm-block">
                     <h5 class="display-4 cream">The Taste Of Tradition On Your Table</h5>
                     <div class="my-5">
@@ -48,4 +48,32 @@
             </div>
         </div>
     </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 text-center my-3">
+                <p class="display-4 font-weight-bold green">Categories</p>
+            </div>
+        </div>
+        {% for c in category_list %}
+        <div class="row">
+                <div class="category col-12 col-md-6">
+                {% if c.image %}
+                    <a href="{% url 'products' %}?category={{ c.backend_name }}">
+                        <img src="{{ c.image.url }}" alt="{{ c.friendly_name }}" class="img-responsive" height="130">
+                    </a>
+                    {% else %}
+                    <a href="{% url 'products' %}?category={{ c.backend_name }}">
+                        <img src="{{ MEDIA_URL }}noimage.png" alt="{{ c.friendly_name }}" class="img-responsive">
+                    </a>
+                {% endif %}
+                <p>
+                    {{ c.friendly_name }}
+                </p>
+                <!-- {{ c.description }} -->
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
 {% endblock %}
