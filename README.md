@@ -211,13 +211,120 @@ The diagram below illustrates the database structure used in this project.
 
 ### Requirements for Deployment
 
-* Python
+* An IDE (such as GitPod or VSCode)
+* Git, for version control
 * GitHub account
+* Python3
+* pip, for Python package installation
 * Heroku account
+* AWS S3 account
+* Stripe account
+* Email account
 
 ### Initial Deployment
 
-* 
+#### This project was deployed in two stages:
+1. _Create a Heroku app, connect to Postgres database and deploy the app without static files._
+
+  * Gitpod Local environment
+    | KEY         | VALUE |
+    | ----------- | ----------- |
+    | DEVELOPMENT | True |
+      
+  * Create an env.py file in gitpod
+
+      ```
+    import os
+
+    os.environ["SECRET_KEY"] = "#YOUR_SECRET_KEY#"
+    os.environ["STRIPE_PUBLIC_KEY"] = "#YOUR_STRIPE_PUBLIC_KEY#"
+    os.environ["STRIPE_SECRET_KEY"] = "#YOUR_STRIPE_SECRET_KEY#"
+    os.environ["DATABASE_URL"] = "#YOUR_DATABASE_URL#"
+    os.environ["STRIPE_WH_SECRET"] = "#YOUR_STRIPE_WH_SECRET#"
+    os.environ["AWS_SECRET_ACCESS_KEY"] = "#YOUR_AWS_SECRET_ACCESS_KEY#"
+    os.environ["AWS_ACCESS_KEY_ID"] = "#YOUR_AWS_ACCESS_KEY_ID#"
+    os.environ["USE_AWS"] = True
+    os.environ["EMAIL_HOST_PASS"] = "#YOUR_EMAIL_APP_PASS_CODE#"
+    os.environ["EMAIL_HOST_USER"] = "#YOUR_EMAIL_ADDRESS#"
+    ```
+  
+  * To deploy this application on Heroku, Heroku needs to understand what dependencies are required, as well as which files to run for this project.
+
+    * Create a requirements file: in the terminal type the following command:
+      * `pip3 freeze --local > requirements.txt`
+      * This file will hold a list of all dependencies required for this project.
+    * Create a procfile: in the terminal type the following command:
+      * `echo web: python run.py > Procfile` 
+      * Make sure there is no blank line after the contents of this file.
+    * Commit and push these changes to GitHub.
+    * Login or sign up to [Heroku](https://www.heroku.com).
+    * Select '**Create New App**' in the top right of your dashboard.
+    * Choose a unique app name, and select the region closest to you, then click '**Create App**'.
+    * Go to the '**Deploy**' tab, find '**Deployment Method**', and select '**GitHub**'.
+    * Find your GitHub repository, and click '**Connect**'.
+    * Navigate to the '**Settings**' tab and click '**Reveal Config Vars**'.
+    * Enter key-value pairs that match those in your project files for the keys below:
+      | KEY                   | VALUE                   |
+      | --------------------- | ----------------------- |
+        SECRET_KEY            | YOUR_SECRET_KEY
+        STRIPE_PUBLIC_KEY     | YOUR_STRIPE_PUBLIC_KEY
+        STRIPE_SECRET_KEY     | YOUR_STRIPE_SECRET_KEY
+        DATABASE_URL          | YOUR_DATABASE_URL
+        STRIPE_WH_SECRET      | YOUR_STRIPE_WH_SECRET
+        AWS_SECRET_ACCESS_KEY | YOUR_AWS_SECRET_ACCESS_KEY
+        AWS_ACCESS_KEY_ID     | YOUR_AWS_ACCESS_KEY_ID
+        USE_AWS               | YOUR_USE_AWS
+        EMAIL_HOST_PASS       | YOUR_EMAIL_HOST_PASS
+        EMAIL_HOST_USER       | YOUR_EMAIL_HOST_USER
+        DISABLE_COLLECTSTATIC | 1 (Add this variable temporarily)
+
+    * In Heroku, navigate to the '**Resources**' tab, and add on '**Heroku Postgres**' with the free plan.
+    * Back up your current sqlite database
+      * As this database was designed without fixtures, make sure manage.py file is connected to mysql database.
+      * Backup the current database for each of desired model and load it into a db.json file: in the terminal type the following command:
+      `python3 manage.py dumpdata your_model_name > db.json`
+      * Repeat this action for each model you wish to transfer to the postgres database (alternatively you can backup your whole database)
+    * Load data from db.json file into postgres:
+      * Create a temporary variable in your environement named: DATABASE_URL with the value of the Postgres URL from Heroku
+      * Install the following packages and freeze the requirements: in the terminal type the following commands:
+        * `pip3 install dj_database_url`
+        * `pip3 install psycopg2-binary`
+        * `pip3 freeze > requirements.txt`
+      * In la-fraschetta > settings.py, add `import dj_database_url` at top of the page
+      * Connect your manage.py file to your postgres database  
+          ```
+          DATABASES = {
+          'default':  dj_database_url.parse('DATABASE_URL')
+          }
+          ```
+    * Load your data from the db.json file into postgres: in the terminal type the following command:
+      * `python3 manage.py loaddata <your_file>.json`
+      * (if you have backed up several json files, repeat this action for each file)
+    * Make migrations to start using PostgreSQL: in the terminal type the following commands:
+      * `python3 manage.py makemigrations`
+      * `python3 manage.py migrate`
+    * Create a superuser to access the Django admin panel: in the terminal type the following command:
+      * `python3 manage.py createsuperuser`
+      * then add a username and password in the terminal
+    * Install the Heroku CLI and login: in the terminal type the following command:
+      * `heroku login` or `heroku login -i`
+    * Remove `DISABLE_COLLECTSTATIC = 1` from your heroku config vars.
+    * Commit and push changes to GitHub.
+    * Add the hostname of your Heroku app to '**ALLOWED HOSTS**' in your settings.py file. This can be found in Heroku Settings > App Name.
+    * Navigate to the '**Deploy**' tab on your Heroku apps Dashboard, and click on '**Enable Automatic Deployment**'.
+    * Click open app to view the application in your browser, your app should display without any images and static files at this stage.
+
+          
+2. _Create and connect an Amazon bucket for storing images and static files._
+  * Create Amazon AWS S3 bucket
+
+
+
+
+
+
+
+
 
 ### How to Fork it
 
