@@ -48,32 +48,32 @@
             </div>
         </div>
     </div>
-
-    <div class="container-fluid">
+    <!-- Categories -->
+    <div class="container">
         <div class="row">
-            <div class="col-12 text-center my-3">
+            <div class="col-12 text-center my-5">
                 <p class="display-4 font-weight-bold green">Categories</p>
             </div>
         </div>
-        {% for c in category_list %}
-        <div class="row">
-                <div class="category col-12 col-md-6">
-                {% if c.image %}
-                    <a href="{% url 'products' %}?category={{ c.backend_name }}">
-                        <img src="{{ c.image.url }}" alt="{{ c.friendly_name }}" class="img-responsive" height="130">
-                    </a>
+        <div class="row pb-3 ml-5 mr-5">
+            {% for c in category_list %}
+                <div class="col-12 col-md-6 text-center pb-3 mb-3">
+                    {% if c.image %}
+                        <a href="{% url 'products' %}?category={{ c.backend_name }}">
+                            <img src="{{ c.image.url }}" alt="{{ c.friendly_name }}" class="img-responsive" height="130">
+                        </a>
                     {% else %}
-                    <a href="{% url 'products' %}?category={{ c.backend_name }}">
-                        <img src="{{ MEDIA_URL }}noimage.png" alt="{{ c.friendly_name }}" class="img-responsive">
-                    </a>
-                {% endif %}
-                <p>
-                    {{ c.friendly_name }}
-                </p>
-                <!-- {{ c.description }} -->
+                        <a href="{% url 'products' %}?category={{ c.backend_name }}">
+                            <img src="{{ MEDIA_URL }}noimage.png" alt="{{ c.friendly_name }}" class="img-responsive" height="130">
+                        </a>
+                    {% endif %}
+                    <p class="pt-3 green">
+                        {{ c.friendly_name }}
+                    </p>
                 </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
-    {% endfor %}
+</div>
 {% endblock %}
+<!-- {{ c.description }} -->

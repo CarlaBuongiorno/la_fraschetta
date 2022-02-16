@@ -185,16 +185,10 @@ input[name='q']::placeholder {
 
 /* ------------------------------------ home */
 
-.category {
-    display: block;
-    margin-bottom: 20px;
-    position: relative;
-}
-
 .img-responsive {
     display: block;
-    max-width: 100%;
-    height: auto;
+    width: 100%;
+    object-fit: cover;
 }
 
 /* ------------------------------------ products page */
