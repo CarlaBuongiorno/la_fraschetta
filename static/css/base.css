@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Italiana&family=Italianno&display=swap');
+
+/* font-family: 'Italiana', serif;
+font-family: 'Italianno', cursive; */
+
 html {
     height: 100%;
 }
@@ -13,6 +18,11 @@ h3,
 h4,
 h6 {
     color: #0f5520;
+    font-family: 'Italiana', serif;
+}
+
+p {
+    font-family: 'Italiana', serif;
 }
 
 /* ------------------------------------ colours */
@@ -184,6 +194,14 @@ input[name='q']::placeholder {
 }
 
 /* ------------------------------------ home */
+
+.categories {
+    width: 80%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 0;
+    padding: 0;
+}
 
 .img-responsive {
     display: block;
