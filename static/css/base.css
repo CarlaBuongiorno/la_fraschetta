@@ -195,6 +195,7 @@ input[name='q']::placeholder {
 
 /* ------------------------------------ home */
 
+/* Credit -> https://www.w3schools.com/css/tryit.asp?filename=trycss_ex_images_card */
 .categories {
     width: 80%;
     background-color: white;
