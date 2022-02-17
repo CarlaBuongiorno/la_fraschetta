@@ -222,7 +222,34 @@ The site was tested on the following physical devices:
 
 ### Solved Bugs
 
-1. 
+1. The 'My Account' dropdown menu was not working. To fix this I Changed the Bootstrap version to Bootstrap4 instead of Bootstrap5 and added jquery to the head in base.html.
+![Categories Dropdown Menu](documentation/screenshots/search_categories.png)
+
+2. When trying to render the products in the products.html template, they would not render. Instead I would get a 404 Page Not Found error.
+![Products 404](documentation/screenshots/render_products.png)
+The issue was that the `products/` path for the products app was inside the products app urls instead of the project level urls.
+
+3. Search and filter categories would only work for a single word category eg: 'dolci', but not for 2 word category eg: `pasta_risotto`. It appeared correctly in the url `pasta,risotto`, but returned no products.
+![Toasts](documentation/screenshots/search_categories.png)
+To fix this, I added a comma in the html to separate the words instead of the actual backend name => `pasta,risotto` instead of `pasta_risotto`.
+
+4. The 'Categories' list disappeared from main nav dropdown menu while on home page. It seemed I couldn't access the product views from the project level template html file.
+The solution was a Context Processor. I had to separate the categories list from the products view and put it into a _contexts.py_ file to make it available site wide in order for the dropdown categories in the main menu to access the category list.
+
+5. The logo would disappear while on the Products page. The problem was that `<src>` was missing a '/' --> `src="media/logo.png"` instead of `src="/media/logo.png"`.
+![Logo Disappeared](documentation/screenshots/search_categories.png)
+
+6. When making a payment at checkout, an error would occur on the card field "Received unknown parameter: payment_method_data[shipping]"
+![Stripe Card Element Error](documentation/screenshots/unknown_parameter.png)
+A closer look at the `payment_method` object in the 'stripe_elements.js' file showed that there was a closing bracket missing on the `billing_method` and the `shipping_method` was over-indented. Fixing these to things resolved the issue.
+![Billing and Shipping Method](documentation/screenshots/billing_shipping_method.png)
+
+7. The Stripe Card Element was disappeared on the Checkout form. The issue was again in the 'stripe_elements.js' file. There was a comma missing from the `payment_method` object.
+![Stripe Card Element](documentation/screenshots/stripe_card_element.png)
+
+8. Some of the toast messages were falling off the page.
+![Toasts](documentation/screenshots/toasts_positioning.png)
+To fix this I had to set a `min-width` css property to the `.message-container` class in order to force its position. 
 
 ### Known Bugs
 
