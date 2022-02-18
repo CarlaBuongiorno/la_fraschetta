@@ -58,6 +58,11 @@ def all_products(request):
 
     current_sorting = f'{template_sort_key}_{direction}'
 
+    wishlist = None
+    if request.user.is_authenticated:
+        user = get_object_or_404(UserProfile, user=request.user)
+        wishlist = WishList.objects.filter(user_profile=user)
+
     context = {
         'products': products,
         'search_term': query,
@@ -65,6 +70,8 @@ def all_products(request):
         'current_sorting': current_sorting,
         'avg_rating': avg_rating,
         'reviews': reviews,
+        'user': user,
+        'wishlist': wishlist,
     }
 
     return render(request, 'products/products.html', context)

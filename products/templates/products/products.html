@@ -80,36 +80,34 @@
                         <div class="col-sm-6 col-md-6 col-lg-3 mb-4">
                             <div class="card h-100 border-green">
                                 {% if product.image %}
-                                <a href="{% url 'product_detail' product.id %}">
-                                    <img src="{{ product.image.url }}" alt="{{ product.name }}" class="card-img-top img-fluid">
-                                    {% if request.user.is_authenticated %}
-                                            <a class="d-none d-lg-inline-block green" id="heart" href="#">
-                                                <i class="far fa-heart fa-lg ml-1 green"></i>
-                                                <i class="fas fa-heart fa-lg ml-1 red d-none"></i>
-                                        {% else %}
-                                            <a class="d-none d-lg-inline-block green" href="{% url 'account_signup' %}" id="heart">
-                                                <i class="far fa-heart fa-lg ml-1 green"></i>
-                                                <i class="fas fa-heart fa-lg ml-1 red d-none"></i>
-                                            </a>
-                                        {% endif %}
-                                </a>
+                                    <a href="{% url 'product_detail' product.id %}">
+                                        <img src="{{ product.image.url }}" alt="{{ product.name }}" class="card-img-top img-fluid">
+                                    </a>
                                 {% else %}
-                                <a href="{% url 'product_detail' product.id %}">
-                                    <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" class="card-img-top img-fluid">
-                                </a>
+                                    <a href="{% url 'product_detail' product.id %}">
+                                        <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" class="card-img-top img-fluid">
+                                    </a>
                                 {% endif %}
+
+                                {% if request.user.is_authenticated %}
+
+                                    <!-- loop over all items (if any) in the wishlist -->
+                                    {% for item in wishlist %}
+                                        <!-- if the outter loop of all products ID matches the inner loop of wishlist items -->
+                                        {% if product.id == item.product.id %}
+                                            <i class="fas fa-heart fa-lg ml-1 red"></i>
+                                        {% endif %}
+                                    {% endfor %}
+
+                                {% else %}
+                                    <a class="d-none d-lg-inline-block green" href="{% url 'account_signup' %}">
+                                        <i class="far fa-heart fa-lg ml-1 green"></i>
+                                    </a>
+                                {% endif %}
+                                
+                                
                                 <div class="card-body pb-0">
                                     <p class="mb-0 green">{{ product.name }}
-                                        {% if request.user.is_authenticated %}
-                                            <a class="d-none d-lg-inline-block green" href="#">
-                                                <i class="far fa-heart fa-lg ml-1 green"></i>
-                                                <i class="fas fa-heart fa-lg ml-1 red d-none"></i>
-                                        {% else %}
-                                            <a class="nav-link" href="{% url 'account_signup' %}">
-                                                <i class="far fa-heart fa-lg ml-1 green"></i>
-                                                <i class="fas fa-heart fa-lg ml-1 red d-none"></i>
-                                            </a>
-                                        {% endif %}
                                     </p>
                                 </div>
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
