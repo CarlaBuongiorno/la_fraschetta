@@ -28,17 +28,17 @@
                     </div>
                     <div class="col-6 mt-5">
                         <p class="text-right">
-                            <span class="d-none d-lg-inline-block green">Add To Wishlist: </span>
                             {% if request.user.is_authenticated %}
-                            {% if in_user_wishlist %}
-                            <!-- <a class="d-none d-lg-inline-block green" href=""> -->
-                                <a class="red wishlist" data-bs-toggle="tooltip" data-bs-placement="top" title="Remove from saved" href="">
-                                    <i class="fas fa-heart fa-lg ml-1 red d-none"></i>
-                                </a>
+                                {% if wishlist %}
+                                    <span class="d-none d-lg-inline-block red">Remove from Wishlist: </span>
+                                    <a class="" href="{% url 'remove_from_wishlist' product.id %}">
+                                        <i class="fas fa-heart fa-lg ml-1 red"></i>
+                                    </a>
                                 {% else %}
-                                <a class="wishlist" data-bs-toggle="tooltip" data-bs-placement="top" title="Save item" href="{% url 'add_to_wishlist' product.id %}">
-                                    <i class="far fa-heart fa-lg ml-1 green"></i>
-                                </a>
+                                    <span class="d-none d-lg-inline-block green">Add to Wishlist: </span>
+                                    <a class="" href="{% url 'add_to_wishlist' product.id %}">
+                                        <i class="far fa-heart fa-lg ml-1 green"></i>
+                                    </a>
                                 {% endif %}
                             {% else %}
                                 <a class="d-none d-lg-inline-block green" href="{% url 'account_signup' %}">

@@ -10,6 +10,7 @@ from .forms import ProductForm, CategoryForm
 from reviews.models import Review
 from reviews.forms import ReviewForm
 from profiles.models import UserProfile
+from wishlist.models import WishList
 
 
 def all_products(request):
@@ -74,6 +75,7 @@ def product_detail(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     reviews = Review.objects.all().filter(product=product)
     avg_rating = reviews.aggregate(Avg('rating'))['rating__avg']
+
     if not request.user.is_authenticated:
         template = 'products/product_detail.html'
         context = {
@@ -85,6 +87,9 @@ def product_detail(request, product_id):
 
     else:
         user_profile = get_object_or_404(UserProfile, user=request.user)
+        # find a match to the product and user
+        wishlist = WishList.objects.filter(user_profile=user_profile, product=product_id)
+
         if request.method == 'POST':
             form = ReviewForm(request.POST)
             if form.is_valid():
@@ -108,6 +113,7 @@ def product_detail(request, product_id):
             'user_profile': user_profile,
             'reviews': reviews,
             'avg_rating': avg_rating,
+            'wishlist': wishlist,
         }
 
         return render(request, template, context)
