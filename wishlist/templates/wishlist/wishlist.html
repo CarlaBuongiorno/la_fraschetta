@@ -16,6 +16,9 @@
                 <hr>
                 <h2 class="">My Wishlist</h2>
                 <hr>
+                {% for product in wishlist %}
+                    {{ product.product.name }}
+                {% endfor %}
             </div>
         </div>
         

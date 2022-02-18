@@ -30,8 +30,6 @@ class UserProfile(models.Model):
     country = CountryField(blank_label='Country', null=True,
                            max_length=80, blank=True,
                            countries=G8Countries)
-    wishlist_items = models.ManyToManyField(Product, blank=True,
-                                            related_name='items')
 
     def __str__(self):
         return self.user.username
