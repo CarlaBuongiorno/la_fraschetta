@@ -6,6 +6,8 @@ from django.dispatch import receiver
 from django_countries import Countries
 from django_countries.fields import CountryField
 
+from products.models import Product
+
 
 class UserProfile(models.Model):
     """
@@ -26,8 +28,10 @@ class UserProfile(models.Model):
     town_or_city = models.CharField(max_length=40, null=True, blank=True)
     postcode = models.CharField(max_length=20, null=True, blank=True)
     country = CountryField(blank_label='Country', null=True,
-                                    max_length=80, blank=True,
-                                    countries=G8Countries)
+                           max_length=80, blank=True,
+                           countries=G8Countries)
+    wishlist_items = models.ManyToManyField(Product, blank=True,
+                                            related_name='items')
 
     def __str__(self):
         return self.user.username

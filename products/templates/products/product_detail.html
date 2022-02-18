@@ -29,8 +29,16 @@
                     <div class="col-6 mt-5">
                         <p class="text-right">
                             <span class="d-none d-lg-inline-block green">Add To Wishlist: </span>
-                            <i class="far fa-heart fa-lg ml-1 green"></i>
-                            <i class="fas fa-heart fa-lg ml-1 red d-none"></i>
+                            {% if request.user.is_authenticated %}
+                                <a class="d-none d-lg-inline-block green" href="#">
+                                    <i class="far fa-heart fa-lg ml-1 green"></i>
+                                    <i class="fas fa-heart fa-lg ml-1 red d-none"></i>
+                            {% else %}
+                                <a class="d-none d-lg-inline-block green" href="{% url 'account_signup' %}">
+                                    <i class="far fa-heart fa-lg ml-1 green"></i>
+                                    <i class="fas fa-heart fa-lg ml-1 red d-none"></i>
+                                </a>
+                            {% endif %}
                         </p>
                     </div>
                 </div>

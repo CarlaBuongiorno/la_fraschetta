@@ -9,7 +9,7 @@ class UserProfileForm(forms.ModelForm):
     class Meta:
         """Set up model and fields"""
         model = UserProfile
-        exclude = ('user',)
+        exclude = ('user', 'wishlist_items')
 
     def __init__(self, *args, **kwargs):
         """
