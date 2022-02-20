@@ -39,7 +39,8 @@ class Product(models.Model):
                                  decimal_places=2,
                                  null=True,
                                  blank=True)
-    # Positive Integer -> https://docs.djangoproject.com/en/4.0/ref/models/fields/
+    # Positive Integer ->
+    # https://docs.djangoproject.com/en/4.0/ref/models/fields/
     stock = models.PositiveSmallIntegerField(default=1,
                                              validators=[
                                                 MaxValueValidator(500),

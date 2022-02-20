@@ -5,12 +5,12 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 from django.db.models import Avg
 
-from .models import Product, Category
-from .forms import ProductForm, CategoryForm
 from reviews.models import Review
 from reviews.forms import ReviewForm
 from profiles.models import UserProfile
 from wishlist.models import WishList
+from .models import Product, Category
+from .forms import ProductForm, CategoryForm
 
 
 def all_products(request):
@@ -50,10 +50,12 @@ def all_products(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(request,
+                               "You didn't enter any search criteria!")
                 return redirect(reverse('products'))
 
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = Q(name__icontains=query) | Q(
+                description__icontains=query)
             products = products.filter(queries)
 
     current_sorting = f'{template_sort_key}_{direction}'
@@ -94,7 +96,8 @@ def product_detail(request, product_id):
     else:
         user_profile = get_object_or_404(UserProfile, user=request.user)
         # find a match to the product and user
-        wishlist = WishList.objects.filter(user_profile=user_profile, product=product_id)
+        wishlist = WishList.objects.filter(
+                   user_profile=user_profile, product=product_id)
 
         if request.method == 'POST':
             form = ReviewForm(request.POST)
@@ -140,7 +143,8 @@ def add_product(request):
             messages.success(request, 'Successfully added product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+            messages.error(request, 'Failed to add product. \
+                Please ensure the form is valid.')
     else:
         form = ProductForm()
     template = 'products/add_product.html'
@@ -166,7 +170,8 @@ def edit_product(request, product_id):
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(request, 'Failed to update product. \
+                Please ensure the form is valid.')
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
@@ -207,7 +212,8 @@ def add_category(request):
             messages.success(request, 'Successfully added category!')
             return redirect(reverse('products'))
         else:
-            messages.error(request, 'Failed to add category. Please ensure the form is valid.')
+            messages.error(request, 'Failed to add category. \
+                Please ensure the form is valid.')
     else:
         form = CategoryForm()
     template = 'products/add_category.html'

@@ -1,8 +1,8 @@
-from django.conf import settings
 from .models import Category
 
 
 def all_categories(request):
+    """ View to return categories to the context"""
 
     category_list = Category.objects.all()
 

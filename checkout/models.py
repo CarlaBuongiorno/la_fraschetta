@@ -16,7 +16,8 @@ class Order(models.Model):
     Stores order details
     """
 
-    # Credit -> Customize country list: https://pypi.org/project/django-countries/#customize-the-country-list
+    # Credit -> Customize country list:
+    # https://pypi.org/project/django-countries/#customize-the-country-list
     class G8Countries(Countries):
         """ Restrict delivery countries to NL only """
         only = ['NL']
@@ -62,7 +63,8 @@ class Order(models.Model):
         self.subtotal = self.lineitems.aggregate(
                             Sum('lineitem_total'))['lineitem_total__sum'] or 0
         if self.subtotal < settings.FREE_DELIVERY_THRESHOLD:
-            self.delivery_cost = self.subtotal * settings.STANDARD_DELIVERY_PERCENTAGE / 100
+            self.delivery_cost = self.subtotal * \
+                                 settings.STANDARD_DELIVERY_PERCENTAGE / 100
         else:
             self.delivery_cost = 0
         self.grand_total = self.subtotal + self.delivery_cost

@@ -11,9 +11,16 @@ class CategoryForm(forms.ModelForm):
         """Set fields from category model"""
         model = Category
         fields = '__all__'
-        exclude = ('backend_name',)
 
-    image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
+    image = forms.ImageField(label='Image', required=False,
+                             widget=CustomClearableFileInput)
+
+    def __init__(self, *args, **kwargs):
+        """Add widget attribute to add a category"""
+        super().__init__(*args, **kwargs)
+        self.fields['backend_name'].widget.attrs['autofocus'] = True
+        for field_name, field in self.fields.items():
+            field.widget.attrs['class'] = 'border-green'
 
 
 class ProductForm(forms.ModelForm):
@@ -26,7 +33,8 @@ class ProductForm(forms.ModelForm):
         fields = '__all__'
         exclude = ('reviews', 'rating',)
 
-    image = forms.ImageField(label='Image', required=False, widget=CustomClearableFileInput)
+    image = forms.ImageField(label='Image', required=False,
+                             widget=CustomClearableFileInput)
 
     def __init__(self, *args, **kwargs):
         """

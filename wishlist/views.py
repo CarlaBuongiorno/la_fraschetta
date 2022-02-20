@@ -35,7 +35,8 @@ def add_to_wishlist(request, product_id):
         user_profile=user,
         product=product
     )
-    messages.success(request, f'{product.name} has been added to your Wishlist!')
+    messages.success(request,
+                     f'{product.name} has been added to your Wishlist!')
 
     return redirect(reverse('product_detail', args=[product.id]))
 
@@ -51,6 +52,7 @@ def remove_from_wishlist(request, product_id):
     # find a match to the product and user, then .delete() it
     WishList.objects.filter(product=product, user_profile=user).delete()
 
-    messages.info(request, f'{product.name} has been removed from your Wishlist!')
+    messages.info(request,
+                  f'{product.name} has been removed from your Wishlist!')
 
     return redirect(reverse('product_detail', args=[product.id]))
