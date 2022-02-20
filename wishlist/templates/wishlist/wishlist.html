@@ -10,7 +10,7 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container mb-2">
+    <div class="container pb-5">
         <div class="row">
             <div class="col my-4 text-center">
                 <hr>
@@ -55,18 +55,27 @@
                                     </td>
                                 </tr>
                             {% endfor %}
-                            
                         </table>
                     </div>
                 {% else %}
                     <p class="lead mb-5 green">You have no products in your Wishlist.</p>
-                    <a href="{% url 'products' %}" class="btn btn-lg">
-                        <span class="icon">
-                            <i class="fas fa-chevron-left green"></i>
-                        </span>
-                        <span class="green">Keep Shopping</span>
-                    </a>
                 {% endif %}
+            </div>
+        </div>   
+        <div class="row mt-2">
+            <div class="col text-center">
+                <a href="{% url 'products' %}" class="btn btn-green">
+                    <span class="icon">
+                        <i class="fas fa-chevron-left"></i>
+                    </span>
+                    <span>Delicatessen</span>
+                </a>
+                <a href="{% url 'profile' %}" class="btn btn-cream my-2">
+                    <span>My Profile</span>
+                    <span class="icon">
+                        <i class="fas fa-chevron-right"></i>
+                    </span>
+                </a>
             </div>
         </div>
     </div>
