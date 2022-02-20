@@ -88,27 +88,21 @@
                                         <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" class="card-img-top img-fluid">
                                     </a>
                                 {% endif %}
-
-                                {% if request.user.is_authenticated %}
-
-                                    <!-- loop over all items (if any) in the wishlist -->
-                                    {% for item in wishlist %}
-                                        <!-- if the outter loop of all products ID matches the inner loop of wishlist items -->
-                                        {% if product.id == item.product.id %}
-                                            <i class="fas fa-heart fa-lg ml-1 red"></i>
-                                        {% endif %}
-                                    {% endfor %}
-
-                                {% else %}
-                                    <a class="d-none d-lg-inline-block green" href="{% url 'account_signup' %}">
-                                        <i class="far fa-heart fa-lg ml-1 green"></i>
-                                    </a>
-                                {% endif %}
-                                
-                                
                                 <div class="card-body pb-0">
-                                    <p class="mb-0 green">{{ product.name }}
-                                    </p>
+                                    <div class="row">
+                                        <div class="col-10 mr-0 pr-0 green">
+                                            {{ product.name }}
+                                        </div>
+                                        <!-- loop over all items (if any) in the wishlist -->
+                                        {% for item in wishlist %}
+                                            <!-- if the outter loop of all products ID matches the inner loop of wishlist items -->
+                                            {% if product.id == item.product.id %}
+                                                    <div class="col-1 mx-0 px-0">
+                                                        <i class="fas fa-heart fa-lg red"></i>
+                                                    </div>
+                                            {% endif %}
+                                        {% endfor %}
+                                    </div>
                                 </div>
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
                                     <div class="row">
@@ -176,14 +170,19 @@
                                                     </small>
                                                 </p>
                                             {% endif %}
-                                            {% if request.user.is_superuser %}
+                                        </div>
+                                    </div>
+                                    
+                                    {% if request.user.is_superuser %}
+                                        <div class="row">
+                                            <div class="col">
                                                 <small class="ml-0">
                                                     <a href="{% url 'edit_product' product.id %}" class="green">Edit</a> |
                                                     <a href="{% url 'delete_product' product.id %}" class="red">Delete</a>
                                                 </small>
-                                            {% endif %}
+                                            </div>
                                         </div>
-                                    </div>
+                                    {% endif %}
                                 </div>
                             </div>
                         </div>
