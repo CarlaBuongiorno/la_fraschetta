@@ -70,7 +70,6 @@ def all_products(request):
         'current_sorting': current_sorting,
         'avg_rating': avg_rating,
         'reviews': reviews,
-        'user': user,
         'wishlist': wishlist,
     }
 
