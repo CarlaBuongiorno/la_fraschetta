@@ -251,6 +251,13 @@ A closer look at the `payment_method` object in the 'stripe_elements.js' file sh
 ![Toasts](documentation/screenshots/toasts_positioning.png)
 To fix this I had to set a `min-width` css property to the `.message-container` class in order to force its position. 
 
+9. Stripe 'payment_intent.success' was failing with a server 500 error.
+![payment_intent.success](documentation/screenshots/stripe.png)
+The problem was in the 'webhook_handler.py' file. In the `handle_payment_intent_succeeded` function, while attempting to get the order objects, I had `grand_total__iexact=grand_total,`.
+![iexact](documentation/screenshots/iexact.png)
+Using `__iexact` on an integer means you're calling upper() on a float, which will result in an error.
+Changing this to just `grand_total=grand_total`, the error went away and payments were successful.
+
 ### Known Bugs
 
 * 
