@@ -23,7 +23,7 @@ def all_products(request):
     categories = None
     template_sort_key = None
     direction = None
-
+    
     reviews = Review.objects.all().filter()
     avg_rating = reviews.aggregate(Avg('rating'))['rating__avg']
 
