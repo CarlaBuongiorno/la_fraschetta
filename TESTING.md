@@ -53,7 +53,7 @@
             * Warning messages
 
     * I wish to view all the products so that I can choose some to buy.
-        * On the _Products_ page, all the products are displayed with four in a row on large screen,two in a row on md screens and one underneath the other on small screens.
+        * On the _Products_ page, all the products are displayed with one underneath the other on small screens, two in a row on md screens and four in a row on large screens.
             * ![Products Page](documentation/screenshots/products.png)
         * A user has the ability to sort the products by _Price_, _Name_, _Category_, and _Ratings_.
             * ![Sort By](documentation/screenshots/sort-by.png)
@@ -78,9 +78,24 @@
 ### Registration and User Accounts
 * #### As a Site User:
     * I wish to create an account for future purchases so that I can view my order history and confirmations, and save my payment information.
+        * A user is able to register for an acount by clicking the 'Register' link in the _My Account_ dropdown in the main navigation menu.
+            * ![Register Link](documentation/screenshots/login-register.png)
+        * A __Sign Up__ form is presented to the user to complete, and a message is displayed to inform the user they will receive an email and should click on the link from the email and then on the 'Confirm' email button to complete the verification process.
+            * ![Register Form](documentation/screenshots/register-verify.png)
+
     * I wish to easily login or logout so that I can access my profile and manage my personal details.
+        * A user is able to login to their acount by clicking the 'Login' link in the _My Account_ dropdown in the main navigation menu.
+            * ![Login Link](documentation/screenshots/login-register.png)
+        * A __Sign In__ form is be presented to the user to complete, and a success toast message will display once logged in.
+            * ![Login Form](documentation/screenshots/sign-in.png)
+        * A user is able to logout of their acount by clicking the 'Logout' link in the _My Account_ dropdown in the main navigation menu.
+            * ![Logout](documentation/screenshots/logout-profile.png)
+        * A __Sign Out__ confirmation button is be presented to the user, and a success toast message will display once signed out.
+            * ![Sign Out Form](documentation/screenshots/signout-confirmation.png)
+
     * I wish to be able to request a password reset so that I can receive an email to reset my password incase I forget it.
-    * I wish to get an email confirmation after registering so that I can verify my registration was successful.
+        * On the __Sign In__ page, a user can click the 'Forgot Password?' link. This will take the user to a page where they have to enter their email. Upon receipt of an email, the user can follow the emailed link back to a page where they can enter a new password. They will then receive a message that the password change was successful.
+            * ![Password Reset](documentation/screenshots/password-reset.png)
 
 ---
 

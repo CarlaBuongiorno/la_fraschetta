@@ -65,7 +65,6 @@
     * I wish to create an account for future purchases so that I can view my order history and confirmations, and save my payment information.
     * I wish to easily login or logout so that I can access my profile and manage my personal details.
     * I wish to be able to request a password reset so that I can receive an email to reset my password incase I forget it.
-    * I wish to get an email confirmation after registering so that I can verify my registration was successful.
 
 #### Reviews and Wishlist
 * As a Registered User:

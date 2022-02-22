@@ -20,7 +20,7 @@
 
     {% if socialaccount_providers %}
       <p>{% blocktrans with site.name as site_name %}Please sign in with one
-      of your existing third party accounts. Or, <a href="{{ signup_url }}">sign up</a>
+      of your existing third party accounts. Or, <a class="red" href="{{ signup_url }}">sign up</a>
       for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
 
       <div class="socialaccount_ballot">
@@ -37,7 +37,7 @@
 
     {% else %}
       <p>{% blocktrans %}If you have not created an account yet, then please
-      <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
+      <a class="red" href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
     {% endif %}
 
     <form class="login" method="POST" action="{% url 'account_login' %}">
@@ -49,7 +49,7 @@
       <a class="btn btn-cream" href="{% url 'home' %}">Home</a>
       <button class="primaryAction btn btn-green rounded" type="submit">{% trans "Sign In" %}</button>
       <p class="mt-2">
-        <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+        <a class="button red secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
       </p>
     </form>
   </div>
