@@ -9,7 +9,7 @@
     </div>
     <div class="toast-body green">
         <div class="row">
-            <div class="col">
+            <div class="col toast-cursive">
                 {{ message }}
                 <hr class="mt-1 mb-3 green">
             </div>
@@ -28,26 +28,26 @@
                         </div>
                         <div class="col-9">
                             <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                            <p class="my-0 small green-muted">Qty: {{ item.quantity }}</p>
+                            <p class="my-0 green-muted">Qty: {{ item.quantity }}</p>
                         </div>
                     </div>
                 {% endfor %}
             </div>
             <div class="row">
                 <div class="col">
-                    <strong><p class="mt-3 mb-1">
+                    <strong><p class="my-2">
                         Total{% if free_delivery_delta > 0 %} (Exc. delivery){% endif %}: 
                         <span class="float-right">€{{ total|floatformat:2 }}</span>
                     </p></strong>
                     {% if free_delivery_delta > 0 %}
-                        <p class="mb-0 p-2 bg-warning shadow-sm text-center">
+                        <p class="mb-0 p-2 bg-cream shadow-sm text-center red border-red">
                             Spend <strong>€{{ free_delivery_delta }}</strong> more to get free next day delivery!
                         </p>
                     {% endif %}
                     <a href="{% url 'view_bag' %}" class="btn btn-green btn-block">
                         <span>Go To Secure Checkout</span>
                         <span class="icon">
-                            <i class="fas fa-lock cream"></i>
+                            <i class="fas fa-lock"></i>
                         </span>
                     </a>
                 </div>

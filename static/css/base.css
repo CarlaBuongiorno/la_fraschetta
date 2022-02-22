@@ -20,6 +20,7 @@ h5,
 h6 {
     color: #0f5520;
     font-family: 'Italiana', serif;
+    letter-spacing: 1px;
 }
 
 p {
@@ -34,6 +35,12 @@ p {
 .nav-italiana {
     font-family: 'Italiana', serif;
     font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.toast-cursive {
+    font-family: cursive;
+    font-size: 16px;
 }
 
 /* ------------------------------------ colours */
@@ -72,6 +79,11 @@ p {
 
 .bg-red {
     background-color: #990b16;
+}
+
+.border-red {
+    border: solid 1px;
+    border-color: #990b16;
 }
 
 /* ------------------------------------ btn colours */
