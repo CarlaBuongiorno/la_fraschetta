@@ -22,7 +22,7 @@ class Order(models.Model):
         """ Restrict delivery countries to NL only """
         only = ['NL']
 
-    order_number = models.CharField(max_length=27, null=False, editable=False)
+    order_number = models.CharField(max_length=32, null=False, editable=False)
     user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL,
                                      null=True, related_name='orders')
     full_name = models.CharField(max_length=50, null=False, blank=False)

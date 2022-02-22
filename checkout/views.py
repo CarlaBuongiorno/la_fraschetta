@@ -170,8 +170,8 @@ def checkout_success(request, order_number):
                 user_profile_form.save()
 
     messages.success(request, f'Order successfully processed! \
-        Your order number is \
-        {order_number}. A confirmation email \
+        The first 10 characters of your order number is \
+        {order_number[0:10]}. A confirmation email \
         will be sent to {order.email}.')
 
     if 'bag' in request.session:
