@@ -37,7 +37,7 @@
         * The __Delicatessen__ menu item is a dropdown displaying a list of all the categories a user can navigate to in order to find the relevant products in that category.
             * ![Main Menu Large Screen](documentation/screenshots/main-nav-lg.png)
             * ![Main Menu Small Screen](documentation/screenshots/main-nav-sm.png)
-        * Scrolling down the _Home_ page, the list of categories are displayed and clicking into any of them will take the user to the _Product_ page displaying the relevant products in that category.
+        * Scrolling down the _Home_ page, the list of categories are displayed and clicking into any of them will take the user to the _Products_ page displaying the relevant products in that category.
             * ![Home Categories Large and Small Screen](documentation/screenshots/home-categories.png)
         * On the _Products_ page of a large screen, there is a side navigation menu displaying the list of categories where a user can navigate/filter through the products by means of their category groups. On a small screen this is displayed by means of a select-box.
             * ![Product Page Categories Menu](documentation/screenshots/categories-menu.png)
@@ -45,9 +45,27 @@
             * ![Navigation Buttons](documentation/screenshots/nav-btns.png)
 
     * I wish to get visual feedback so that I see when an action has been completed.
+        * There are validation messages for all the forms if a user doesn't enter the correct format of information.
+        * Toast messages are presented to the user in the form of:
+            * Success messages
+            * Error messages
+            * Info messages (containing information for the user)
+            * Warning messages
+
     * I wish to view all the products so that I can choose some to buy.
+        * On the _Products_ page, all the products are displayed with four in a row on large screen,two in a row on md screens and one underneath the other on small screens.
+            * ![Products Page](documentation/screenshots/products.png)
+        * A user has the ability to sort the products by _Price_, _Name_, _Category_, and _Ratings_.
+            * ![Sort By](documentation/screenshots/sort-by.png)
+
     * I wish to search for a specific product or category so that I may find the item that I want.
+        * There is a _search bar_ in the main navigation menu where a user can search for products or categories.
+            * ![Search Site](documentation/screenshots/search-site.png)
+            * ![Search for Spaghetti](documentation/screenshots/search-spaghetti.png)
+            (Two products are found for search term 'spaghetti'. The second product (Pecorino) contains the word 'spaghetti' in its description.)
+    
     * I wish to view full product information so that I can see the details of a specific product including the price, description, product rating and product image.
+        * Clicking on a product
     * I wish to easily see my bag total so that I can stick to my budget.
 
 ---
