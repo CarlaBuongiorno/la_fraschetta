@@ -214,17 +214,17 @@
         </div>
         <!-- Reviews -->
         <div class="row mt-0 pb-5">
-            <div class="col-12 col-md-5 offset-lg-1 green mr-3">
+            <div class="col-10 offset-1 col-sm-8 offset-sm-2 col-md-6 offset-md-0 col-lg-5 offset-lg-1 green">
                 <h5 class="font-weight-bold ml-1">{{ reviews.count }} Reviews for {{ product.name }}</h5>
                 <hr class="mb-3">
                 {% for review in reviews %}
-                    <div class="row">
-                        <div class="col-8">
+                    <div class="row mb-3">
+                        <div class="col-8 pr-0 pr-md-3">
                             <p class="mb-0 ml-1"><u>{{ review.user_profile.user }}</u></p>
                             <p class="green-muted mb-1 ml-1"><small>{{ review.created_on }}</small></p>
                             <p class="mb-0 ml-1">{{ review.review }}</p>
                         </div>
-                        <div class="col-4">
+                        <div class="col-4 px-0">
                             {% if review.rating == 5 %}
                                 <p class="">
                                     <small class="green-muted">
@@ -283,7 +283,7 @@
             </div>
             <!-- Add Review -->
             {% if user.is_authenticated %}
-                <div class="col-12 col-md-5 ml-3">
+                <div class="col-10 offset-1 col-sm-8 offset-sm-2 col-md-6 offset-md-0 col-lg-5">
                     <div class="row">
                         <div class="col green">
                             <h5 id="add-review" class="font-weight-bold ml-1">Add your review for {{ product.name }}</h5>
