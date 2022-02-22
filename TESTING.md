@@ -30,6 +30,20 @@
 ### Viewing and Navigation
 * #### As a Shopper:
     * I wish to easily navigate the site so that I can have a good user experience.
+        * The main navigation bar is easy to understand and is visible on every page of the site.
+        * Clicking on a menu item in the navigation bar displays the relevant page without errors.
+        * The __Account__ menu item is a dropdown that displays differently depending on what access the user has.
+        * The logo at the top left of the page, takes the user back to the home page at any given point.
+        * The __Delicatessen__ menu item is a dropdown displaying a list of all the categories a user can navigate to in order to find the relevant products in that category.
+            * ![Main Menu Large Screen](documentation/screenshots/main-nav-lg.png)
+            * ![Main Menu Small Screen](documentation/screenshots/main-nav-sm.png)
+        * Scrolling down the _Home_ page, the list of categories are displayed and clicking into any of them will take the user to the _Product_ page displaying the relevant products in that category.
+            * ![Home Categories Large and Small Screen](documentation/screenshots/home-categories.png)
+        * On the _Products_ page of a large screen, there is a side navigation menu displaying the list of categories where a user can navigate/filter through the products by means of their category groups. On a small screen this is displayed by means of a select-box.
+            * ![Product Page Categories Menu](documentation/screenshots/categories-menu.png)
+        * On each page a user navigates to, there are buttons giving the user the option to navigate elsewhere, eg. back to the _Delcatessen_ (the _Products_ page), their _Profile_ page, the _Checkout_ page, etc.
+            * ![Navigation Buttons](documentation/screenshots/nav-btns.png)
+
     * I wish to get visual feedback so that I see when an action has been completed.
     * I wish to view all the products so that I can choose some to buy.
     * I wish to search for a specific product or category so that I may find the item that I want.

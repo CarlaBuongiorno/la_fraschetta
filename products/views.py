@@ -123,7 +123,6 @@ def product_detail(request, product_id):
             'reviews': reviews,
             'avg_rating': avg_rating,
             'wishlist': wishlist,
-            'wishlist_btn': True,
         }
 
         return render(request, template, context)

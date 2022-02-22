@@ -96,11 +96,11 @@
                                             You could get free delivery by spending just <strong>€{{ free_delivery_delta }}</strong> more!
                                         </p>
                                     {% endif %}
-                                    <a href="{% url 'products' %}" class="continue-shopping-btn mr-3 my-auto">
+                                    <a href="{% url 'products' %}" class="btn btn-cream">
                                         <span class="icon">
-                                            <i class="fas fa-chevron-left green"></i>
+                                            <i class="fas fa-chevron-left"></i>
                                         </span>
-                                        <span class="green">Continue Shopping</span>
+                                        Continue Shopping
                                     </a>
                                     <a href="{% url 'checkout' %}" class="btn btn-green">
                                         <span class="">Secure Checkout</span>
@@ -114,11 +114,11 @@
                     </div>
                 {% else %}
                     <p class="lead mb-5 green">Your bag is empty.</p>
-                    <a href="{% url 'products' %}" class="btn btn-lg">
+                    <a href="{% url 'products' %}" class="btn btn-green">
                         <span class="icon">
-                            <i class="fas fa-chevron-left green"></i>
+                            <i class="fas fa-chevron-left"></i>
                         </span>
-                        <span class="green">Keep Shopping</span>
+                        Keep Shopping
                     </a>
                 {% endif %}
             </div>

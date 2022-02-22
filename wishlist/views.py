@@ -35,7 +35,7 @@ def add_to_wishlist(request, product_id):
         user_profile=user,
         product=product
     )
-    messages.success(request,
+    messages.info(request,
                      f'{product.name} has been added to your Wishlist!')
 
     return redirect(reverse('product_detail', args=[product.id]))
