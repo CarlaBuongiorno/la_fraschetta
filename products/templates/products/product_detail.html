@@ -11,33 +11,33 @@
 
 {% block content %}
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
-                <div class="image-container mt-5 mb-3">
+        <div class="row mt-3">
+            <div class="col-10 offset-1 col-sm-8 offset-sm-2 col-md-5 offset-md-0 col-lg-2 offset-lg-2">
+                <div class="mt-5 mb-3 ml-md-5 ml-lg-0">
                     {% if product.image %}
-                        <img src="{{ product.image.url }}" alt="{{ product.name }}" class="card-img-top img-fluid">
+                        <img src="{{ product.image.url }}" alt="{{ product.name }}" class="card-img-top">
                     {% else %}
-                        <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" class="card-img-top img-fluid">
+                        <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}" class="card-img-top">
                     {% endif %}
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4 mb-5">
+            <div class="col-10 offset-1 col-sm-8 offset-sm-2 col-md-6 offset-md-0 col-lg-6 mb-5 ml-md-0 ml-lg-5">
                 <div class="row">
-                    <div class="col-6 mt-5">
-                        <h1 class="">{{ product.name }}</h1>
+                    <div class="col-11 col-sm-10 col-lg-7 mt-5 pr-0">
+                        <h1>{{ product.name }}</h1>
                     </div>
-                    <div class="col-6 mt-5">
+                    <div class="col-1 col-sm-2 col-lg-4 pl-0 mt-5">
                         <p class="text-right">
                             {% if request.user.is_authenticated %}
                                 {% if wishlist %}
                                     <span class="d-none d-lg-inline-block red">Remove from Wishlist: </span>
-                                    <a class="" href="{% url 'remove_from_wishlist' product.id %}">
-                                        <i class="fas fa-heart fa-lg ml-1 red"></i>
+                                    <a href="{% url 'remove_from_wishlist' product.id %}">
+                                        <i class="hover-heart-green fas fa-heart fa-lg ml-1 mt-3 red"></i>
                                     </a>
                                 {% else %}
                                     <span class="d-none d-lg-inline-block green">Add to Wishlist: </span>
                                     <a class="wishlist_btn" href="{% url 'add_to_wishlist' product.id %}">
-                                        <i class="far fa-heart fa-lg ml-1 green"></i>
+                                        <i class="hover-heart-red far fa-heart fa-lg ml-1 mt-3 green"></i>
                                     </a>
                                 {% endif %}
                             {% else %}
@@ -48,89 +48,91 @@
                         </p>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col">
-                    {% if avg_rating == 5 %}
-                        <p class="">
-                            <small class="green-muted">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                ({{ reviews.count }} reviews) | <a class="green add-review" href="#add-review">Add Your Review</a>
-                            </small>
-                        </p>
-                    {% elif avg_rating == 4 %}
-                        <p>
-                            <small class="green-muted">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                                ({{ reviews.count }} reviews) | <a class="green add-review" href="#add-review">Add Your Review</a>
-                            </small>
-                        </p>
-                    {% elif avg_rating == 3 %}
-                        <p>
-                            <small class="green-muted">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
-                                ({{ reviews.count }} reviews) | <a class="green add-review" href="#add-review">Add Your Review</a>
-                            </small>
-                        </p>
-                    {% elif avg_rating == 2 %}
-                        <p>
-                            <small class="green-muted">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
-                                ({{ reviews.count }} reviews) | <a class="green add-review" href="#add-review">Add Your Review</a>
-                            </small>
-                        </p>
-                    {% elif avg_rating == 1 %}
-                        <p>
-                            <small class="green-muted">
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <i class="far fa-star"></i>
-                                ({{ reviews.count }} reviews) | <a class="green add-review" href="#add-review">Add Your Review</a>
-                            </small>
-                        </p>
-                    {% else %}
-                        <p>
-                            <small class="green-muted">
-                                No Reviews | <a href="#add-review">Add Your Review</a>
-                            </small>
-                        </p>
+                <div class="row pr-0">
+                    <div class="col-12 col-sm-8 col-md-9 col-lg-8">
+                        {% if avg_rating == 5 %}
+                            <p>
+                                <small class="green-muted">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    ({{ reviews.count }} reviews) | <a class="red add-review" href="#add-review">Add Your Review</a>
+                                </small>
+                            </p>
+                        {% elif avg_rating == 4 %}
+                            <p>
+                                <small class="green-muted">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    ({{ reviews.count }} reviews) | <a class="red add-review" href="#add-review">Add Your Review</a>
+                                </small>
+                            </p>
+                        {% elif avg_rating == 3 %}
+                            <p>
+                                <small class="green-muted">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    ({{ reviews.count }} reviews) | <a class="red add-review" href="#add-review">Add Your Review</a>
+                                </small>
+                            </p>
+                        {% elif avg_rating == 2 %}
+                            <p>
+                                <small class="green-muted">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    ({{ reviews.count }} reviews) | <a class="red add-review" href="#add-review">Add Your Review</a>
+                                </small>
+                            </p>
+                        {% elif avg_rating == 1 %}
+                            <p>
+                                <small class="green-muted">
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    ({{ reviews.count }} reviews) | <a class="red add-review" href="#add-review">Add Your Review</a>
+                                </small>
+                            </p>
+                        {% else %}
+                            <p>
+                                <small class="green-muted">
+                                    No Reviews | <a href="#add-review">Add Your Review</a>
+                                </small>
+                            </p>
+                        {% endif %}
+                    </div>
+                    <div class="col-12 pb-3 pb-sm-0 col-sm-4 col-md-3 col-lg-3 text-sm-right pl-sm-0">
+                    {% if request.user.is_superuser %}
+                        <small>
+                            <a href="{% url 'edit_product' product.id %}" class="green">Edit</a> |
+                            <a href="{% url 'delete_product' product.id %}" class="red">Delete</a>
+                        </small>
                     {% endif %}
-                </div>
-                {% if request.user.is_superuser %}
-                    <small class="">
-                        <a href="{% url 'edit_product' product.id %}" class="green">Edit</a> |
-                        <a href="{% url 'delete_product' product.id %}" class="red">Delete</a>
-                    </small>
-                {% endif %}
+                    </div>
                 </div>
                 <div class="row">
-                    <div class="col green">
+                    <div class="col-12 col-lg-11 green">
                         <p class="lead text-left font-weight-bold">€{{ product.price }}</p>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-3 d-none d-lg-block">
+                    <div class="col-lg-3 d-none d-lg-block">
                     {% if product.category %}
                         <p class="my-auto green">Category:</p>
                     </div>
-                    <div class="col-9">
+                    <div class="col-12 col-lg-8">
                         <p class="my-auto">
                             <a href="{% url 'products' %}?category={{ product.category.backend_name }}" class="green-muted">
                                 <p class="small my-auto">{{ product.category.friendly_name }}</p>
@@ -140,10 +142,10 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-3 d-none d-lg-block">
+                    <div class="col-lg-3 d-none d-lg-block">
                         <p class="green">Description:</p>
                     </div>
-                    <div class="col-9">
+                    <div class="col-md-12 col-lg-8">
                         <p class="green-muted">{{ product.description }}</p>
                     </div>
                 </div>
@@ -151,12 +153,12 @@
                     {% if product.stock >= 1 %}
                     <div class="row">
                         {% csrf_token %}
-                        <div class="col-3 d-none d-lg-block">
+                        <div class="col-lg-3 d-none d-lg-block">
                             <p class="green">Quantity:</p>
                         </div>
-                        <div class="col-5">
-                            <div class="form-group">
-                                <div class="input-group">
+                        <div class="col-12 col-sm-6 col-lg-4">
+                            <div class="form-group mb-0">
+                                <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <button class="decrement-qty btn bg-red cream"
                                             data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
@@ -180,12 +182,12 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-4 text-center px-0">
+                        <div class="col-12 col-sm-6 col-lg-4 text-sm-right">
                             <button type="submit" class="btn btn-green">Add to Bag <i class="fas fa-shopping-basket"></i></button>
                         </div>
                     </div>
                     {% endif %}
-                    <div class="row">
+                    <div class="row mt-1">
                         <div class="col">
                             <p class="red">
                                 {% if product.stock <= 0 %}
