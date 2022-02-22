@@ -65,8 +65,13 @@
             (Two products are found for search term 'spaghetti'. The second product (Pecorino) contains the word 'spaghetti' in its description.)
     
     * I wish to view full product information so that I can see the details of a specific product including the price, description, product rating and product image.
-        * Clicking on a product
+        * Clicking on a product brings the user to the _Product Details_ page. Here it is clear what the product is by its image, it's name, the price, the category it belongs to, and the average ratings it has.
+            * ![Product Details](documentation/screenshots/product-detail.png)
+
     * I wish to easily see my bag total so that I can stick to my budget.
+        * Each time a product gets added to the cart, the total gets updated under the basket icon in the main navigation bar.
+        * A success message also appears with a preview of the cart details.
+            * ![Bag Total and Preview](documentation/screenshots/bag-total.png)
 
 ---
 
