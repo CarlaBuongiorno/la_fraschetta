@@ -16,13 +16,24 @@ h1,
 h2,
 h3,
 h4,
+h5,
 h6 {
     color: #0f5520;
     font-family: 'Italiana', serif;
 }
 
 p {
+    font-family: cursive;
+    letter-spacing: 0.25px;
+}
+
+.nav-cursive {
+    font-family: cursive;
+}
+
+.nav-italiana {
     font-family: 'Italiana', serif;
+    font-size: 24px;
 }
 
 /* ------------------------------------ colours */
@@ -40,7 +51,7 @@ p {
 }
 
 .green-muted {
-    color: #819c88;
+    color: #6c9c79;
 }
 
 .red {
@@ -56,7 +67,7 @@ p {
 }
 
 .bg-muted-green {
-    background-color: #819c88;
+    background-color: #6c9c79;
 }
 
 .bg-red {
@@ -105,7 +116,7 @@ p {
 
 /* ------------------------------------ navbar */
 input[name='q']::placeholder {
-    color: #819c88;
+    color: #6c9c79;
 }
 
 .navbar-light .navbar-nav .nav-link,
@@ -341,7 +352,7 @@ hr {
 }
 
 .arrow-muted-green {
-    border-bottom-color: #819c88 !important;
+    border-bottom-color: #6c9c79 !important;
 }
 
 .bag-notification-wrapper {
@@ -366,7 +377,7 @@ hr {
 }
 
 .allauth-form-inner-content input::placeholder {
-    color: #819c88;
+    color: #6c9c79;
 }
 
 .allauth-form-inner-content button,

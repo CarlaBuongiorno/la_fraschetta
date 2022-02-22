@@ -64,11 +64,11 @@
             <!-- Categories outer container lg screen -> side categories navbar -->
             <div class="d-none d-lg-block col-lg-2 ml-5 px-0">
                 <nav class="nav flex-column side-categories-nav">
-                    <p class="ml-3 mt-3">Categories</p>
+                    <h3 class="ml-3 mt-3 cream">Categories</h3>
                     <hr class="mt-0 cream">
                     <a href="{% url 'products' %}" class="nav-link side-categories-items active">All Products</a>
                     {% for cat in category_list %}
-                        <a href="{% url 'products' %}?category={{ cat.backend_name }}" class="nav-link side-categories-items">{{ cat.friendly_name }}</a>
+                        <a href="{% url 'products' %}?category={{ cat.backend_name }}" class="nav-link side-categories-items nav-cursive">{{ cat.friendly_name }}</a>
                     {% endfor %}
                 </nav>
             </div>

@@ -144,7 +144,7 @@
                         <p class="green">Description:</p>
                     </div>
                     <div class="col-9">
-                        <p class="small green-muted">{{ product.description }}</p>
+                        <p class="green-muted">{{ product.description }}</p>
                     </div>
                 </div>
                 <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
@@ -213,7 +213,7 @@
         <!-- Reviews -->
         <div class="row mt-0 pb-5">
             <div class="col-12 col-md-5 offset-lg-1 green mr-3">
-                <p class="font-weight-bold ml-1">{{ reviews.count }} Reviews for {{ product.name }}</p>
+                <h5 class="font-weight-bold ml-1">{{ reviews.count }} Reviews for {{ product.name }}</h5>
                 <hr class="mb-3">
                 {% for review in reviews %}
                     <div class="row">
@@ -284,7 +284,7 @@
                 <div class="col-12 col-md-5 ml-3">
                     <div class="row">
                         <div class="col green">
-                            <p id="add-review" class="font-weight-bold ml-1">Add your review for {{ product.name }}</p>
+                            <h5 id="add-review" class="font-weight-bold ml-1">Add your review for {{ product.name }}</h5>
                             <hr>
                         </div>
                     </div>

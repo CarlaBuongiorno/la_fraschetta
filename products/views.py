@@ -107,7 +107,7 @@ def product_detail(request, product_id):
                     product=product,
                     rating=request.POST.get('rating'),
                     review=request.POST.get('review'))
-                messages.success(request, 'Successfully added review.')
+                messages.info(request, 'Successfully added review.')
                 return redirect(reverse('product_detail', args=[product_id]))
             else:
                 messages.error(request, 'Failed to add review. \
