@@ -70,7 +70,7 @@
                 <nav class="nav flex-column side-categories-nav">
                     <h3 class="ml-3 mt-3 cream">Categories</h3>
                     <hr class="mt-0 cream">
-                    <a href="{% url 'products' %}" class="nav-link side-categories-items active">All Products</a>
+                    <a href="{% url 'products' %}" class="nav-link side-categories-items active nav-cursive">All Products</a>
                     {% for cat in category_list %}
                         <a href="{% url 'products' %}?category={{ cat.backend_name }}" class="nav-link side-categories-items nav-cursive">{{ cat.friendly_name }}</a>
                     {% endfor %}

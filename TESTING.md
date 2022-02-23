@@ -10,8 +10,6 @@
 
 [Testing User Stories](#testing-user-stories)
 
-[Automated Testing](#automated-testing)
-
 [Code Validation](#code-validation)
 
 [Responsiveness And Compatibility](#responsiveness-and-compatibility)
@@ -194,13 +192,6 @@
     * I wish to be able to delete any product so that I can remove old items from my store.
         * A store owner can delete any product by clicking on the 'Delete' link either on a product on the __All Products__ page, or on the __Product Detail__ page.
         * ![Delete a Product](documentation/screenshots/delete-product.png)
-
-[Back to Top](#testing-and-project-barrier-solutions)
-
----
-
-## **Automated Testing**
-
 
 [Back to Top](#testing-and-project-barrier-solutions)
 

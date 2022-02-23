@@ -1,8 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Italiana&family=Italianno&display=swap');
-
-/* font-family: 'Italiana', serif;
-font-family: 'Italianno', cursive; */
-
+@import url('https://fonts.googleapis.com/css2?family=Suwannaphum:wght@400;700;900&display=swap');
 html {
     height: 100%;
 }
@@ -16,42 +12,58 @@ h1,
 h2,
 h3,
 h4,
-h5,
+/* h5, */
 h6 {
     color: #0f5520;
-    font-family: 'Italiana', serif;
+    font-family: 'Suwannaphum', serif;
+    font-weight: 700;
+}
+
+.product-title {
+    font-family: 'Suwannaphum', serif;
+    font-weight: 700;
+    font-size: 3.5rem;
+}
+
+h5 {
+    font-family: cursive;
     letter-spacing: 1px;
+    font-weight: 700;
 }
 
 .title {
     font-family: cursive;
-    font-size: 70px;
-    letter-spacing: 1.25px;
+    font-size: 60px;
 }
 
 .title-italiana {
-    font-family: 'Italiana', serif;
-    letter-spacing: 1.25px;
+    font-family: 'Suwannaphum', serif;
+    font-size: 40px;
+    font-weight: 400;
+
 }
 
 p {
-    font-family: cursive;
-    letter-spacing: 0.25px;
+    font-family: 'Suwannaphum', serif;
 }
 
 .nav-cursive {
     font-family: cursive;
+    font-weight: bold;
+    font-size: 50px;
+    letter-spacing: 1px;
 }
 
 .nav-italiana {
-    font-family: 'Italiana', serif;
-    font-size: 24px;
+    /* font-family: 'Suwannaphum', serif; */
+    font-family: cursive;
+    font-weight: bold;
+    font-size: 30px;
     letter-spacing: 1px;
 }
 
 .toast-cursive {
     font-family: cursive;
-    font-size: 16px;
 }
 
 /* ------------------------ */
