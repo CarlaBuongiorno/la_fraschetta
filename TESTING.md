@@ -102,9 +102,23 @@
 ### Reviews and Wishlist
 * #### As a Registered User:
     * I wish to be able to add my own reviews to products so that I may share my experience.
+        * If a user is registered and logged in, they will have acces to a _Review_ form on the _Product Detail_ page in order to add their own review to a product.
+        * The newly added review will then be displayed on the _Product Detail_ page also with the date in which it was created.
+            * ![Reviews](documentation/screenshots/reviews.png)
+            
+
     * I wish to be able to edit/delete my reviews so that I can amend any errors or, in case I change my opinion.
+
     * I wish to be able to add products to my wishlist so that I can view those products later.
+        * If a user is registered and logged in, they will have the ability to click on the wishlist heart displayed on the __Product Detail__ page.
+        * The heart will turn red and immediately get added to the user's wislist.
+        * The user's 'wished-for' items are displayed with image, description, and price on the __Wishlist__ page.
+        * All the user's 'wished-for' items also get a little red heart on them on the __All Products__ page. 
+            * ![Add To Wishlist](documentation/screenshots/add-to-wishlist.png)
+
     * I wish to be able to remove products from my wishlist so that my wishlist only consists of products I want to have saved.
+        * To remove the product from the _Wishlist_ a user can either click on the red heart, which will make it turn back to green, or navigate to the __Wishlist__ page and remove by clicking on the trash can for that product.
+        * ![Remove From Wishlist](documentation/screenshots/remove-from-wishlist.png)
 
 ---
 
