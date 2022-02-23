@@ -23,6 +23,17 @@ h6 {
     letter-spacing: 1px;
 }
 
+.title {
+    font-family: cursive;
+    font-size: 70px;
+    letter-spacing: 1.25px;
+}
+
+.title-italiana {
+    font-family: 'Italiana', serif;
+    letter-spacing: 1.25px;
+}
+
 p {
     font-family: cursive;
     letter-spacing: 0.25px;
@@ -41,6 +52,33 @@ p {
 .toast-cursive {
     font-family: cursive;
     font-size: 16px;
+}
+
+/* ------------------------ */
+
+.hero-container {
+	background: url('/media/carousel1.jpeg') no-repeat center center;
+	background-size: cover;
+	height: 65vh;
+	position: relative;
+    margin-top: 20px;
+	max-width: 100%;
+}
+
+.hero-info {
+	margin-left: 50px;
+	text-shadow: #990b16 1px 0 10px;
+    position: absolute;
+}
+
+.shop-now-btn {
+    font-size: 24px;
+	margin-left: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: absolute;
+    top: 120px;
+    box-shadow: #0f5520 1px 0 10px;
 }
 
 /* ------------------------------------ colours */
@@ -266,6 +304,14 @@ hr {
     justify-content: center;
     height: 1.5rem;
     width: 1.5rem;
+}
+
+.hover-heart-red:hover {
+    color: #990b16;
+}
+
+.hover-heart-green:hover {
+    color: #0f5520;
 }
 
 /* ------------------------------------------ */

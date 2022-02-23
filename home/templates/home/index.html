@@ -10,44 +10,20 @@
 {% endblock %}
 
 {% block content %}
-    <!-- Carousel Hero Section -->
-    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="{{ MEDIA_URL }}carousel1.jpeg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-sm-block">
-                    <h5 class="display-4 cream">The Taste Of Tradition On Your Table</h5>
-                    <div class="my-5">
-                        <h4>
-                            <a href="{% url 'products' %}" class="btn btn-lg btn-green py-3">Shop Now</a>
-                        </h4>
-                    </div>
-                </div>
+    <!-- Hero Section -->
+    <div class="container hero-container img-fluid">
+        <div class="row h-100">
+            <div class="col col-md-8 mt-0 hero-info">
+                <h1 class="cream title-italiana pt-3">The Taste Of <span class="title cream">Tradition</span> On Your Table!</h1>
             </div>
-            <div class="carousel-item">
-                <img src="{{ MEDIA_URL }}carousel2.jpg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-sm-block">
-                    <h5 class="display-4 red">The Taste Of Tradition On Your Table</h5>
-                    <div class="my-5">
-                        <h4>
-                            <a href="{% url 'products' %}" class="btn btn-lg btn-green py-3">Shop Now</a>
-                        </h4>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="{{ MEDIA_URL }}carousel3.jpeg" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-sm-block">
-                    <h5 class="display-4 cream">The Taste Of Tradition On Your Table</h5>
-                    <div class="my-5">
-                        <h4>
-                            <a href="{% url 'products' %}" class="btn btn-lg btn-green py-3">Shop Now</a>
-                        </h4>
-                    </div>
-                </div>
+            <div class="col-4">
+                <h4>
+                    <a href="{% url 'products' %}" class="shop-now-btn btn btn-lg btn-green py-1">Shop Now</a>
+                </h4>
             </div>
         </div>
     </div>
+
     <!-- Categories -->
     <div class="container">
         <div class="row">
