@@ -80,6 +80,9 @@
             * ![Register Link](documentation/screenshots/login-register.png)
         * A __Sign Up__ form is presented to the user to complete, and a message is displayed to inform the user they will receive an email and should click on the link from the email and then on the 'Confirm' email button to complete the verification process.
             * ![Register Form](documentation/screenshots/register-verify.png)
+        * A user can then click on 'My Profile' under the 'My Account' menu dropdown and will be taken to their __Profile__ page. Here they have the ability to update their information as well as view their order history
+            * ![Profile](documentation/screenshots/profile.png)
+
 
     * I wish to easily login or logout so that I can access my profile and manage my personal details.
         * A user is able to login to their acount by clicking the 'Login' link in the _My Account_ dropdown in the main navigation menu.
@@ -104,7 +107,7 @@
         * The newly added review will then be displayed on the _Product Detail_ page also with the date in which it was created.
             * ![Reviews](documentation/screenshots/reviews.png)
             
-    * I wish to be able to edit/delete my reviews so that I can amend any errors or, in case I change my opinion.
+    <!-- * I wish to be able to edit/delete my reviews so that I can amend any errors or, in case I change my opinion. -->
 
     * I wish to be able to add products to my wishlist so that I can view those products later.
         * If a user is registered and logged in, they will have the ability to click on the wishlist heart displayed on the __Product Detail__ page.
@@ -148,24 +151,30 @@
 * #### As a Shopper:
     * I wish to buy products online as a guest so that I can checkout without having to create an account.
         * A guest user has the ability to make purchases without having to sign up for an account.
+            * ![Guest Purchase](documentation/screenshots/guest-purchase.png)
 
     * I wish to easily add, update the quantity, or delete products in my bag so that I can adjust my purchase to fit my preferences before checkout.
         * On the __Product Detail__ page the user has the ability to add more than one of the same item to their bag.
         * Upon navigating to the __Shopping Cart__ page, a user has the ability to increase or decrease the quantity of a given item, as well as remove it entirely from the cart by means of the 'trash can' icon.
         * Any adjustments are followed my toast messages as visual feedback for the user and the cart's total is adjusted accordingly.
+            * ![Quantity](documentation/screenshots/quantity.png)
+
 
     * I wish to be able to easily enter my payment information so that I can have a smooth checkout experience.
         * Clicking the 'Secure Checkout' button takes the user to the __Checkout__ page where the user can fill out a form consisting of their delivery and payment details. All fields are labelled clearly for the user.
+            * ![Checkout Form](documentation/screenshots/checkout-form.png)
 
     * I wish to experience that my payment and personal information are secure so that I can be confident enough to provide the neccessary information to purchase products securely.
         * Stripe is used to handle all card payments on this site. Stripe is certified to PCI Service Provider Level 1, which is the most stringent level of certification available in the payments industry. All card numbers are encrypted with AES-256 (Advanced Encryption Standard - 256 bits), and decryption keys are stored on separate machines.
 
     * I wish to view a summary of my order before completing my purchase so that I can check that I havn't made any mistakes.
         * A summary of the user's order is displayed on the __Checkout__ page onder above the form on small screens and on the right side of the form on large screens.
+            * ![Checkout Summary](documentation/screenshots/checkout-summary.png)
 
     * I wish to receive a confirmation email of my purchase so that I can be confident that the purchase has been made successfully and view my order details.
         * After clicking the 'Complete Order' button, an email is sent to the user confirming their order and order number.
         * A message is displayed informing the user an email has been sent and a summary of the order is displayed on this page.
+            * ![Confirmation Email Purchase](documentation/screenshots/confirmation-email-purchase.png)
 
 ---
 
@@ -175,14 +184,16 @@
         * A store owner has the additional ability to add products and categories to the site. 
         * The __Add Product__ and __Add Category__ forms can ba found by clicking the 'My Account' menu item in the navigation menu.
         * The forms are easy to understand and fill out and the added products and categories get stored in the database.
+            * ![Add Category and Add Product](documentation/screenshots/add-product.png)
 
     * I wish to be able to edit any product so that I can update the details of products.
         * A store owner can edit any product by clicking on the 'Edit' link either on a product on the __All Products__ page, or on the __Product Detail__ page.
         * The user will be taken to the same form as the __Add Product__ form but will now have the existing product details filled in and can then update any detail.
+            * ![Edit a Product](documentation/screenshots/edit-delete-product.png)
 
     * I wish to be able to delete any product so that I can remove old items from my store.
         * A store owner can delete any product by clicking on the 'Delete' link either on a product on the __All Products__ page, or on the __Product Detail__ page.
-        
+        * ![Delete a Product](documentation/screenshots/delete-product.png)
 
 [Back to Top](#testing-and-project-barrier-solutions)
 
