@@ -18,14 +18,22 @@ def all_products(request):
         A view to show all products, including sorting and search queries.
         Also enables all categories to render in the menus.
     """
-    products = Product.objects.all()
+    products = list(Product.objects.all())
     query = None
     categories = None
     template_sort_key = None
     direction = None
-    
-    reviews = Review.objects.all().filter()
-    avg_rating = reviews.aggregate(Avg('rating'))['rating__avg']
+
+    reviews = list(Review.objects.all())
+
+    ratings = []
+
+    for product in products:
+        reviews = Review.objects.all().filter(product=product)
+        avg_rating = reviews.aggregate(Avg('rating'))['rating__avg']
+        ratings.append(avg_rating)
+
+    zipped_data = zip(products, ratings)
 
     if request.GET:
         if 'sort' in request.GET:
@@ -70,9 +78,9 @@ def all_products(request):
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
-        'avg_rating': avg_rating,
         'reviews': reviews,
         'wishlist': wishlist,
+        'zipped_data': zipped_data,
     }
 
     return render(request, 'products/products.html', context)
