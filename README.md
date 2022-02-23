@@ -85,7 +85,6 @@
 * As a Shopper:
     * I wish to buy products online as a guest so that I can checkout without having to create an account.
     * I wish to easily add, update the quantity, or delete products in my bag so that I can adjust my purchase to fit my preferences before checkout.
-    Easily enter my payment information	Have a smooth checkout experience
     * I wish to be able to easily enter my payment information so that I can have a smooth checkout experience.
     * I wish to experience that my payment and personal information are secure so that I can be confident enough to provide the neccessary information to purchase products securely.
     * I wish to view a summary of my order before completing my purchase so that I can check that I havn't made any mistakes.

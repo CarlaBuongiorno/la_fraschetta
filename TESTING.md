@@ -142,26 +142,47 @@
         * A user can easily see what they have searched for and how many products match the search term at top left side of the screen (under the page title) on large screens, and just under the page title on small screens.
             * ![Products Found](documentation/screenshots/products-found.png)
 
-
 ---
 
 ### Purchasing and Checkout
 * #### As a Shopper:
     * I wish to buy products online as a guest so that I can checkout without having to create an account.
+        * A guest user has the ability to make purchases without having to sign up for an account.
+
     * I wish to easily add, update the quantity, or delete products in my bag so that I can adjust my purchase to fit my preferences before checkout.
-    Easily enter my payment information	Have a smooth checkout experience
+        * On the __Product Detail__ page the user has the ability to add more than one of the same item to their bag.
+        * Upon navigating to the __Shopping Cart__ page, a user has the ability to increase or decrease the quantity of a given item, as well as remove it entirely from the cart by means of the 'trash can' icon.
+        * Any adjustments are followed my toast messages as visual feedback for the user and the cart's total is adjusted accordingly.
+
     * I wish to be able to easily enter my payment information so that I can have a smooth checkout experience.
+        * Clicking the 'Secure Checkout' button takes the user to the __Checkout__ page where the user can fill out a form consisting of their delivery and payment details. All fields are labelled clearly for the user.
+
     * I wish to experience that my payment and personal information are secure so that I can be confident enough to provide the neccessary information to purchase products securely.
+        * Stripe is used to handle all card payments on this site. Stripe is certified to PCI Service Provider Level 1, which is the most stringent level of certification available in the payments industry. All card numbers are encrypted with AES-256 (Advanced Encryption Standard - 256 bits), and decryption keys are stored on separate machines.
+
     * I wish to view a summary of my order before completing my purchase so that I can check that I havn't made any mistakes.
+        * A summary of the user's order is displayed on the __Checkout__ page onder above the form on small screens and on the right side of the form on large screens.
+
     * I wish to receive a confirmation email of my purchase so that I can be confident that the purchase has been made successfully and view my order details.
+        * After clicking the 'Complete Order' button, an email is sent to the user confirming their order and order number.
+        * A message is displayed informing the user an email has been sent and a summary of the order is displayed on this page.
 
 ---
 
 ### Admin and Store Management
 * #### As a Store Owner:
     * I wish to be able to add a new product so that I can add new products to my store.
+        * A store owner has the additional ability to add products and categories to the site. 
+        * The __Add Product__ and __Add Category__ forms can ba found by clicking the 'My Account' menu item in the navigation menu.
+        * The forms are easy to understand and fill out and the added products and categories get stored in the database.
+
     * I wish to be able to edit any product so that I can update the details of products.
+        * A store owner can edit any product by clicking on the 'Edit' link either on a product on the __All Products__ page, or on the __Product Detail__ page.
+        * The user will be taken to the same form as the __Add Product__ form but will now have the existing product details filled in and can then update any detail.
+
     * I wish to be able to delete any product so that I can remove old items from my store.
+        * A store owner can delete any product by clicking on the 'Delete' link either on a product on the __All Products__ page, or on the __Product Detail__ page.
+        
 
 [Back to Top](#testing-and-project-barrier-solutions)
 
