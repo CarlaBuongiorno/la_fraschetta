@@ -31,7 +31,6 @@ class ProductForm(forms.ModelForm):
         """Set fields from product model"""
         model = Product
         fields = '__all__'
-        exclude = ('reviews', 'rating',)
 
     image = forms.ImageField(label='Image', required=False,
                              widget=CustomClearableFileInput)
