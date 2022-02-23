@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_title %}
+    500
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <section class="container justify-content-center">
+        <div class="row">
+            <div class="col my-4 text-center">
+                <hr>
+                <h2>Error 500</h2>
+                <hr>
+            </div>
+        </div>
+        <div class="row pb-5">
+            <div class="col-12 col-md-6 offset-md-3 text-center">
+                <h3 class="mt-2 mb-4 red">Oops!</h3>
+                <p class="red mb-2">This page doesn't exist!</p>
+                <a href="/" class="btn btn-green">Click here to head back to safety!</a>
+                <a href="/">
+                    <img src="{{ MEDIA_URL }}logo.png" alt="La Fraschetta Logo" class="w-50">
+                </a>
+            </div>
+        </div>
+    </section>
+{% endblock %}
