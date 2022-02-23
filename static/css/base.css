@@ -289,6 +289,12 @@ input[name='q']::placeholder {
 
 /* ------------------------------------ products page */
 
+.card-img-top {
+    width: 100%;
+    height: 20vh;
+    object-fit: cover;
+}
+
 .side-categories-nav {
     background-color: #990b16;
     color: #fffaea;
