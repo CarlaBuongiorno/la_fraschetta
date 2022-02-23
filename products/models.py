@@ -42,6 +42,10 @@ class Product(models.Model):
                                                 MaxValueValidator(500),
                                                 MinValueValidator(0)
                                              ])
+    rating = models.DecimalField(max_digits=4,
+                                 decimal_places=2,
+                                 null=True,
+                                 blank=True)
 
     def __str__(self):
         return self.name
