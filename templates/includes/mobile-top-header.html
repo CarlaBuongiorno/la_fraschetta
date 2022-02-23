@@ -1,7 +1,10 @@
 <li class="list-inline-item mx-0">
     <a class="nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <div class="text-center">
-            <div><i class="fas fa-search fa-lg green"></i></div>
+            <div>
+                <i class="fas fa-search fa-lg green"></i>
+                <p class="sr-only">Search our Delicatessen</p>
+            </div>
         </div>
     </a>
     <div class="dropdown-menu border-0 w-100 px-4" aria-labelledby="mobile-search">
@@ -12,6 +15,7 @@
                     <button class="form-control form-control btn btn-green border-green" type="submit">
                         <span class="icon">
                             <i class="fas fa-search cream"></i>
+                            <p class="sr-only">Search our Delicatessen</p>
                         </span>
                     </button>
                 </div>
@@ -22,7 +26,10 @@
 <li class="list-inline-item dropdown x-0">
     <a class="nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <div class="text-center">
-            <div><i class="fas fa-user fa-lg green"></i></div>
+            <div>
+                <i class="fas fa-user fa-lg green"></i>
+                <p class="sr-only">Account</p>
+            </div>
         </div>
     </a>
     <div class="dropdown-menu border-0 bg-cream" aria-labelledby="user-options">
@@ -46,14 +53,20 @@
         <a class="nav-link" href="{% url 'account_signup' %}">
     {% endif %}
         <div class="text-center">
-            <div><i class="fas fa-heart fa-lg green"></i></div>
+            <div>
+                <i class="fas fa-heart fa-lg green"></i>
+                <p class="sr-only">Wishlist</p>
+            </div>
         </div>
     </a>
 </li>
 <li class="list-inline-item mr-sm-4 mx-0">
     <a class="{% if grand_total %}font-weight-bold{% endif %} nav-link d-block d-lg-none" href="{% url 'view_bag' %}">
         <div class="text-center">
-            <div><i class="fas fa-shopping-basket fa-lg green"></i></div>
+            <div>
+                <i class="fas fa-shopping-basket fa-lg green"></i>
+                <p class="sr-only">Shopping Basket</p>
+            </div>
         </div>
     </a>
 </li>

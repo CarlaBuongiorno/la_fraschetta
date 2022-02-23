@@ -15,7 +15,7 @@
         <div class="row">
             <div class="col my-4 text-center">
                 <hr>
-                <h2 class="">Shopping Cart</h2>
+                <h2>Shopping Cart</h2>
                 <hr>
             </div>
         </div>
@@ -60,18 +60,21 @@
                                                             data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
                                                             <span>
                                                                 <i class="fas fa-minus fa-sm"></i>
+                                                                <span class="sr-only">Decrement Quantity</span>
                                                             </span>
                                                         </button>
                                                     </div>
                                                     <input class="form-control form-control-sm qty_input green" type="number"
                                                         name="quantity" value="{{ item.quantity }}" min="1" max="99"
                                                         data-item_id="{{ item.item_id }}"
-                                                        id="id_qty_{{ item.item_id }}">
+                                                        id="id_qty_{{ item.item_id }}" aria-label="Quantity">
+                                                    <label class="sr-only" for="id_qty_{{ item.item_id }}">{{ item.quantity }}</label>
                                                     <div class="input-group-append">
                                                         <button class="increment-qty btn btn-sm bg-green cream"
                                                             data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
                                                             <span>
                                                                 <i class="fas fa-plus fa-sm"></i>
+                                                                <span class="sr-only">Increment Quantity</span>
                                                             </span>
                                                         </button>
                                                     </div>

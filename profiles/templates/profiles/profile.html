@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_title %}
+    Profile
+{% endblock %}
+
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
 {% endblock %}
@@ -14,11 +18,11 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container mb-2">
+    <section class="container mb-2">
         <div class="row">
             <div class="col my-4 text-center">
                 <hr>
-                <h2 class="">My Profile</h2>
+                <h2>My Profile</h2>
                 <hr>
             </div>
         </div>
@@ -70,7 +74,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
 {% endblock %}
 

@@ -53,6 +53,7 @@
                             <button class="form-control btn btn-green border-green" type="submit">
                                 <span class="icon">
                                     <i class="fas fa-search"></i>
+                                    <p class="sr-only">Search our Delicatessen</p>
                                 </span>
                             </button>
                         </div>
@@ -61,7 +62,7 @@
 			</div>
 			<div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center">
 				<a href="{% url 'home' %}" class="nav-link">
-                    <img class="logo" src="{{ MEDIA_URL }}logo.png" alt="">
+                    <img class="logo" src="{{ MEDIA_URL }}logo.png" alt="Sky line of Italy with 'La Fraschetta' written below">
                 </a>
 			</div>
 			<div class="col-12 col-lg-4 my-auto py-1 py-lg-0 pl-lg-0">
@@ -102,7 +103,10 @@
 					<li class="list-inline-item">
 						<a class="{% if grand_total %}font-weight-bold{% endif %} nav-link" href="{% url 'view_bag' %}">
                             <div class="text-center">
-                                <div><i class="fas fa-shopping-basket fa-lg green"></i></div>
+                                <div>
+                                    <i class="fas fa-shopping-basket fa-lg green"></i>
+                                    <p class="sr-only">Shopping Basket</p>
+                                </div>
                                 <p class="my-0 green">
                                     {% if grand_total %}
                                         €{{ grand_total|floatformat:2 }}
