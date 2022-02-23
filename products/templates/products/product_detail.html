@@ -65,6 +65,17 @@
                                     ({{ reviews.count }} reviews) | <a class="red add-review" href="#add-review">Add Your Review</a>
                                 </small>
                             </p>
+                        {% elif avg_rating == 4.5 %}
+                            <p>
+                                <small class="green-muted">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    ({{ reviews.count }} reviews) | <a class="red add-review" href="#add-review">Add Your Review</a>
+                                </small>
+                            </p>
                         {% elif avg_rating == 4 %}
                             <p>
                                 <small class="green-muted">
@@ -72,6 +83,17 @@
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    ({{ reviews.count }} reviews) | <a class="red add-review" href="#add-review">Add Your Review</a>
+                                </small>
+                            </p>
+                        {% elif avg_rating == 3.5 %}
+                            <p>
+                                <small class="green-muted">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
                                     <i class="far fa-star"></i>
                                     ({{ reviews.count }} reviews) | <a class="red add-review" href="#add-review">Add Your Review</a>
                                 </small>
@@ -87,11 +109,33 @@
                                     ({{ reviews.count }} reviews) | <a class="red add-review" href="#add-review">Add Your Review</a>
                                 </small>
                             </p>
+                        {% elif avg_rating == 2.5 %}
+                            <p>
+                                <small class="green-muted">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    ({{ reviews.count }} reviews) | <a class="red add-review" href="#add-review">Add Your Review</a>
+                                </small>
+                            </p>
                         {% elif avg_rating == 2 %}
                             <p>
                                 <small class="green-muted">
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    ({{ reviews.count }} reviews) | <a class="red add-review" href="#add-review">Add Your Review</a>
+                                </small>
+                            </p>
+                        {% elif avg_rating == 1.5 %}
+                            <p>
+                                <small class="green-muted">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
                                     <i class="far fa-star"></i>
                                     <i class="far fa-star"></i>
                                     <i class="far fa-star"></i>
@@ -112,7 +156,7 @@
                         {% else %}
                             <p>
                                 <small class="green-muted">
-                                    No Reviews | <a class="red" href="#add-review">Add Your Review</a>
+                                    No Reviews
                                 </small>
                             </p>
                         {% endif %}

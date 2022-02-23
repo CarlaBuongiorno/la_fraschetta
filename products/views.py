@@ -18,32 +18,27 @@ def all_products(request):
         A view to show all products, including sorting and search queries.
         Also enables all categories to render in the menus.
     """
-    products = list(Product.objects.all())
+    products = Product.objects.all()
     query = None
     categories = None
     template_sort_key = None
     direction = None
 
-    reviews = list(Review.objects.all())
-
+    reviews = Review.objects.all()
     ratings = []
-
-    for product in products:
-        reviews = Review.objects.all().filter(product=product)
-        avg_rating = reviews.aggregate(Avg('rating'))['rating__avg']
-        ratings.append(avg_rating)
-
-    zipped_data = zip(products, ratings)
+    product_reviews_count = []
 
     if request.GET:
         if 'sort' in request.GET:
             product_sort_key = request.GET['sort']
             template_sort_key = product_sort_key
-            if product_sort_key == 'backend_name':
+            if product_sort_key == 'name':
                 product_sort_key = 'lower_name'
-                products = products.annotate(lower_name=Lower('backend_name'))
+                products = products.annotate(lower_name=Lower('name'))
             if product_sort_key == 'category':
                 product_sort_key = 'category__backend_name'
+            if product_sort_key == 'review':
+                product_sort_key = 'rating'
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':
@@ -73,6 +68,20 @@ def all_products(request):
         user = get_object_or_404(UserProfile, user=request.user)
         wishlist = WishList.objects.filter(user_profile=user)
 
+    for product in products:
+        reviews = Review.objects.all().filter(product=product)
+        product_reviews_count.append(len(reviews))
+        avg_rating = reviews.aggregate(Avg('rating'))['rating__avg']
+        if avg_rating is not None:
+            # round to the nearest 0.5 value
+            rounded_avg = round(avg_rating * 2) / 2
+            ratings.append(rounded_avg)
+        else:
+            # no ratings yet, so append just the 0 average
+            ratings.append(avg_rating)
+
+    zipped_data = zip(products, ratings, product_reviews_count)
+
     context = {
         'products': products,
         'search_term': query,
@@ -91,6 +100,9 @@ def product_detail(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
     reviews = Review.objects.all().filter(product=product)
     avg_rating = reviews.aggregate(Avg('rating'))['rating__avg']
+    if avg_rating is not None:
+            # round to the nearest 0.5 value
+            avg_rating = round(avg_rating * 2) / 2
 
     if not request.user.is_authenticated:
         template = 'products/product_detail.html'
@@ -115,6 +127,11 @@ def product_detail(request, product_id):
                     product=product,
                     rating=request.POST.get('rating'),
                     review=request.POST.get('review'))
+                # re-filter reviews including the newest, and grab updated aggregate rating
+                reviews = Review.objects.all().filter(product=product)
+                avg_rating = reviews.aggregate(Avg('rating'))['rating__avg']
+                product.rating = avg_rating
+                product.save()
                 messages.info(request, 'Successfully added review.')
                 return redirect(reverse('product_detail', args=[product_id]))
             else:
