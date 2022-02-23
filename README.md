@@ -77,7 +77,6 @@
 * As a Shopper:
     * I wish to be able to sort the list of available products so that I can sort relevant products alphabetically, by name or by price.
     * I wish to be able to sort a category of products so that I can sort relevant products alphabetically, by name or by price.
-    * I wish to be able to sort multiple categories simultaneously so that I can find the best rated or priced products across broad categories.
     * I wish to be able to search for a specific product by name or description so that I can quickly find items I'm interested in. 
     * I wish to be able to view a list of search results so that I can see if the product I want is available to purchase.
     * I wish to be able to easily see what I've searched for and the number of results so that I can quickly decide whether the product I'm looking for is available.

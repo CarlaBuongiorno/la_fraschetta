@@ -55,9 +55,7 @@
     * I wish to view all the products so that I can choose some to buy.
         * On the _Products_ page, all the products are displayed with one underneath the other on small screens, two in a row on md screens and four in a row on large screens.
             * ![Products Page](documentation/screenshots/products.png)
-        * A user has the ability to sort the products by _Price_, _Name_, _Category_, and _Ratings_.
-            * ![Sort By](documentation/screenshots/sort-by.png)
-
+        
     * I wish to search for a specific product or category so that I may find the item that I want.
         * There is a _search bar_ in the main navigation menu where a user can search for products or categories.
             * ![Search Site](documentation/screenshots/search-site.png)
@@ -106,7 +104,6 @@
         * The newly added review will then be displayed on the _Product Detail_ page also with the date in which it was created.
             * ![Reviews](documentation/screenshots/reviews.png)
             
-
     * I wish to be able to edit/delete my reviews so that I can amend any errors or, in case I change my opinion.
 
     * I wish to be able to add products to my wishlist so that I can view those products later.
@@ -118,18 +115,33 @@
 
     * I wish to be able to remove products from my wishlist so that my wishlist only consists of products I want to have saved.
         * To remove the product from the _Wishlist_ a user can either click on the red heart, which will make it turn back to green, or navigate to the __Wishlist__ page and remove by clicking on the trash can for that product.
-        * ![Remove From Wishlist](documentation/screenshots/remove-from-wishlist.png)
+            * ![Remove From Wishlist](documentation/screenshots/remove-from-wishlist.png)
 
 ---
 
 ### Sorting and Searching
 * #### As a Shopper:
     * I wish to be able to sort the list of available products so that I can sort relevant products alphabetically, by name or by price.
+        * A user has the ability to sort the products by _Price_, _Name_, _Category_, and _Ratings_.
+            * ![Sort By](documentation/screenshots/sort-by.png)
+
     * I wish to be able to sort a category of products so that I can sort relevant products alphabetically, by name or by price.
-    * I wish to be able to sort multiple categories simultaneously so that I can find the best rated or priced products across broad categories.
+        * A user has the ability to sort the products by _Price_, _Name_, and _Ratings_ within the sorted categories.
+            * ![Categories](documentation/screenshots/categories-menu.png)
+
     * I wish to be able to search for a specific product by name or description so that I can quickly find items I'm interested in. 
+        * There is a _search bar_ in the main navigation menu where a user can search for products or categories.
+            * ![Search Site](documentation/screenshots/search-site.png)
+            
     * I wish to be able to view a list of search results so that I can see if the product I want is available to purchase.
+        * After entering a search term, the user is presented with a list of relevant products.
+            * ![Search for Spaghetti](documentation/screenshots/search-spaghetti.png)
+            (Two products are found for search term 'spaghetti'. The second product (Pecorino) contains the word 'spaghetti' in its description.)
+
     * I wish to be able to easily see what I've searched for and the number of results so that I can quickly decide whether the product I'm looking for is available.
+        * A user can easily see what they have searched for and how many products match the search term at top left side of the screen (under the page title) on large screens, and just under the page title on small screens.
+            * ![Products Found](documentation/screenshots/products-found.png)
+
 
 ---
 
