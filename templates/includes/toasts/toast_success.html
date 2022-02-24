@@ -2,7 +2,7 @@
     <div class="arrow-up arrow-green"></div>
     <div class="w-100 toast-capper bg-green"></div>
     <div class="toast-header">
-        <strong class="mr-auto green">Success!</strong>
+        <h6 class="mr-auto my-auto font-weight-bold green">Success!</h6>
         <button type="button" class="ml-2 mb-1 close green" data-dismiss="toast" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
@@ -35,10 +35,10 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <strong><p class="my-2">
+                    <p class="my-2"><strong>
                         Total{% if free_delivery_delta > 0 %} (Exc. delivery){% endif %}: 
                         <span class="float-right">€{{ total|floatformat:2 }}</span>
-                    </p></strong>
+                    </strong></p>
                     {% if free_delivery_delta > 0 %}
                         <p class="mb-0 p-2 bg-cream shadow-sm text-center red border-red">
                             Spend <strong>€{{ free_delivery_delta }}</strong> more to get free next day delivery!

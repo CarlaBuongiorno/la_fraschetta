@@ -33,32 +33,35 @@
                                     <th scope="col">Product Info</th>
                                     <th scope="col"></th>
                                     <th scope="col">Price</th>
+                                    <th scope="col"></th>
                                 </tr>
                             </thead>
 
-                            {% for product in wishlist %}
-                                <tr>
-                                    <td class="p-3 w-25">
-                                    {% if product.product.image %}
-                                        <img class="image-fluid w-100" src="{{ product.product.image.url }}" alt="{{ product.product.name }}">
-                                    {% else %}
-                                        <img class="image-fluid w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.product.name }}">
-                                    {% endif %}
-                                    </td>
-                                    <td class="py-3 w-50 pl-4 pr-5">
-                                        <p class="my-0 green mb-4"><strong>{{ product.product.name }}</strong></p>
-                                        <div>
-                                            <p class="my-0 mr-5 green">{{ product.product.description }}</p>
-                                        </div>
-                                    </td>
-                                    <td class="py-3">
-                                        <p class="my-0 green"><strong>€{{ product.product.price }}</strong></p>
-                                    </td>
-                                    <td class="py-3">
-                                        <a class="red" href="{% url 'remove_from_wishlist' product.product.id %}"><i class="fas fa-trash-alt"></i></a>
-                                    </td>
-                                </tr>
-                            {% endfor %}
+                            <tbody>
+                                {% for product in wishlist %}
+                                    <tr>
+                                        <td class="p-3 w-25">
+                                        {% if product.product.image %}
+                                            <img class="image-fluid w-100" src="{{ product.product.image.url }}" alt="{{ product.product.name }}">
+                                        {% else %}
+                                            <img class="image-fluid w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.product.name }}">
+                                        {% endif %}
+                                        </td>
+                                        <td class="py-3 w-50 pl-4 pr-5">
+                                            <p class="my-0 green mb-4"><strong>{{ product.product.name }}</strong></p>
+                                            <div>
+                                                <p class="my-0 mr-5 green">{{ product.product.description }}</p>
+                                            </div>
+                                        </td>
+                                        <td class="py-3">
+                                            <p class="my-0 green"><strong>€{{ product.product.price }}</strong></p>
+                                        </td>
+                                        <td class="py-3">
+                                            <a class="red" href="{% url 'remove_from_wishlist' product.product.id %}"><i class="fas fa-trash-alt"></i></a>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
                         </table>
                     </div>
                 {% else %}
