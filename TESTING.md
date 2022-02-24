@@ -200,6 +200,16 @@
 ## **Code Validation**
 
 ### W3C Markup Validation Service:
+* HTML was validated by running each page through the [W3C HTML Markup Validator](https://validator.w3.org/) and returned no errors.
+    * [Home](documentation/screenshots/w3c-html/home.png)
+    * [Our Story](documentation/screenshots/w3c-html/our-story.png)
+    * [Products](documentation/screenshots/w3c-html/products.png)
+    * [Product Details](documentation/screenshots/w3c-html/product-details.png)
+    * [Profile](documentation/screenshots/w3c-html/profile.png)
+    * [Wishlist](documentation/screenshots/w3c-html/wishlist.png)
+    * [Shopping Cart](documentation/screenshots/w3c-html/shopping-cart.png)
+    * [Checkout](documentation/screenshots/w3c-html/checkout.png)
+    * [Checkout Success](documentation/screenshots/w3c-html/checkout-success.png)
 
 
 ---
