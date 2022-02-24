@@ -48,6 +48,12 @@ select option[value=""] {
   color: #6c9c79 !important;
 }
 
+.form-check-label a:hover {
+  text-decoration: none;
+  color: #990b16;
+  font-weight: 600;
+}
+
 #loading-overlay {
   display: none;
   position: fixed;
