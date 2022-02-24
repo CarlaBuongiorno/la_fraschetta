@@ -54,7 +54,7 @@
                                 <span class="icon">
                                     <i class="fas fa-search"></i>
                                 </span>
-                                <p class="sr-only">Search our Delicatessen</p>
+                                <span class="sr-only">Search our Delicatessen</span>
                             </button>
                         </div>
                     </div>
@@ -105,7 +105,7 @@
                             <div class="text-center">
                                 <div>
                                     <i class="fas fa-shopping-basket fa-lg green"></i>
-                                    <p class="sr-only">Shopping Basket</p>
+                                    <span class="sr-only">Shopping Basket</span>
                                 </div>
                                 <p class="my-0 green">
                                     {% if grand_total %}
@@ -156,7 +156,7 @@
     {% endblock %}
 
     {% block postloadjs %}
-    <script type="text/javascript">
+    <script>
         $('.toast').toast('show');
     </script>
     {% endblock %}
