@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Suwannaphum:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Suwannaphum:wght@400;700;900&display=swap');
+
 html {
     height: 100%;
 }
@@ -12,58 +13,38 @@ h1,
 h2,
 h3,
 h4,
-/* h5, */
+h5,
 h6 {
     color: #0f5520;
     font-family: 'Suwannaphum', serif;
-    font-weight: 700;
 }
 
-.product-title {
+/* ------------------------------------ fonts */
+
+.site-font {
     font-family: 'Suwannaphum', serif;
-    font-weight: 700;
-    font-size: 3.5rem;
 }
 
-h5 {
-    font-family: cursive;
-    letter-spacing: 1px;
-    font-weight: 700;
+.cursive-font {
+    font-family: 'Dancing Script', cursive;
 }
 
-.title {
-    font-family: cursive;
-    font-size: 60px;
+h2, h3 {
+    font-weight: bold;
 }
 
-.title-italiana {
-    font-family: 'Suwannaphum', serif;
-    font-size: 40px;
-    font-weight: 400;
-
+h1 span {
+    font-family: 'Dancing Script', cursive;
+    font-size: 70px;
 }
 
 p {
     font-family: 'Suwannaphum', serif;
 }
 
-.nav-cursive {
-    font-family: cursive;
-    font-weight: bold;
-    font-size: 50px;
-    letter-spacing: 1px;
-}
-
-.nav-italiana {
-    /* font-family: 'Suwannaphum', serif; */
-    font-family: cursive;
-    font-weight: bold;
-    font-size: 30px;
-    letter-spacing: 1px;
-}
-
-.toast-cursive {
-    font-family: cursive;
+.red-nav {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
 }
 
 /* ------------------------ */
@@ -84,7 +65,6 @@ p {
 }
 
 .shop-now-btn {
-    font-size: 24px;
 	margin-left: 50px;
     padding-left: 20px;
     padding-right: 20px;
@@ -241,9 +221,9 @@ input[name='q']::placeholder {
     #main-nav .nav-link:hover,
     #main-nav .nav-link:active,
     #main-nav .nav-link:focus {
-        text-decoration: underline;
-        text-decoration-thickness: 2px;
-        text-decoration-color: #fffaea;
+        font-weight: bolder;
+        text-decoration: none;
+	    text-shadow: #fff 1px 0 10px;
     }
 
     .navbar-light .navbar-nav .show>.nav-link,
@@ -287,6 +267,15 @@ input[name='q']::placeholder {
     object-fit: cover;
 }
 
+.categories a:hover {
+    text-decoration: none;
+}
+
+.categories a h5:hover {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.75rem;
+}
+
 /* ------------------------------------ products page */
 
 .card-img-top {
@@ -298,12 +287,12 @@ input[name='q']::placeholder {
 .side-categories-nav {
     background-color: #990b16;
     color: #fffaea;
-    font-size: 24px;
+    font-size: 1.25rem;
+    font-family: 'Suwannaphum', serif;
 }
 
 .side-categories-items {
     color: #fffaea;
-    font-size: 18px;
 }
 
 .side-categories-items:hover {

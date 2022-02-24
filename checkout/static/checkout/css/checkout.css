@@ -22,7 +22,7 @@
 }
 
 .stripe-style-input::placeholder {
-    color: #819c88;
+    color: #6c9c79;
 }
 
 
@@ -45,7 +45,7 @@ select option {
 
 select:invalid,
 select option[value=""] {
-  color: #819c88 !important;
+  color: #6c9c79 !important;
 }
 
 #loading-overlay {

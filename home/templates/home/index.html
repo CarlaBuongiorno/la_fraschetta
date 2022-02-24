@@ -17,10 +17,10 @@
     <!-- Hero Section -->
     <div class="container hero-container img-fluid">
         <div class="row h-100">
-                <h1 class="cream title-italiana pt-4 hero-info">The Taste Of <span class="title cream">Tradition</span> On Your Table!</h1>
-                <h4>
+                <h1 class="cream pt-4 hero-info">The taste of <span class="cream">Tradition</span> on your table!</h1>
+                <h2>
                     <a href="{% url 'products' %}" class="shop-now-btn btn btn-lg btn-green py-1">Shop Now</a>
-                </h4>
+                </h2>
             </div>
         </div>
     </div>
@@ -29,7 +29,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 text-center my-3">
-                <p class="display-4 font-weight-bold green">Categories</p>
+                <h2 class="green">Categories</h2>
             </div>
         </div>
         <div class="row pb-3 ml-4 mr-4">
@@ -38,15 +38,18 @@
                     {% if c.image %}
                         <a href="{% url 'products' %}?category={{ c.backend_name }}">
                             <img src="{{ c.image.url }}" alt="{{ c.friendly_name }}" class="img-responsive" height="140">
+                            <h5 class="pt-3 mb-0 pb-0 green">
+                                {{ c.friendly_name }}
+                            </h5>
                         </a>
                     {% else %}
                         <a href="{% url 'products' %}?category={{ c.backend_name }}">
                             <img src="{{ MEDIA_URL }}noimage.png" alt="{{ c.friendly_name }}" class="img-responsive" height="130">
+                            <h5 class="pt-3 mb-0 pb-0 green">
+                                {{ c.friendly_name }}
+                            </h5>
                         </a>
                     {% endif %}
-                    <p class="pt-3 mb-0 pb-0 green">
-                        {{ c.friendly_name }}
-                    </p>
                 </div>
                 <div class="col-1"></div>
             {% endfor %}

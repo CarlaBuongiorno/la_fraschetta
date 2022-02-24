@@ -19,7 +19,7 @@
             <!-- Shop image -->
             <div class="col my-4 text-center">
                 <hr>
-                <h2 class="">Delicatessen</h2>
+                <h2>Delicatessen</h2>
                 <hr>
             </div>
         </div>
@@ -70,9 +70,9 @@
                 <nav class="nav flex-column side-categories-nav">
                     <h3 class="ml-3 mt-3 cream">Categories</h3>
                     <hr class="mt-0 cream">
-                    <a href="{% url 'products' %}" class="nav-link side-categories-items active nav-cursive">All Products</a>
+                    <a href="{% url 'products' %}" class="nav-link side-categories-items active">All Products</a>
                     {% for cat in category_list %}
-                        <a href="{% url 'products' %}?category={{ cat.backend_name }}" class="nav-link side-categories-items nav-cursive">{{ cat.friendly_name }}</a>
+                        <a href="{% url 'products' %}?category={{ cat.backend_name }}" class="nav-link side-categories-items">{{ cat.friendly_name }}</a>
                     {% endfor %}
                 </nav>
             </div>
@@ -81,7 +81,7 @@
                 <!-- Products inner container lg screen -->
                 <div class="row">
                     {% for product, review, count in zipped_data %}
-                        <div class="col-sm-6 col-md-6 col-lg-3 mb-4">
+                        <div class="col-sm-6 col-md-6 col-lg-3 mb-3 px-lg-1">
                             <div class="card h-100 border-green">
                                 {% if product.image %}
                                     <a href="{% url 'product_detail' product.id %}">
@@ -94,9 +94,9 @@
                                 {% endif %}
                                 <div class="card-body pb-0">
                                     <div class="row">
-                                        <h5 class="col-10 mr-0 pr-0 green">
+                                        <h6 class="col-10 mr-0 pr-0 green font-weight-bold pl-lg-1">
                                             {{ product.name }}
-                                        </h5>
+                                        </h6>
                                         <!-- loop over all items (if any) in the wishlist -->
                                         {% for item in wishlist %}
                                             <!-- if the outter loop of all products ID matches the inner loop of wishlist items -->
@@ -110,7 +110,7 @@
                                 </div>
                                 <div class="card-footer bg-white pt-0 border-0 text-left">
                                     <div class="row">
-                                        <div class="col">
+                                        <div class="col pl-lg-1">
                                             <p class="lead mb-0 text-left font-weight-bold green">€{{ product.price }}</p>
                                             {% if review == 5 %}
                                                 <p>
@@ -223,7 +223,7 @@
                                     
                                     {% if request.user.is_superuser %}
                                         <div class="row">
-                                            <div class="col">
+                                            <div class="col pl-lg-1">
                                                 <small class="ml-0">
                                                     <a href="{% url 'edit_product' product.id %}" class="green">Edit</a> |
                                                     <a href="{% url 'delete_product' product.id %}" class="red">Delete</a>
