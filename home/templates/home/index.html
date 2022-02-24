@@ -15,17 +15,17 @@
 
 {% block content %}
     <!-- Hero Section -->
-    <div class="container hero-container img-fluid">
+    <section class="container hero-container img-fluid">
         <div class="row h-100">
             <h1 class="cream pt-4 hero-info">The taste of <span class="cream">Tradition</span> on your table!</h1>
             <h2>
                 <a href="{% url 'products' %}" class="shop-now-btn btn btn-lg btn-green py-1">Shop Now</a>
             </h2>
         </div>
-    </div>
+    </section>
 
     <!-- Categories -->
-    <div class="container">
+    <section class="container">
         <div class="row">
             <div class="col-12 text-center my-3">
                 <h2 class="green">Categories</h2>
@@ -53,5 +53,5 @@
                 <div class="col-1"></div>
             {% endfor %}
         </div>
-    </div>
+    </section>
 {% endblock %}

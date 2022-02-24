@@ -14,7 +14,7 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container mb-2">
+    <section class="container mb-2">
         <div class="row">
             <!-- Shop image -->
             <div class="col my-4 text-center">
@@ -23,26 +23,19 @@
                 <hr>
             </div>
         </div>
-        <!-- Categories dropdown sm and md screens -->
-        <div class="row">
-            <div class="col d-lg-none my-auto d-flex justify-content-center justify-content-md-start">
-                <div class="sort-select-wrapper-categories">
-                    <select name="" class="custom-select custom-select-sm">
-                        <option value="categories" disabled>Categories</option>
-                        {% for cat in category_list %}
-                            <option>
-                                <a href="{% url 'products' %}?category={{ cat.backend_name }}" class="nav-link">{{ cat.friendly_name }}</a>
-                            </option>
-                        {% endfor %}
-                    </select>
-                </div>
-            </div>
-        </div>
-        <!-- Delicatessen|10 Products ------- Sort By (lg & md screen)-->
+        <!-- Sort By -->
         <div class="row mb-3">
-            <div class="col-sm-12 col-md-6 col-lg-5 order-md-2 my-auto d-flex justify-content-center justify-content-md-end">
+            <div class="col-sm-12 col-md-7 ml-lg-5">
+                <p class="green-muted mt-3 text-left">
+                    {% if search_term or current_categories or current_sorting != 'None_None' %}
+                        <span class="small"><a class="site-font red" href="{% url 'products' %}">Delicatessen</a> | </span>
+                    {% endif %}
+                    {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
+                </p>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4 my-auto d-flex justify-content-center justify-content-md-end">
                 <div class="sort-select-wrapper-sort-by">
-                    <select name="" id="sort-selector" class="custom-select custom-select-sm border-green green">
+                    <select name="sort-selector" id="sort-selector" class="custom-select custom-select-sm border-green green">
                         <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
                         <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
                         <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
@@ -54,14 +47,6 @@
                         <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z - A)</option>
                     </select>
                 </div>
-            </div>
-            <div class="col-sm-12 col-md-6 order-md-1 ml-5">
-                <p class="green-muted mt-3 text-center text-md-left">
-                    {% if search_term or current_categories or current_sorting != 'None_None' %}
-                        <span class="small"><a href="{% url 'products' %}">Delicatessen</a> | </span>
-                    {% endif %}
-                    {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term }}"</strong>{% endif %}
-                </p>
             </div>
         </div>
         <div class="row">
@@ -223,7 +208,7 @@
                                     
                                     {% if request.user.is_superuser %}
                                         <div class="row">
-                                            <div class="col pl-lg-1">
+                                            <div class="col pl-lg-1 site-font">
                                                 <small class="ml-0">
                                                     <a href="{% url 'edit_product' product.id %}" class="green">Edit</a> |
                                                     <a href="{% url 'delete_product' product.id %}" class="red">Delete</a>
@@ -238,7 +223,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
     <div class="btt-button border">
         <a class="btt-link d-flex h-100">
             <i class="fas fa-arrow-up mx-auto my-auto"></i>
@@ -248,13 +233,13 @@
 
 {% block postloadjs %}
     {{ block.super }}
-    <script type="text/javascript">
+    <script>
         $('.btt-link').click(function(e) {
             window.scrollTo(0,0);
         });
     </script>
 
-    <script type="text/javascript">
+    <script>
         $('#sort-selector').change(function() {
             var selector = $(this);
             var currentUrl = new URL(window.location);

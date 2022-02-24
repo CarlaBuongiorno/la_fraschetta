@@ -132,7 +132,7 @@
 	</header>
     
     {% if messages %}
-        <div class="message-container">
+        <article class="message-container">
             {% for message in messages %}
                 {% with message.level as level %}
                     {% if level == 40 %}
@@ -146,7 +146,7 @@
                     {% endif %}
                 {% endwith %}
             {% endfor %}
-        </div>
+        </article>
     {% endif %}
 
     {% block page_header %}

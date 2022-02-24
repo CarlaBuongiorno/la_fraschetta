@@ -330,7 +330,7 @@ hr {
     height: 400px;
 }
 
-.sort-select-wrapper-categories,
+/* .sort-select-wrapper-categories, */
 .sort-select-wrapper-sort-by {
     width: 80%;
 }
@@ -520,10 +520,10 @@ hr {
     }
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
     .sort-select-wrapper-categories {
         width: 50%;
-    }
+    } */
     
     .sort-select-wrapper-sort-by {
         width: 100%;
