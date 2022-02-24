@@ -243,7 +243,7 @@ input[name='q']::placeholder {
 /* ------------------------------------ header */
 
 .header-container {
-    padding-top: 96px;
+    padding-top: 85px;
 }
 
 .logo {
@@ -325,12 +325,13 @@ hr {
     color: #0f5520;
 }
 
-/* ------------------------------------------ */
-.carousel .carousel-item {
-    height: 400px;
+.back-to-category-link a:hover {
+    color: #990b16;
+    text-decoration: none;
 }
 
-/* .sort-select-wrapper-categories, */
+/* ------------------------------------------ Other buttons */
+
 .sort-select-wrapper-sort-by {
     width: 80%;
 }
@@ -520,10 +521,7 @@ hr {
     }
 }
 
-/* @media (min-width: 768px) {
-    .sort-select-wrapper-categories {
-        width: 50%;
-    } */
+@media (min-width: 768px) {
     
     .sort-select-wrapper-sort-by {
         width: 100%;
@@ -540,7 +538,7 @@ hr {
     }
     
     .header-container {
-        padding-top: 154px;
+        padding-top: 160px;
     }
     
     .message-container {

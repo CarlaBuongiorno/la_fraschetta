@@ -175,19 +175,19 @@
                         <p class="lead text-left font-weight-bold">€{{ product.price }}</p>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-lg-3 d-none d-lg-block">
+                <div class="row pb-2">
                     {% if product.category %}
-                        <p class="my-auto green">Category:</p>
-                    </div>
-                    <div class="col-12 col-lg-8">
-                        <p class="my-auto">
-                            <a href="{% url 'products' %}?category={{ product.category.backend_name }}" class="green-muted">
-                                <p class="my-auto">{{ product.category.friendly_name }}</p>
-                            </a>
-                        </p>
+                        <div class="col-lg-3 d-none d-lg-block">
+                            <p class="my-auto green">Category:</p>
+                        </div>
+                        <div class="col-12 col-lg-8">
+                            <p class="my-auto back-to-category-link">
+                                <a href="{% url 'products' %}?category={{ product.category.backend_name }}" class="green-muted my-auto">
+                                    {{ product.category.friendly_name }}
+                                </a>
+                            </p>
+                        </div>
                     {% endif %}
-                    </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-3 d-none d-lg-block">
