@@ -303,29 +303,47 @@ DevTools were used to test the site across a range of widths:
 
 * iPhone SE (375px)
     * Menu
-    * ![Menu](documentation/screenshots/iphone375/menu.png)
-* Added to Wishlist
-    * ![Added to Wishlist](documentation/screenshots/iphone375/added-to-wishlist.png)
-* Wishlist
-    * ![Wishlist](documentation/screenshots/iphone375/wishlist2.png)
-* Profile
-    * ![Profile](documentation/screenshots/iphone375/profile.png)
-* Profile Updated
-    * ![Profile Updated](documentation/screenshots/iphone375/profile-updated.png)
-* Sort By Rating Descending
-    * ![Sort By Rating Descending](documentation/screenshots/iphone375/sortby-rating-desc.png)
-* Error 404
-    * ![Error 404](documentation/screenshots/iphone375/error404.png) 
+        * ![Menu](documentation/screenshots/iphone375/menu.png)
+    * Added to Wishlist
+        * ![Added to Wishlist](documentation/screenshots/iphone375/added-to-wishlist.png)
+    * Wishlist
+        * ![Wishlist](documentation/screenshots/iphone375/wishlist2.png)
+    * Profile
+        * ![Profile](documentation/screenshots/iphone375/profile.png)
+    * Profile Updated
+        * ![Profile Updated](documentation/screenshots/iphone375/profile-updated.png)
+    * Sort By Ratings Descending
+        * ![Sort By Ratings Descending](documentation/screenshots/iphone375/sortby-ratings-desc.png)
+    * Error 404
+        * ![Error 404](documentation/screenshots/iphone375/error404.png) 
     
 * Samsung Galaxy S20 Ultra (412px)
-    * 
+    * Signed Out
+        * ![Signed Out](documentation/screenshots/samsung412/signed-out.png)
+    * Add to Bag
+        * ![Add to Bag](documentation/screenshots/samsung412/add-to-bag.png)
+    * Shopping Cart
+        * ![Shopping Cart](documentation/screenshots/samsung412/bag.png)
+    * Updated Quantity
+        * ![Updated Quantity](documentation/screenshots/samsung412/updated-qty.png)
+    * Checkout
+        * ![Checkout](documentation/screenshots/samsung412/checkout.png)
 
 ---
 
 ### Tablets:
 
 * iPad Air (820px)
-    * 
+    * Sign Out
+        * ![Sign Out](documentation/screenshots/ipad820/signout.png)
+    * Our Story
+        * ![Our Story](documentation/screenshots/ipad820/our-story.png)
+    * Product Details
+        * ![Product Details](documentation/screenshots/ipad820/product-details.png)
+    * Wishlist
+        * ![Wishlist](documentation/screenshots/ipad820/wishlist.png)
+    * Checkout
+        * ![Checkout](documentation/screenshots/ipad820/checkout.png)
 
 ---
 
