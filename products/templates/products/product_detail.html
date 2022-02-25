@@ -32,21 +32,15 @@
                     </div>
                     <div class="col-1 col-sm-2 col-lg-4 pl-0 mt-5">
                         <p class="text-right">
-                            {% if request.user.is_authenticated %}
-                                {% if wishlist %}
-                                    <span class="d-none d-lg-inline-block red">Remove from Wishlist: </span>
-                                    <a href="{% url 'remove_from_wishlist' product.id %}">
-                                        <i class="hover-heart-green fas fa-heart fa-lg ml-1 mt-3 red"></i>
-                                    </a>
-                                {% else %}
-                                    <span class="d-none d-lg-inline-block green">Add to Wishlist: </span>
-                                    <a class="wishlist_btn" href="{% url 'add_to_wishlist' product.id %}">
-                                        <i class="hover-heart-red far fa-heart fa-lg ml-1 mt-3 green"></i>
-                                    </a>
-                                {% endif %}
+                            {% if wishlist %}
+                                <span class="d-none d-lg-inline-block red">Remove from Wishlist: </span>
+                                <a href="{% url 'remove_from_wishlist' product.id %}">
+                                    <i class="hover-heart-green fas fa-heart fa-lg ml-1 mt-3 red"></i>
+                                </a>
                             {% else %}
-                                <a class="d-none d-lg-inline-block green" href="{% url 'account_signup' %}">
-                                    <i class="far fa-heart fa-lg ml-1 green"></i>
+                                <span class="d-none d-lg-inline-block green">Add to Wishlist: </span>
+                                <a class="wishlist_btn" href="{% if user.is_authenticated %}{% url 'add_to_wishlist' product.id %}{% else %}{% url 'account_login' %}{% endif %}">
+                                    <i class="hover-heart-red far fa-heart fa-lg ml-1 mt-3 green"></i>
                                 </a>
                             {% endif %}
                         </p>
@@ -62,7 +56,8 @@
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
-                                    ({{ reviews.count }} reviews) | <a class="red add-review" href="#add-review">Add Your Review</a>
+                                    ({{ reviews.count }} reviews) | <a class="red add-review" href="{% if user.is_authenticated %}#add-review{% else %}{% url 'account_login' %}{% endif %}">Add Your Review</a>
+
                                 </small>
                             </p>
                         {% elif avg_rating == 4.5 %}
@@ -73,7 +68,7 @@
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star-half-alt"></i>
-                                    ({{ reviews.count }} reviews) | <a class="red add-review" href="#add-review">Add Your Review</a>
+                                    ({{ reviews.count }} reviews) | <a class="red add-review" href="{% if user.is_authenticated %}#add-review{% else %}{% url 'account_login' %}{% endif %}">Add Your Review</a>
                                 </small>
                             </p>
                         {% elif avg_rating == 4 %}
@@ -84,7 +79,7 @@
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
                                     <i class="far fa-star"></i>
-                                    ({{ reviews.count }} reviews) | <a class="red add-review" href="#add-review">Add Your Review</a>
+                                    ({{ reviews.count }} reviews) | <a class="red add-review" href="{% if user.is_authenticated %}#add-review{% else %}{% url 'account_login' %}{% endif %}">Add Your Review</a>
                                 </small>
                             </p>
                         {% elif avg_rating == 3.5 %}
@@ -95,7 +90,7 @@
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star-half-alt"></i>
                                     <i class="far fa-star"></i>
-                                    ({{ reviews.count }} reviews) | <a class="red add-review" href="#add-review">Add Your Review</a>
+                                    ({{ reviews.count }} reviews) | <a class="red add-review" href="{% if user.is_authenticated %}#add-review{% else %}{% url 'account_login' %}{% endif %}">Add Your Review</a>
                                 </small>
                             </p>
                         {% elif avg_rating == 3 %}
@@ -106,7 +101,7 @@
                                     <i class="fas fa-star"></i>
                                     <i class="far fa-star"></i>
                                     <i class="far fa-star"></i>
-                                    ({{ reviews.count }} reviews) | <a class="red add-review" href="#add-review">Add Your Review</a>
+                                    ({{ reviews.count }} reviews) | <a class="red add-review" href="{% if user.is_authenticated %}#add-review{% else %}{% url 'account_login' %}{% endif %}">Add Your Review</a>
                                 </small>
                             </p>
                         {% elif avg_rating == 2.5 %}
@@ -117,7 +112,7 @@
                                     <i class="fas fa-star-half-alt"></i>
                                     <i class="far fa-star"></i>
                                     <i class="far fa-star"></i>
-                                    ({{ reviews.count }} reviews) | <a class="red add-review" href="#add-review">Add Your Review</a>
+                                    ({{ reviews.count }} reviews) | <a class="red add-review" href="{% if user.is_authenticated %}#add-review{% else %}{% url 'account_login' %}{% endif %}">Add Your Review</a>
                                 </small>
                             </p>
                         {% elif avg_rating == 2 %}
@@ -128,7 +123,7 @@
                                     <i class="far fa-star"></i>
                                     <i class="far fa-star"></i>
                                     <i class="far fa-star"></i>
-                                    ({{ reviews.count }} reviews) | <a class="red add-review" href="#add-review">Add Your Review</a>
+                                    ({{ reviews.count }} reviews) | <a class="red add-review" href="{% if user.is_authenticated %}#add-review{% else %}{% url 'account_login' %}{% endif %}">Add Your Review</a>
                                 </small>
                             </p>
                         {% elif avg_rating == 1.5 %}
@@ -139,7 +134,7 @@
                                     <i class="far fa-star"></i>
                                     <i class="far fa-star"></i>
                                     <i class="far fa-star"></i>
-                                    ({{ reviews.count }} reviews) | <a class="red add-review" href="#add-review">Add Your Review</a>
+                                    ({{ reviews.count }} reviews) | <a class="red add-review" href="{% if user.is_authenticated %}#add-review{% else %}{% url 'account_login' %}{% endif %}">Add Your Review</a>
                                 </small>
                             </p>
                         {% elif avg_rating == 1 %}
@@ -150,7 +145,7 @@
                                     <i class="far fa-star"></i>
                                     <i class="far fa-star"></i>
                                     <i class="far fa-star"></i>
-                                    ({{ reviews.count }} reviews) | <a class="red add-review" href="#add-review">Add Your Review</a>
+                                    ({{ reviews.count }} reviews) | <a class="red add-review" href="{% if user.is_authenticated %}#add-review{% else %}{% url 'account_login' %}{% endif %}">Add Your Review</a>
                                 </small>
                             </p>
                         {% else %}
@@ -348,10 +343,11 @@
                         {{ form|crispy }}
                         <button class="btn btn-green" type="submit">Add Review</button>
                     </form>
-
                 </div>
             {% else %}
-                <p class="red">You need to login to add reviews.</p>
+                <div class="col-10 offset-1 col-sm-8 offset-sm-2 col-md-6 offset-md-0 col-lg-5">
+                    <p class="red">You need to login to add reviews.</p>
+                </div>
             {% endif %}
         </div>
     </div>

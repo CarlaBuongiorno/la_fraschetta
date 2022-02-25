@@ -353,8 +353,20 @@ The site was tested on the following physical devices:
 ### Laptops:
 
 * MacBook Pro 13inch
-    * 
-        * ![]()
+    * Home
+    * ![Home](documentation/screenshots/google-chrome/home.png)
+* Products
+    * ![Products](documentation/screenshots/google-chrome/products.png)
+* Product Details
+    * ![Product Details](documentation/screenshots/google-chrome/product.png)
+* Added a Review
+    * ![Added a Review](documentation/screenshots/google-chrome/added-review.png)
+* Remove From Wishlist
+    * ![Remove From Wishlist](documentation/screenshots/google-chrome/remove-from-wishlist.png)
+* Add to Bag
+    * ![Add to Bag](documentation/screenshots/google-chrome/add-to-bag.png)
+* Checkout Success
+    * ![Checkout Success](documentation/screenshots/google-chrome/checkout-success.png)
 
 [Back to Top](#testing-and-project-barrier-solutions)
 
