@@ -301,7 +301,7 @@ DevTools were used to test the site across a range of widths:
 
 ### Mobiles: 
 
-* iphone5(320px)
+* iPhone SE (375px)
     * 
         * ![]()
     

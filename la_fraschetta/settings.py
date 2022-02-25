@@ -13,7 +13,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import dj_database_url
 import os
-if os.path.exists("env.py"):
+# if os.path.exists("env.py"):
+if os.environ.get("DEBUG") == "False":
     import env  # noqa
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -223,7 +224,7 @@ STRIPE_SECRET_KEY = os.environ.get('STRIPE_SECRET_KEY', '')
 STRIPE_WH_SECRET = os.environ.get('STRIPE_WH_SECRET', '')
 
 # Emails
-if 'DEBUG' in os.environ:
+if os.environ.get("DEBUG"):
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
     DEFAULT_FROM_EMAIL = 'lafraschetta@example.com'
 else:
