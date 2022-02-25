@@ -302,26 +302,29 @@ DevTools were used to test the site across a range of widths:
 ### Mobiles: 
 
 * iPhone SE (375px)
-    * 
-        * ![]()
+    * Menu
+    * ![Menu](documentation/screenshots/iphone375/menu.png)
+* Added to Wishlist
+    * ![Added to Wishlist](documentation/screenshots/iphone375/added-to-wishlist.png)
+* Wishlist
+    * ![Wishlist](documentation/screenshots/iphone375/wishlist2.png)
+* Profile
+    * ![Profile](documentation/screenshots/iphone375/profile.png)
+* Profile Updated
+    * ![Profile Updated](documentation/screenshots/iphone375/profile-updated.png)
+* Sort By Rating Descending
+    * ![Sort By Rating Descending](documentation/screenshots/iphone375/sortby-rating-desc.png)
+* Error 404
+    * ![Error 404](documentation/screenshots/iphone375/error404.png) 
     
-* Moto G4 (340px)
-    * 
-
-* iPhone 6/7/8 (375px)
-    * 
-
-* iPhone 6/7/8 Plus (414px)
+* Samsung Galaxy S20 Ultra (412px)
     * 
 
 ---
 
 ### Tablets:
 
-* iPad (768px)
-    * 
-
-* iPad Pro (1024px)
+* iPad Air (820px)
     * 
 
 ---
