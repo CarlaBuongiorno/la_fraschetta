@@ -101,8 +101,8 @@ def product_detail(request, product_id):
     reviews = Review.objects.all().filter(product=product)
     avg_rating = reviews.aggregate(Avg('rating'))['rating__avg']
     if avg_rating is not None:
-            # round to the nearest 0.5 value
-            avg_rating = round(avg_rating * 2) / 2
+        # round to the nearest 0.5 value
+        avg_rating = round(avg_rating * 2) / 2
 
     if not request.user.is_authenticated:
         template = 'products/product_detail.html'
@@ -233,7 +233,7 @@ def add_category(request):
     if request.method == 'POST':
         form = CategoryForm(request.POST, request.FILES)
         if form.is_valid():
-            category = form.save()
+            form.save()
             messages.success(request, 'Successfully added category!')
             return redirect(reverse('products'))
         else:

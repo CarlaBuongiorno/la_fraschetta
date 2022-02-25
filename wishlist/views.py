@@ -31,7 +31,7 @@ def add_to_wishlist(request, product_id):
     user = get_object_or_404(UserProfile, user=request.user)
     product = get_object_or_404(Product, pk=product_id)
 
-    item = WishList.objects.create(
+    WishList.objects.create(
         user_profile=user,
         product=product
     )
