@@ -4,7 +4,7 @@
 
 [View the live site here](https://la-fraschetta.herokuapp.com/)
 
-![Final project image home page](docs/screenshots/amiresponsive.png)
+![Final project image home page](documentation/screenshots/amiresponsive/amiresponsive.png)
 
 ## **Contents**
 
@@ -105,8 +105,6 @@
         * The newly added review will then be displayed on the _Product Detail_ page also with the date in which it was created.
             * ![Reviews](documentation/screenshots/reviews.png)
             
-    <!-- * I wish to be able to edit/delete my reviews so that I can amend any errors or, in case I change my opinion. -->
-
     * I wish to be able to add products to my wishlist so that I can view those products later.
         * If a user is registered and logged in, they will have the ability to click on the wishlist heart displayed on the __Product Detail__ page.
         * The heart will turn red and immediately get added to the user's wislist.
@@ -229,7 +227,6 @@
     * [Add Product](documentation/screenshots/w3c-css/add-product.png)
     * [Edit Product](documentation/screenshots/w3c-css/edit-product.png)
 
-
 ---
 
 ### JSHint:
@@ -347,7 +344,7 @@ DevTools were used to test the site across a range of widths:
 
 ---
 
-### Desktops:
+### Large Screen Devices:
 
 * Nest Hub (1024px)
     * Home Categories Signed In
@@ -400,12 +397,6 @@ The site was tested on the following physical devices:
         * ![Loading](documentation/screenshots/huawei/loading.jpg) 
     * Checkout Success
         * ![Checkout Success](documentation/screenshots/huawei/checkout-success.jpg) 
-
-* Sony Xperia 1 II
-    * 
-
-* iPhone X
-    * 
 
 ---
 

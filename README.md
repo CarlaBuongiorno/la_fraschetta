@@ -2,7 +2,7 @@
 
 [View the live site here](https://la-fraschetta.herokuapp.com/)
 
-![Final project image home page]()
+![Final project image home page](documentation/screenshots/amiresponsive/amiresponsive.png)
 
 ## **Contents**
 
@@ -69,7 +69,6 @@
 #### Reviews and Wishlist
 * As a Registered User:
     * I wish to be able to add my own reviews to products so that I may share my experience.
-    * I wish to be able to edit/delete my reviews so that I can amend any errors or, in case I change my opinion.
     * I wish to be able to add products to my wishlist so that I can view those products later.
     * I wish to be able to remove products from my wishlist so that my wishlist only consists of products I want to have saved.
 
