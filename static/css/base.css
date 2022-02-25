@@ -343,6 +343,7 @@ hr {
     position: fixed;
     bottom: 10px;
     right: 20px;
+    z-index: 9999;
 }
 
 .decrement-qty:hover {
