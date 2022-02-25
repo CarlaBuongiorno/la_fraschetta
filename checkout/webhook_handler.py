@@ -11,7 +11,7 @@ from profiles.models import UserProfile
 from .models import Order, OrderLineItem
 
 
-class StripeWH_Handler:
+class StripeWH_Handler:  # pragma: no cover
     """Handle Stripe webhooks"""
 
     def __init__(self, request):
@@ -80,10 +80,10 @@ class StripeWH_Handler:
                     full_name__iexact=shipping_details.name,
                     email__iexact=billing_details.email,
                     delivery_country__iexact=shipping_details.address.country,
-                    delivery_postcode__iexact=shipping_details.address.postal_code,
-                    delivery_town_or_city__iexact=shipping_details.address.city,
-                    delivery_street_address1__iexact=shipping_details.address.line1,
-                    delivery_street_address2__iexact=shipping_details.address.line2,
+                    delivery_postcode__iexact=shipping_details.address.postal_code,  # noqa
+                    delivery_town_or_city__iexact=shipping_details.address.city,  # noqa
+                    delivery_street_address1__iexact=shipping_details.address.line1,  # noqa
+                    delivery_street_address2__iexact=shipping_details.address.line2,  # noqa
                     grand_total=grand_total,
                     original_bag=bag,
                     stripe_pid=pid,

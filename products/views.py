@@ -127,7 +127,8 @@ def product_detail(request, product_id):
                     product=product,
                     rating=request.POST.get('rating'),
                     review=request.POST.get('review'))
-                # re-filter reviews including the newest, and grab updated aggregate rating
+                # re-filter reviews including the newest, and grab updated
+                # aggregate rating
                 reviews = Review.objects.all().filter(product=product)
                 avg_rating = reviews.aggregate(Avg('rating'))['rating__avg']
                 product.rating = avg_rating

@@ -17,8 +17,6 @@ from .forms import OrderForm
 from .models import Order, OrderLineItem
 
 
-
-
 @require_POST
 def cache_checkout_data(request):
     """Cache checkout data and bag to be sent to stripe"""

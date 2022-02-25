@@ -240,11 +240,14 @@
     * [Quantity Input Field](documentation/screenshots/w3c-css/product-qty.png)
     * [Sort](documentation/screenshots/w3c-css/sort.png)
     * [Stripe Payments](documentation/screenshots/w3c-css/stripe-payments.png)
+        * Errors highlighted in 'stripe_elements.js' pertain to Stripe import.
 
 ---
 
-### Python 8:
-
+### PEP8:
+* All python files were tested with [PEP8 online](http://pep8online.com/) and returned no errors.
+    * Some lines are too long and cannot be broken up, therefore `# noqa:` is used in order for Flake8 to ignore them.
+        * [Products views.py PEP8 Check](documentation/screenshots/pep8/pep8.png)
 
 [Back to Top](#testing-and-project-barrier-solutions)
 
