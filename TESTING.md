@@ -200,7 +200,7 @@
 ## **Code Validation**
 
 ### W3C Markup Validation Service:
-* HTML was validated by running each page through the [W3C HTML Markup Validator](https://validator.w3.org/) and returned no errors.
+* The HTML for this site was validated by running each page through the [W3C HTML Markup Validator](https://validator.w3.org/) and returned no errors.
     * [Home](documentation/screenshots/w3c-html/home.png)
     * [Our Story](documentation/screenshots/w3c-html/our-story.png)
     * [Products](documentation/screenshots/w3c-html/products.png)
@@ -215,6 +215,19 @@
 ---
 
 ### W3C CSS Validation Service:
+* The CSS for this site was validated by running each page through the [W3C CSS Validator]() via direct input and returned no errors.
+    * [Home](documentation/screenshots/w3c-css/home.png)
+    * [Our Story](documentation/screenshots/w3c-css/our-story.png)
+    * [Products](documentation/screenshots/w3c-css/products.png)
+    * [Product Details](documentation/screenshots/w3c-css/product-details.png)
+    * [Profile](documentation/screenshots/w3c-css/profile.png)
+    * [Wishlist](documentation/screenshots/w3c-css/wishlist.png)
+    * [Shopping Cart](documentation/screenshots/w3c-css/shopping-cart.png)
+    * [Checkout](documentation/screenshots/w3c-css/checkout.png)
+    * [Checkout Success](documentation/screenshots/w3c-css/checkout-success.png)
+    * [Add Category](documentation/screenshots/w3c-css/add-category.png)
+    * [Add Product](documentation/screenshots/w3c-css/add-product.png)
+    * [Edit Product](documentation/screenshots/w3c-css/edit-product.png)
 
 
 ---
