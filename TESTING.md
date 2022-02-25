@@ -380,7 +380,26 @@ The site was tested on the following physical devices:
 ### Mobiles: 
 
 * Huawei P30
-    * 
+    * Sign In
+        * ![Sign In](documentation/screenshots/huawei/sign-in.jpg)
+    * Our Story
+        * ![Our Story](documentation/screenshots/huawei/our-story.jpg)
+    * Profile
+        * ![Profile](documentation/screenshots/huawei/profile.jpg)
+    * Profile Updated
+        * ![Profile Updated](documentation/screenshots/huawei/profile-updated.jpg)
+    * Wishlist
+        * ![Wishlist](documentation/screenshots/huawei/wishlist.jpg)
+    * Removed From Wishlist
+        * ![Removed From Wishlist](documentation/screenshots/huawei/removed-from-wishlist.jpg)
+    * Shopping Cart
+        * ![Shopping Cart](documentation/screenshots/huawei/bag.jpg) 
+    * Update Product Quantity
+        * ![Update Product Quantity](documentation/screenshots/huawei/update-qty.jpg) 
+    * Loading
+        * ![Loading](documentation/screenshots/huawei/loading.jpg) 
+    * Checkout Success
+        * ![Checkout Success](documentation/screenshots/huawei/checkout-success.jpg) 
 
 * Sony Xperia 1 II
     * 
