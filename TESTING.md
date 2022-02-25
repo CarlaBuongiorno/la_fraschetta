@@ -233,7 +233,13 @@
 ---
 
 ### JSHint:
-
+* All javascript files were tested with [JSHint](https://jshint.com/) and returned no errors.
+    * [Product and Category Image](documentation/screenshots/w3c-css/image.png)
+    * [Bag](documentation/screenshots/w3c-css/bag.png)
+    * [Country Fields Functionality](documentation/screenshots/w3c-css/countryfield.png)
+    * [Quantity Input Field](documentation/screenshots/w3c-css/product-qty.png)
+    * [Sort](documentation/screenshots/w3c-css/sort.png)
+    * [Stripe Payments](documentation/screenshots/w3c-css/stripe-payments.png)
 
 ---
 
