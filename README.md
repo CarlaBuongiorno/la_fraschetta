@@ -1,6 +1,6 @@
 # **La Fraschetta**
 
-[View the live site here]()
+[View the live site here](https://la-fraschetta.herokuapp.com/)
 
 ![Final project image home page]()
 

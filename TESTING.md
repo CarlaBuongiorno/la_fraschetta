@@ -1,8 +1,8 @@
 # **Testing And Project Barrier Solutions**
 
-[Return to README.md](https://github.com/CarlaBuongiorno/The-Collector/blob/master/README.md)
+[Return to README.md](https://github.com/CarlaBuongiorno/la-fraschetta/blob/master/README.md)
 
-[View the live site here](https://the-collector-project.herokuapp.com/)
+[View the live site here](https://la-fraschetta.herokuapp.com/)
 
 ![Final project image home page](docs/screenshots/amiresponsive.png)
 
@@ -265,8 +265,20 @@ The website was tested through the following browsers:
 
 ### Google Chrome
 
-* 
-    * ![]()
+* Home
+    * ![Home](documentation/screenshots/google-chrome/home.png)
+* Products
+    * ![Products](documentation/screenshots/google-chrome/products.png)
+* Product Details
+    * ![Product Details](documentation/screenshots/google-chrome/product.png)
+* Added a Review
+    * ![Added a Review](documentation/screenshots/google-chrome/added-review.png)
+* Remove From Wishlist
+    * ![Remove From Wishlist](documentation/screenshots/google-chrome/remove-from-wishlist.png)
+* Add to Bag
+    * ![Add to Bag](documentation/screenshots/google-chrome/add-to-bag.png)
+* Checkout Success
+    * ![Checkout Success](documentation/screenshots/google-chrome/checkout-success.png)
 
 ### Microsoft Edge
 
