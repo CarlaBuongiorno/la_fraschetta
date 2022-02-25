@@ -349,12 +349,29 @@ DevTools were used to test the site across a range of widths:
 
 ### Desktops:
 
-* Laptop (1200px)
-    * 
+* Nest Hub (1024px)
+    * Home Categories Signed In
+        * ![Home Categories Signed In](documentation/screenshots/nest-hub/home.png)
+    * Error 404
+        * ![Error 404](documentation/screenshots/nest-hub/error404.png)
+    * Search -> No Results
+        * ![Search -> No Results](documentation/screenshots/nest-hub/search-no-results.png)
+    * Search Tiramisu
+        * ![Search Tiramisu](documentation/screenshots/nest-hub/search-tiramisu.png)
+    * Sort Condiments By Price Ascending
+        * ![Sort Condiments By Price Ascending](documentation/screenshots/nest-hub/sort-condiments-price-asc.png)
 
 * Desktop screen (1400px)
-    * 
-
+    * Empty Shopping Cart
+        * ![Empty Shopping Cart](documentation/screenshots/lg-screen/empty-bag.png)
+    * Edit Product
+        * ![Edit Product](documentation/screenshots/lg-screen/edit-product.png)
+    * Updated Product
+        * ![Updated Product](documentation/screenshots/lg-screen/updated-product.png)
+    * Profile
+        * ![Profile](documentation/screenshots/lg-screen/profile.png)
+    * Past Confirmation Order
+        * ![Past Confirmation Order](documentation/screenshots/lg-screen/past-confirmation-order.png)
 
 ---
 
