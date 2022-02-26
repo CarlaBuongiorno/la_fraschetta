@@ -6,15 +6,7 @@ This website was built to fulfill the requirements of the Code Institute Milesto
 
 Using the principles of UX design, this fully responsive website was developed using HTML, CSS, Bootstrap, JavaScript, jQuery, Python, Django, and it uses a SQL database through PostgreSQL, allowing the store owners to easily add, edit or delete the products that they have to sell.
 
-The website payment system uses a service called Stripe. At this stage, the stripe functionality is set up to only accept the test card details below:
-
-Card Number: 4242 4242 4242 4242
-
-Month/Year: 04 / 24
-
-CVC: 242
-
-ZIP: 42424
+The website payment system uses a service called Stripe. At this stage, the stripe functionality is set up to only accept the test card details. You can find these details [here](https://stripe.com/docs/testing#cards).
 
 ![Final project image home page](documentation/screenshots/amiresponsive/amiresponsive.png)
 
@@ -520,8 +512,15 @@ All testing and project barriers and solutions has been documented here - [TESTI
 * [Code Institute](https://codeinstitute.net/) was the main source of information used to create this project.
   * A large amount of code came from the Code Institute, [Boutique Ado](https://boutique-ado-carla-buongiorno.herokuapp.com/) Mini Project Walkthrough by Chris Zielinski.
   * The core functionality of La Fraschetta is all taken from the Boutique Ado project.
-* Tim Nelson for creating the average ratings functionality for each product on the All Products page.
-* Tim Nelson for creating the functionality to render a heart on each Product on the All Product page based on if a user has it in their wishlist.
+* [Django Documentation](https://docs.djangoproject.com/en/4.0/) for helping me understand Django as a whole.
+* Python Package Index for customizing a country list [django-countries](https://pypi.org/project/django-countries/#customize-the-country-list).
+* Django Documentation for helping me understand model fields better, in particular [Positive Integer](https://docs.djangoproject.com/en/4.0/ref/models/fields/) for the stock count of a product to be integers above 0.
+* Django Documentations for helping me understand averaging using [Aggregation](https://docs.djangoproject.com/en/4.0/topics/db/aggregation/). This was specific to _Average Product Ratings_.
+* My mentor, Tim Nelson, for helping me understand and guiding me in rendering the reviews details on the _Product Details_ page.
+* My mentor, Tim Nelson, for helping me understand and create the average ratings functionality and rendering the correct amount of stars on each product on the _All Products_ page, then updating the average rating after a new review is added.
+* My mentor, Tim Nelson, for helping me understand and create the functionality to render a heart on each Product on the _All Product_ page based on if a user has it in their wishlist.
+* [CSS Tricks](https://css-tricks.com/snippets/css/css-triangle/) for creating the little triangle pointers on the toast messages.
+* [w3schools](https://www.w3schools.com/css/tryit.asp?filename=trycss_ex_images_card) for creating cards with a hovering effect for the Categories section on the _Home_ page.
 
 * [Bootstrap](https://getbootstrap.com/) throughout the site, to create a beautiful, responsive site.
 
