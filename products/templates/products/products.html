@@ -82,6 +82,7 @@
                                         <h6 class="col-10 mr-0 pr-0 green font-weight-bold pl-lg-1">
                                             {{ product.name }}
                                         </h6>
+                                        <!-- Credit -> Tim Nelson for his assistance with rendering hearts on a user's wishlisted items -->
                                         <!-- loop over all items (if any) in the wishlist -->
                                         {% for item in wishlist %}
                                             <!-- if the outter loop of all products ID matches the inner loop of wishlist items -->
@@ -97,6 +98,7 @@
                                     <div class="row">
                                         <div class="col pl-lg-1">
                                             <p class="lead mb-0 text-left font-weight-bold green">€{{ product.price }}</p>
+                                            <!-- Credit -> Tim Nelson for his assitance with rendering the correct amount of stars on each product's average rating -->
                                             {% if review == 5 %}
                                                 <p>
                                                     <small class="green-muted">

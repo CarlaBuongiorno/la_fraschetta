@@ -70,8 +70,11 @@ def all_products(request):
 
     for product in products:
         reviews = Review.objects.all().filter(product=product)
+        # Credit - https://docs.djangoproject.com/en/4.0/topics/db/aggregation/
         product_reviews_count.append(len(reviews))
         avg_rating = reviews.aggregate(Avg('rating'))['rating__avg']
+        # Credit -> Tim Nelson for helping me create the 'avg_rating' 
+        # functionality
         if avg_rating is not None:
             # round to the nearest 0.5 value
             rounded_avg = round(avg_rating * 2) / 2
