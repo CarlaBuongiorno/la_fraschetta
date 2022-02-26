@@ -102,16 +102,23 @@
 ## **Design**
 
 ### Colour Scheme
-
-* 
+* The website uses the colours found in the Italian Flag for authenticity.
+  * [Colour Palette - Coolers.co](https://coolors.co/0f5520-fffaea-990b16-6c9c79)
+  ![Colour Palette](documentation/screenshots/colors.png)
 
 ### Typography
 
-* 
+* The website uses two fonts from [Google Fonts](https://fonts.google.com/?query=Suwannaphum).
+  * The first one is called _Suwannaphum_, chosen for it's traditional (but not rigid) look. It has a fall back font of 'serif'.
+  * The second font is called _Dancing Script_, chosen to try incorporate the typical Italian humour and flare. It has a fall back of 'cursive'.
 
 ### Imagery
 
-* 
+* The icons in the site were taken from font-awesome and used for their obvious meaning.
+* The logo was designed and created by Natasha, designer, photographer, and future owner of __La Fraschetta__.
+* The first image (on the home page) of the site was chosen as a background for the Title. It is a sunset view of a little town in Tuscany called 'San Giminiano'. This image was chosen as it captures the true essence and beauty of Italy, complete with Italian rooftops, a church, a fort, Vinyards, and hills.
+* The images on the _Our Story_ page are all of Natasha and Simone, future owners of __La Fraschetta__, taken by Natasha.
+* Some of the product and category images are also photos taken by Natasha. All the rest of the product and category images were chosen from various copy-right sites, used as placeholders in order to fillful the requirements for this project. These images will eventually be replaced by real __La Fraschetta__ store product images.
 
 ### Wireframes
 The wireframes for desktop, mobile and tablet for this project can be found below:
