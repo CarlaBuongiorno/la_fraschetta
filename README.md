@@ -205,6 +205,10 @@ The wireframes for desktop, mobile and tablet for this project can be found belo
 * Store owner has the ability to add Categories
 * Store owner has the ability to add / edit and delete Products
 
+* 404 Page Not Found
+* 500 Internal Server Error
+    * ![404 Page Not Found](docs/screenshots/features/page_not_found.png)
+
 ---
 
 ### Future Features
@@ -215,6 +219,7 @@ The wireframes for desktop, mobile and tablet for this project can be found belo
 * The ability for the logged in user to Add To Wishlist and Remove From Wishlist from the Listed Products page.
 * The ability for the store owner to edit and delete Categories.
 * A 'Confirm to delete' modal, allowing the store owner to confirm deletion of a product.or category in order to avoid accidental deletion.
+* Pagination
 
 [Back to Top](#la-fraschetta)
 
@@ -223,6 +228,27 @@ The wireframes for desktop, mobile and tablet for this project can be found belo
 ## **Information Architecture**
 
 ### Navigation bar
+
+The navigation bar changes depending on user status and screen size:
+
+| Nav Link | Logged Out | Logged In (User) | Logged In (Admin) |
+|-------|-----|-----|-----|
+| Logo (small screen) | &#10060; | &#10060; | &#10060; |
+| Logo (large screen) | &#9989; | &#9989; | &#9989; |
+| Home | &#9989; | &#9989; | &#9989; |
+| Delicatessen with dropdown list of Categories | &#9989; | &#9989; | &#9989; |
+| Our Story | &#9989; | &#9989; | &#9989; |
+| Contact | &#9989; | &#9989; | &#9989; |
+| Search Our Site | &#9989; | &#9989; | &#9989; |
+| My Account | &#9989; | &#9989; | &#9989; |
+| My Account dropdown - Login | &#9989; | &#10060; | &#10060; |
+| My Account dropdown - Register | &#9989; | &#10060; | &#10060; |
+| My Account dropdown - Profile | &#10060; | &#9989; | &#9989; |
+| My Account dropdown - Log Out | &#10060; | &#9989; | &#9989; |
+| My Account dropdown - Add Category | &#10060; | &#10060; | &#9989; |
+| My Account dropdown - Add Product | &#10060; | &#10060; | &#9989; |
+| Wishlist | &#10060; | &#9989; | &#9989; |
+| Shopping Basket Icon | &#9989; | &#9989; | &#9989; |
 
 ### Database Design
 The diagram below illustrates the database structure used in this project.
