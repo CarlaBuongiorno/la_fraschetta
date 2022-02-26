@@ -2,166 +2,308 @@
 
 <!doctype html>
 <html lang="en">
-  <head>
-    {% block meta %}
-        <!-- Required meta tags -->
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- Favicon -->
-        <link rel="icon" type="image/x-icon" sizes="192x192" href="{% static 'favicon/favicon.ico' %}">
-    {% endblock %}
+    <head>
+        {% block meta %}
+            <!-- Required meta tags -->
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <!-- Favicon -->
+            <link rel="icon" type="image/x-icon" sizes="192x192" href="{% static 'favicon/favicon.ico' %}">
+        {% endblock %}
 
-    {% block extra_meta %}
-    {% endblock %}
+        {% block extra_meta %}
+        {% endblock %}
 
-    {% block corecss %}
-        <!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="stylesheet" href="{% static 'css/base.css' %}">
-    {% endblock %}
+        {% block corecss %}
+            <!-- Bootstrap CSS -->
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+            <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        {% endblock %}
 
-    {% block extra_css %}
-    {% endblock %}
+        {% block extra_css %}
+        {% endblock %}
 
-    {% block corejs %}
-        <!-- Bootstrap Bundle with Popper -->
-        <script src="https://kit.fontawesome.com/e9c73d7092.js" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-        <!-- Stripe -->
-        <script src="https://js.stripe.com/v3/"></script>
-    {% endblock %}
+        {% block corejs %}
+            <!-- Bootstrap Bundle with Popper -->
+            <script src="https://kit.fontawesome.com/e9c73d7092.js" crossorigin="anonymous"></script>
+            <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+            <!-- Stripe -->
+            <script src="https://js.stripe.com/v3/"></script>
+        {% endblock %}
 
-    {% block extra_js %}
-    {% endblock %}
+        {% block extra_js %}
+        {% endblock %}
 
-    <title>La Fraschetta {% block extra_title %}{% endblock %}</title>
-  </head>
-  <body>
-    <header class="container-fluid fixed-top p-0">
-		<div class="row text-center bg-green" id="delivery-banner">
-			<div class="col">
-				<p class="mb-0 cream">Free Delivery From €{{ free_delivery_threshold }} Within The Netherlands!</p>
-			</div>
-		</div>
-		<div id="topnav" class="row bg-cream pt-lg-2 d-none d-lg-flex">
-			<div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-				<form method="GET" action="{% url 'products' %}" class="ml-lg-3">
-                    <div class="input-group w-75">
-                        <input class="form-control border-green bg-cream green site-search" type="text" name="q" placeholder="Search our site">
-                        <div class="input-group-append">
-                            <button class="form-control btn btn-green border-green" type="submit">
-                                <span class="icon">
-                                    <i class="fas fa-search"></i>
-                                </span>
-                                <span class="sr-only">Search our Delicatessen</span>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-			</div>
-			<div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center">
-				<a href="{% url 'home' %}" class="nav-link">
-                    <img class="logo" src="{{ MEDIA_URL }}logo.png" alt="Sky line of Italy with 'La Fraschetta' written below">
-                </a>
-			</div>
-			<div class="col-12 col-lg-4 my-auto py-1 py-lg-0 pl-lg-0">
-				<ul class="list-inline list-unstyled text-right mr-lg-3 my-0">
-					<li class="list-inline-item dropdown">
-						<a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <div class="text-center">
-                                <div><i class="fas fa-user fa-lg green"></i></div>
-                                <p class="my-0 green">My Account</p>
+        <title>La Fraschetta {% block extra_title %}{% endblock %}</title>
+    </head>
+    <body>
+        <header class="container-fluid fixed-top p-0">
+            <div class="row text-center bg-green" id="delivery-banner">
+                <div class="col">
+                    <p class="mb-0 cream">Free Delivery From €{{ free_delivery_threshold }} Within The Netherlands!</p>
+                </div>
+            </div>
+            <div id="topnav" class="row bg-cream pt-lg-2 d-none d-lg-flex">
+                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+                    <form method="GET" action="{% url 'products' %}" class="ml-lg-3">
+                        <div class="input-group w-75">
+                            <input class="form-control border-green bg-cream green site-search" type="text" name="q" placeholder="Search our site">
+                            <div class="input-group-append">
+                                <button class="form-control btn btn-green border-green" type="submit">
+                                    <span class="icon">
+                                        <i class="fas fa-search"></i>
+                                    </span>
+                                    <span class="sr-only">Search our Delicatessen</span>
+                                </button>
                             </div>
-                        </a>
-						<div class="dropdown-menu border-0 bg-cream" aria-labelledby="user-options">
-                            {% if request.user.is_authenticated %}
-                                {% if request.user.is_superuser %}
-                                <a href="{% url 'add_category' %}" class="dropdown-item green">Add Category</a>
-                                    <a href="{% url 'add_product' %}" class="dropdown-item green">Add Product</a>
-                                {% endif %}
-                                <a href="{% url 'profile' %}" class="dropdown-item green">My Profile</a>
-                                <a href="{% url 'account_logout' %}" class="dropdown-item green">Logout</a>
-                            {% else %}
-                                <a href="{% url 'account_signup' %}" class="dropdown-item green">Register</a>
-                                <a href="{% url 'account_login' %}" class="dropdown-item green">Login</a>
-                            {% endif %}
                         </div>
-					</li>
-                    {% if request.user.is_authenticated %}
-					    <li class="list-inline-item">
-						    <a class="nav-link" href="{% url 'wishlist' %}">
+                    </form>
+                </div>
+                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center">
+                    <a href="{% url 'home' %}" class="nav-link">
+                        <img class="logo" src="{{ MEDIA_URL }}logo.png" alt="Sky line of Italy with 'La Fraschetta' written below">
+                    </a>
+                </div>
+                <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 pl-lg-0">
+                    <ul class="list-inline list-unstyled text-right mr-lg-3 my-0">
+                        <li class="list-inline-item dropdown">
+                            <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <div class="text-center">
+                                    <div><i class="fas fa-user fa-lg green"></i></div>
+                                    <p class="my-0 green">My Account</p>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu border-0 bg-cream" aria-labelledby="user-options">
+                                {% if request.user.is_authenticated %}
+                                    {% if request.user.is_superuser %}
+                                    <a href="{% url 'add_category' %}" class="dropdown-item green">Add Category</a>
+                                        <a href="{% url 'add_product' %}" class="dropdown-item green">Add Product</a>
+                                    {% endif %}
+                                    <a href="{% url 'profile' %}" class="dropdown-item green">My Profile</a>
+                                    <a href="{% url 'account_logout' %}" class="dropdown-item green">Logout</a>
+                                {% else %}
+                                    <a href="{% url 'account_signup' %}" class="dropdown-item green">Register</a>
+                                    <a href="{% url 'account_login' %}" class="dropdown-item green">Login</a>
+                                {% endif %}
+                            </div>
+                        </li>
+                        {% if request.user.is_authenticated %}
+                            <li class="list-inline-item">
+                                <a class="nav-link" href="{% url 'wishlist' %}">
+                                    <div class="text-center">
+                                        <div>
+                                            <i class="fas fa-heart fa-lg green"></i>
+                                        </div>
+                                        <p class="my-0 green">Wishlist</p>
+                                    </div>
+                                </a>
+                            </li>
+                        {% endif %}
+                        <li class="list-inline-item">
+                            <a class="{% if grand_total %}font-weight-bold{% endif %} nav-link" href="{% url 'view_bag' %}">
                                 <div class="text-center">
                                     <div>
-                                        <i class="fas fa-heart fa-lg green"></i>
+                                        <i class="fas fa-shopping-basket fa-lg green"></i>
+                                        <span class="sr-only">Shopping Basket</span>
                                     </div>
-                                    <p class="my-0 green">Wishlist</p>
+                                    <p class="my-0 green">
+                                        {% if grand_total %}
+                                            €{{ grand_total|floatformat:2 }}
+                                        {% else %}
+                                            €0.00
+                                        {% endif %}
+                                    </p>
                                 </div>
                             </a>
                         </li>
-                    {% endif %}
-					<li class="list-inline-item">
-						<a class="{% if grand_total %}font-weight-bold{% endif %} nav-link" href="{% url 'view_bag' %}">
-                            <div class="text-center">
-                                <div>
-                                    <i class="fas fa-shopping-basket fa-lg green"></i>
-                                    <span class="sr-only">Shopping Basket</span>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <nav class="navbar navbar-main-lg navbar-expand-lg navbar-light w-100 bg-cream pt-3 pt-lg-2">
+                    <button class="navbar-toggler ml-4 border-green" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    {% include 'includes/mobile-top-header.html' %}
+                    {% include 'includes/main-nav.html' %}
+                </nav>
+            </div>
+        </header>
+        
+        {% if messages %}
+            <article class="message-container">
+                {% for message in messages %}
+                    {% with message.level as level %}
+                        {% if level == 40 %}
+                            {% include 'includes/toasts/toast_error.html' %}
+                        {% elif level == 30 %}
+                            {% include 'includes/toasts/toast_warning.html' %}
+                        {% elif level == 25 %}
+                            {% include 'includes/toasts/toast_success.html' %}
+                        {% else %}
+                            {% include 'includes/toasts/toast_info.html' %}
+                        {% endif %}
+                    {% endwith %}
+                {% endfor %}
+            </article>
+        {% endif %}
+
+        {% block page_header %}
+        {% endblock %}
+
+        {% block content %}
+        {% endblock %}
+
+        <!-- Footer -->
+        <footer class="container-fluid">
+
+            <div class="row align-items-center text-center text-md-start">
+                <div class="col">
+                    <div class="row bg-green">
+
+                        <!-- logo -->
+                        <div class="col-5">
+                            <div class="row">
+                                <div class="col-12">
+                                    <a href="{% url 'home' %}" class="p-0">
+                                        <img class="logo bg-cream" src="{{ MEDIA_URL }}logo.png" alt="Sky line of Italy with 'La Fraschetta' written below">
+                                    </a>
                                 </div>
-                                <p class="my-0 green">
-                                    {% if grand_total %}
-                                        €{{ grand_total|floatformat:2 }}
-                                    {% else %}
-                                        €0.00
-                                    {% endif %}
-                                </p>
+                                <div class="col ml-4 mb-2 text-left">
+                                    <h5 class="cream pt-4 hero-info-footer">The taste of <span class="cream">Tradition</span> on your table!</h5>
+                                </div>
                             </div>
-                        </a>
-					</li>
-				</ul>
-			</div>
-		</div>
-        <div class="row">
-            <nav class="navbar navbar-main-lg navbar-expand-lg navbar-light w-100 bg-cream pt-3 pt-lg-2">
-                <button class="navbar-toggler ml-4 border-green" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                {% include 'includes/mobile-top-header.html' %}
-                {% include 'includes/main-nav.html' %}
-            </nav>
-        </div>
-	</header>
-    
-    {% if messages %}
-        <article class="message-container">
-            {% for message in messages %}
-                {% with message.level as level %}
-                    {% if level == 40 %}
-                        {% include 'includes/toasts/toast_error.html' %}
-                    {% elif level == 30 %}
-                        {% include 'includes/toasts/toast_warning.html' %}
-                    {% elif level == 25 %}
-                        {% include 'includes/toasts/toast_success.html' %}
-                    {% else %}
-                        {% include 'includes/toasts/toast_info.html' %}
-                    {% endif %}
-                {% endwith %}
-            {% endfor %}
-        </article>
-    {% endif %}
+                        </div>
+                        
+                        <!-- Products -->
+                        <div class="d-none d-lg-block col-2 cream text-left">
+                            <P class="pt-3 mb-1 font-weight-bold">Products</P>
+                                {% for c in category_list %}
+                                    <p class="small py-0 my-0">{{ c.friendly_name }}</p>
+                                {% endfor %}
+                        </div>
+                        
+                        <!-- Contact -->
+                        <div class="col-4 col-lg-3 bg-green cream text-left">
+                            <P class="pt-3 mb-1 font-weight-bold">Contact</P>
+                            <div class="row">
+                                <div class="col">
+                                    <!-- Address -->
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <p class="small py-0 my-0">Address: </p>
+                                        </div>
+                                        <div class="col-8 px-0 mr-0">
+                                            <p class="small py-0 my-0"><small>Winkelcentrum Weidevenne,</small></p>
+                                            <p class="small py-0 my-0"><small>Van Damplein 11, 1448 NB</small></p>
+                                            <p class="small py-0 my-0"><small>Purmerend</small></p>
+                                        </div>
+                                    </div>
+                                    <!-- Phone -->
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <p class="small py-0 my-0">Phone: </p>
+                                        </div>
+                                        <div class="col-8 px-0 mr-0">
+                                            <p class="small py-0 my-0"><small>+31 633 891 442</small></p>
+                                        </div>
+                                    </div>
+                                    <!-- Email -->
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <p class="small py-0 my-0">Email: </p>
+                                        </div>
+                                        <div class="col-8 px-0 mr-0">
+                                            <p class="small py-0 my-0"><small>lafraschetta@example.com</small></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-    {% block page_header %}
-    {% endblock %}
+                            <div class="row pt-3">
+                                <div class="col-1">
+                                    <a href="https://www.facebook.com/" class="text-decoration-none hvr-grow" target="_blank" rel="noopener">
+                                        <i class="fab fa-facebook-square cream social-icons" aria-hidden="true"></i>
+                                        <span class="sr-only">Facebook</span>
+                                    </a>
+                                </div>
+                                <div class="col-1">
+                                    <a href="https://www.instagram.com/" class="text-decoration-none hvr-grow" target="_blank" rel="noopener">
+                                        <i class="fab fa-instagram cream social-icons" aria-hidden="true"></i>
+                                        <span class="sr-only">Instagram</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>  
 
-    {% block content %}
-    {% endblock %}
+                        <!-- Opening Hours -->
+                        <div class="col-3 col-lg-2">
+                            <P class="pt-3 mb-1 font-weight-bold cream text-left">Opening Hours</P>
+                        </div>
 
-    {% block postloadjs %}
-    <script>
-        $('.toast').toast('show');
-    </script>
-    {% endblock %}
-    
-  </body>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row bg-green pb-3 mt-0 pt-2">
+                <div class="col cream">
+
+                    <!-- <div class="row">
+                        <div class="col cream small">
+                            &copy; Copyright <span id=copyright></span> La Fraschetta
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 small">
+                            <span class="d-none d-md-inline-block">Developed by: Carla Buongiorno</span>   
+                            <a href="https://github.com/CarlaBuongiorno/la-fraschetta" class="text-decoration-none hvr-grow" target="_blank" rel="noopener">
+                                <i class="fab fa-github cream" aria-hidden="true"></i>
+                                <span class="sr-only">GitHub</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/carlabuongiorno/" class="text-decoration-none hvr-grow" target="_blank" rel="noopener">
+                                <i class="fab fa-linkedin cream" aria-hidden="true"></i>
+                                <span class="sr-only">linkedin</span>
+                            </a>
+                        </div>
+                    </div> -->
+
+                    <div class="row">
+                        <div class="col cream small ml-4">
+                            <span>
+                                &copy; Copyright<span id=copyright></span> | La Fraschetta | 
+                            </span>
+                            <span class="d-none d-md-inline-block">Developed by: Carla Buongiorno </span>   
+                            <a href="https://github.com/CarlaBuongiorno/la-fraschetta" class="text-decoration-none hvr-grow" target="_blank" rel="noopener">
+                                <i class="fab fa-github cream" aria-hidden="true"></i>
+                                <span class="sr-only">GitHub</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/carlabuongiorno/" class="text-decoration-none hvr-grow" target="_blank" rel="noopener">
+                                <i class="fab fa-linkedin cream" aria-hidden="true"></i>
+                                <span class="sr-only">linkedin</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
+        {% block postloadjs %}
+        <script>
+            $('.toast').toast('show');
+        </script>
+        <script>
+            function copyright() {
+                let date = new Date();
+                let year = date.getFullYear();
+                document.getElementById("copyright").innerHTML = year;
+            }
+            copyright();
+        </script>
+        {% endblock %}
+        
+    </body>
 </html>

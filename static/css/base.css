@@ -33,9 +33,18 @@ h2, h3 {
     font-weight: bold;
 }
 
-h1 span {
+h1.hero-info span {
     font-family: 'Dancing Script', cursive;
     font-size: 70px;
+}
+
+h5.hero-info-footer {
+    font-size: 2rem;
+}
+
+h5.hero-info-footer span {
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
 }
 
 p {
@@ -521,12 +530,21 @@ hr {
 	    height: 80vh;
     }
 
-    h1 span {
+    h1.hero-info span {
         font-size: 50px;
     }
 
     .hero-info {
         margin-top: 110px;
+        font-size: 30px;
+    }
+
+    h5.hero-info-footer {
+        font-size: 1rem;
+    }
+    
+    h5.hero-info-footer span {
+        font-family: 'Dancing Script', cursive;
         font-size: 30px;
     }
 

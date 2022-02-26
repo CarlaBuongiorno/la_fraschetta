@@ -36,13 +36,11 @@ ZIP: 42424
 
 [Technologies Used](#technologies-used)
 * [Languages Used](#languages-used)
-* [Workspace](#workspace)
-* [Version Control](#version-control)
-* [Wireframing](#wireframing)
-* [Responsive Design](#responsive-design)
 * [Site Design](#site-design)
-* [Database Design Technologies](#database-design-technologies)
-* [Frameworks, Libraries and Others](#frameworks-libraries-and-others)
+* [Hosting](#hosting)
+* [Databases Platform and Cloud Storage](#databases-platform-and-cloud-storage)
+* [Frameworks and Libraries](#frameworks-and-libraries)
+* [Other Technologies](#other-technologies)
 * [Testing](#testing)
 
 [Deployment](#deployment)
@@ -207,7 +205,6 @@ The wireframes for desktop, mobile and tablet for this project can be found belo
 
 * 404 Page Not Found
 * 500 Internal Server Error
-    * ![404 Page Not Found](docs/screenshots/features/page_not_found.png)
 
 ---
 
@@ -278,7 +275,7 @@ The diagram below illustrates the database structure used in this project.
 * [GitHub](https://github.com/) is used to store the code for this project after being pushed from Git.
 * [Heroku](https://www.heroku.com) was used to deploy the live site.
 
-### Databases platform and cloud storage
+### Databases Platform and Cloud Storage
 * [SQlite](https://www.sqlite.org/index.html) is the SQL database engine provided by default as part of Django and used during development.
 * [Heroku Postgres](https://devcenter.heroku.com/articles/heroku-postgresql) is the SQL database service provided directly by Heroku for storing the site's data.
 * [Amazon AWS S3](https://s3.console.aws.amazon.com/s3) was used to host this project's images and static files.
@@ -520,7 +517,12 @@ All testing and project barriers and solutions has been documented here - [TESTI
 
 ### Code
 
-* [Code Institute](https://codeinstitute.net/) was the main source of information used to create this project, specifically the Boutique Ado Mini Project Walkthrough by Chris Zielinski.
+* [Code Institute](https://codeinstitute.net/) was the main source of information used to create this project.
+  * A large amount of code came from the Code Institute, [Boutique Ado](https://boutique-ado-carla-buongiorno.herokuapp.com/) Mini Project Walkthrough by Chris Zielinski.
+  * The core functionality of La Fraschetta is all taken from the Boutique Ado project.
+* Tim Nelson for creating the average ratings functionality for each product on the All Products page.
+* Tim Nelson for creating the functionality to render a heart on each Product on the All Product page based on if a user has it in their wishlist.
+
 * [Bootstrap](https://getbootstrap.com/) throughout the site, to create a beautiful, responsive site.
 
 ### Media
