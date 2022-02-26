@@ -512,6 +512,7 @@ All testing and project barriers and solutions has been documented here - [TESTI
 * [Code Institute](https://codeinstitute.net/) was the main source of information used to create this project.
   * A large amount of code came from the Code Institute, [Boutique Ado](https://boutique-ado-carla-buongiorno.herokuapp.com/) Mini Project Walkthrough by Chris Zielinski.
   * The core functionality of La Fraschetta is all taken from the Boutique Ado project.
+* [Stackoverflow](https://stackoverflow.com/) for help figuring out django error codes, and searching for bug fixes.
 * [Django Documentation](https://docs.djangoproject.com/en/4.0/) for helping me understand Django as a whole.
 * Python Package Index for customizing a country list [django-countries](https://pypi.org/project/django-countries/#customize-the-country-list).
 * Django Documentation for helping me understand model fields better, in particular [Positive Integer](https://docs.djangoproject.com/en/4.0/ref/models/fields/) for the stock count of a product to be integers above 0.
@@ -521,12 +522,114 @@ All testing and project barriers and solutions has been documented here - [TESTI
 * My mentor, Tim Nelson, for helping me understand and create the functionality to render a heart on each Product on the _All Product_ page based on if a user has it in their wishlist.
 * [CSS Tricks](https://css-tricks.com/snippets/css/css-triangle/) for creating the little triangle pointers on the toast messages.
 * [w3schools](https://www.w3schools.com/css/tryit.asp?filename=trycss_ex_images_card) for creating cards with a hovering effect for the Categories section on the _Home_ page.
-
+* [Django For Everybody - Full Python University Course](https://www.youtube.com/watch?v=o0XbHvKxw7Y&t=20867s) for better understanding of Django framework.
 * [Bootstrap](https://getbootstrap.com/) throughout the site, to create a beautiful, responsive site.
 
 ### Media
 
-* 
+  * The images used in this site were obtained from Pexels, Unsplash, and Pixabay. All of these sites are completely copyright-free. Below are all the photographers whose work are featured in this website:
+
+* #### Product Items
+
+  * Beverages
+    * [Champagne](https://unsplash.com/photos/lvjumTfLfzk)
+      * Photo by [Mael BALLAND](https://unsplash.com/@mael_balland) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    * [Sauvignon Blanc](https://unsplash.com/photos/fAz5Cf1ajPM)
+      * Photo by [Brett Jordan](https://unsplash.com/@brett_jordan?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    * [Cabernet Sauvignon Merlot](https://unsplash.com/photos/n6fz0zYJILU)	
+      * Photo by [Ceeces Travel](https://unsplash.com/@ceecestravel1?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    * [Aperol](https://unsplash.com/photos/ymNAJ0ryag4)			
+      * Photo by [Mollie Sivaram](https://unsplash.com/@molliesivaram?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    * [Dory Merlot](https://unsplash.com/photos/GqWu8qrCiwg)		
+      * Photo by [Lucas Santos](https://unsplash.com/@_staticvoid?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    * [Perrier Sparkling Water](https://unsplash.com/photos/6A1aHee_6XA)		
+      * Photo by [Mae Mu](https://unsplash.com/@picoftasty?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    * [Peroni](https://unsplash.com/photos/5mhWS3womyM)	
+      * Photo by [Matheus Bardemaker](https://unsplash.com/@matheus_bardemaker?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    * [Heineken](https://unsplash.com/photos/mhad_4H6S14)		
+      * Photo by [Alexander Cifuentes](https://unsplash.com/@aleexcif?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    * [Disaronno](https://unsplash.com/photos/qv7I1yvF0ik)		
+      * Photo by [Ethan Rougon](https://unsplash.com/@ethanethan?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    * [Coca Cola](https://unsplash.com/photos/Y1JduWEJuW4)	
+      * Photo by [Alex Vinogradov](https://unsplash.com/@alexx876?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
+  * Bread
+    * [Baguette](https://unsplash.com/photos/1CisSMe9UQA)		
+      * Photo by [Slashio Photography](https://unsplash.com/@slashiophotography?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    * [Pane con Pasta Madre](https://unsplash.com/photos/_h-2jrL9cMU)     	
+      * Photo by [Mae Mu](https://unsplash.com/@picoftasty?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    * [Pane Casareccio](https://unsplash.com/photos/V4sYOmyTg2w)	
+      * Photo by [Eduardo Alexandre](https://unsplash.com/@eddalexandre?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    * [Focaccia](https://unsplash.com/photos/TqQXS9bG4mE)	
+      * Photo by [Quin Engle](https://unsplash.com/@twistsandzests?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    * [Ciabatta Panini](https://unsplash.com/photos/b83TSzQMmGg)	
+      * Photo by [Sergio Arze](https://unsplash.com/@sergich?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/@twistsandzests?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    * [Ciabatta Loaf](https://unsplash.com/photos/KZwp2IIyXmA)		
+      * Photo by [Toa Heftiba](https://unsplash.com/@heftiba?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/@twistsandzests?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    * [Grissini](https://unsplash.com/photos/bmN6-n8NTx8)		
+      * Photo by [Slashio Photography](https://unsplash.com/@slashiophotography?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/@twistsandzests?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    * [Pane con le Olive](https://www.stockfreeimages.com/5535696/Olive-Bread-Loaf-in-Kitchen.html#) on [Stock Free Images](https://www.stockfreeimages.com/)
+      
+  * Desserts
+    * [Creme Patissiere](https://unsplash.com/photos/acw-W7oeFOk)  	
+      * Photo by [Bohdan Stocek](https://unsplash.com/@bohdans?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    * [Bomboloni](https://unsplash.com/photos/r22iesHiNC4)  		
+      * Photo by [Karolina Kołodziejczak](https://unsplash.com/@rabbit_in_blue?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    * [Cannoli](https://unsplash.com/photos/zrl9pZp-nos)      	
+      * Photo by [amirali mirhashemian](https://unsplash.com/@amir_v_ali?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    * [Amaretti Biscotti](https://unsplash.com/photos/74ePJt-GpMA)  		
+      * Photo by [Quin Engle](https://unsplash.com/@twistsandzests?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    * [Assortment of Biscuits](https://unsplash.com/photos/eUlo0X7J8hw)  		
+      * Photo by [Nina Plobner](https://unsplash.com/@photodiaryofnina?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    * [Panettone](https://unsplash.com/photos/AQ_og51xGlE)		
+      * Photo by [Food Photographer | Jennifer Pallian](https://unsplash.com/@photodiaryofnina?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    * [Brioche](https://unsplash.com/photos/m9pzwmxm2rk)		
+      * Photo by [Mae Mu](https://unsplash.com/@picoftasty?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
+  * Cheese & Dairy
+    * [Asiago]https://unsplash.com/photos/KaK2jp8ie8s 		
+      * Photo by [Alexander Maasch](https://unsplash.com/@tiefenscharf?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    * [Pecorino](https://unsplash.com/photos/7sJMQ_amtiQ)		
+      * Photo by [Aliona Gumeniuk](https://unsplash.com/@agumeniuk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)  
+    * [Gorgonzola](https://unsplash.com/photos/vwPyPWuQAAk)	
+      * Photo by [Michele Blackwell](https://unsplash.com/@mab_studio?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    * [Parmigiano](https://unsplash.com/photos/lL_g13pvgdY)		
+      * Photo by [Max Nayman](https://unsplash.com/@maxniceman?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    * [Tomello](https://unsplash.com/photos/U9XpwAzue_Y)		
+      * Photo by [Adana Eisagholian](https://unsplash.com/@adana90photos?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) 
+    * [Cream](https://unsplash.com/photos/nOctn3PEC0E)		
+      * Photo by [Autumn Hassett](https://unsplash.com/@onpointedigital?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    * [Yoghurt](https://unsplash.com/photos/NFHeBysjCTI)		
+      * Photo by [Visual Stories || Micheile](https://unsplash.com/@micheile?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    * [Milk with Jug](https://unsplash.com/photos/c6TKtsi8C1k)		
+      * Photo by [Mary Skrynnikova](https://unsplash.com/@mary_skr?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+
+  * Cold Cuts
+    * [Ham](https://unsplash.com/photos/1OfPse1qVLM)		
+      * Photo by [Сергей Орловский](https://unsplash.com/@sorel_67?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    * [Salami](https://unsplash.com/photos/m_N0Q_lwxZ0)		
+      * Photo by [Wesual Click](https://unsplash.com/@wesual?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    * [Pancetta](https://unsplash.com/photos/3iPwRGpl7mc)	
+      * Photo by [Davey Gravy](https://unsplash.com/@davey_gravy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    * [Prosciutto](https://unsplash.com/photos/PK8oUTQjkrk)		
+      * Photo by [Stephane Coudassot-Berducou](https://unsplash.com/@hi_i_am_steph?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+    * [Mortadella](https://www.stockfreeimages.com/22479467/Mortadella-di-bologna-whit-mushroom.html)				
+      * Photo by Gancino on [Stock Free Images](https://www.stockfreeimages.com/)
+
+    * Condiments
+      * [Herbs](https://unsplash.com/photos/OtdNWHGRvfI)		
+        * Photo by [Kevin Doran](https://unsplash.com/@kfitzdor?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+      * [Pickled Olives in Jars](https://unsplash.com/photos/oIW078LjZzs)		
+        * Photo by [Elie Dib](https://unsplash.com/@elieadib?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+      * [Spices](https://unsplash.com/photos/pvltA6Ur6S0)		
+        * Photo by [Diana Polekhina](https://unsplash.com/@diana_pole?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+      * [Honey](https://unsplash.com/photos/kp9UVn-PUac)		
+        * Photo by [Roberta Sorge](https://unsplash.com/@robertina?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+      * [Olive Oil](https://unsplash.com/photos/uOBApnN_K7w)
+        * Photo by [Roberta Sorge](https://unsplash.com/@robertina?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+      * [Pickles](https://www.dreamstime.com/vegetables-bottle-stock-image-image-free-613821)
+        *  Photo by [613821 © Mylightscapes](https://www.dreamstime.com/mylightscapes_info) on [Dreamstime.com](https://www.dreamstime.com/)
+
 
 ### Acknowledgements
 
