@@ -154,13 +154,67 @@ The wireframes for desktop, mobile and tablet for this project can be found belo
 
 ## Features
 
-* 
+* Home
+  * Hero Image
+  * List of Categories that lead to the Categorized Products when clicked
+
+* Our Story
+  * Gallery
+
+* View a List of Products
+  * Sort the List of Products by:
+    * _Name_ (A - Z / Z - A)
+    * _Category_ (A - Z / Z - A)
+    * _Price_ (low - high / high - low)
+    * _Ratings_ (low - high / high - low)
+
+* View a List of Categorized Products
+  * Sort the Categorized List of Products by:
+    * _Name_ (A - Z / Z - A)
+    * _Category_ (A - Z / Z - A)
+    * _Price_ (low - high / high - low)
+    * _Ratings_ (low - high / high - low)
+
+* View the number of ratings and average rating for each product on All Products (Categorized Products) page
+
+* View Product Details and stock availibility
+
+* Add Products to Shopping Cart
+* Update quantity and delete Products from Shopping Cart
+
+* Make purchases of the products in the Shopping Cart
+  * If the payment fails, the user is directed back to the checkout form and is shown a message that the payment failed.
+  * If the payment succeeds, the user will be sent a confirmation email containsing the full order details and order number. The user will be redirected to the checkout success page and a message will display, informing the user that the payment succeeded, containing the order details and order number.
+  * Ability for a registered user to save their details upon purchase for ease of future purchases
+
+* Profile
+  * Update Profile
+  * Purchases get saved to a Order History on a registered user's Profile
+
+* Register/Sign In
+* Sign Out
+* Email Verification
+
+* Wishlist (for the logged in user)
+  * Add or remove items from the Wishlist
+  * Display wishlisted items with a red heart on All Products (Categorized Products) page
+
+* Diplay of Reviews with Username and the Date it was added, for each Product 
+* Add Reviews (for the logged in user)
+
+* Store owner has the ability to add Categories
+* Store owner has the ability to add / edit and delete Products
 
 ---
 
 ### Future Features
 
-* 
+* A 'Confirm to delete' modal, allowing the site users to confirm deletion of a product from their shopping cart to avoid accidental deletion.
+* The ability for a registered user to delete their account with a 'Confirm to delete' modal.
+* The ability for the logged in user to edit and delete their review(s).
+* The ability for the logged in user to Add To Wishlist and Remove From Wishlist from the Listed Products page.
+* The ability for the store owner to edit and delete Categories.
+* A 'Confirm to delete' modal, allowing the store owner to confirm deletion of a product.or category in order to avoid accidental deletion.
 
 [Back to Top](#la-fraschetta)
 
