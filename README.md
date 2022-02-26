@@ -2,6 +2,20 @@
 
 [View the live site here](https://la-fraschetta.herokuapp.com/)
 
+This website was built to fulfill the requirements of the Code Institute Milestone 4 Project. It is an e-commerce site designed for the future __La Fraschetta__ store owner's, Natasha Buongiorno and Simone Ottaviani.
+
+Using the principles of UX design, this fully responsive website was developed using HTML, CSS, Bootstrap, JavaScript, jQuery, Python, Django, and it uses a SQL database through PostgreSQL, allowing the store owners to easily add, edit or delete the products that they have to sell.
+
+The website payment system uses a service called Stripe. At this stage, the stripe functionality is set up to only accept the test card details below:
+
+Card Number: 4242 4242 4242 4242
+
+Month/Year: 04 / 24
+
+CVC: 242
+
+ZIP: 42424
+
 ![Final project image home page](documentation/screenshots/amiresponsive/amiresponsive.png)
 
 ## **Contents**
@@ -118,7 +132,7 @@
 * The logo was designed and created by Natasha, designer, photographer, and future owner of __La Fraschetta__.
 * The first image (on the home page) of the site was chosen as a background for the Title. It is a sunset view of a little town in Tuscany called 'San Giminiano'. This image was chosen as it captures the true essence and beauty of Italy, complete with Italian rooftops, a church, a fort, Vinyards, and hills.
 * The images on the _Our Story_ page are all of Natasha and Simone, future owners of __La Fraschetta__, taken by Natasha.
-* Some of the product and category images are also photos taken by Natasha. All the rest of the product and category images were chosen from various copy-right sites, used as placeholders in order to fillful the requirements for this project. These images will eventually be replaced by real __La Fraschetta__ store product images.
+* Some of the product and category images are also photos taken by Natasha. All the rest of the product and category images were chosen from various sites offering royalty-free images, used as placeholders in order to fillful the requirements for this project. These images will eventually be replaced by real __La Fraschetta__ store product images.
 
 ### Wireframes
 The wireframes for desktop, mobile and tablet for this project can be found below:
