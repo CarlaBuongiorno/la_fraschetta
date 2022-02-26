@@ -1,0 +1,89 @@
+<div class="row align-items-center text-center text-md-start d-none d-md-block">
+    <div class="col">
+        <div class="row bg-green">
+            <!-- logo -->
+            <div class="col-5">
+                <div class="row">
+                    <div class="col-12">
+                        <a href="{% url 'home' %}" class="p-0">
+                            <img class="logo bg-cream" src="{{ MEDIA_URL }}logo.png" alt="Sky line of Italy with 'La Fraschetta' written below">
+                        </a>
+                    </div>
+                    <div class="col ml-4 mb-2 text-left">
+                        <h5 class="cream pt-4 hero-info-footer">The taste of <span class="cream">Tradition</span> on your table!</h5>
+                    </div>
+                </div>
+            </div>                       
+            <!-- Products -->
+            <div class="d-none d-lg-block col-2 cream text-left">
+                <P class="pt-3 mb-1 font-weight-bold">Products</P>
+                    {% for c in category_list %}
+                        <p class="small py-0 my-0">{{ c.friendly_name }}</p>
+                    {% endfor %}
+            </div>                  
+            <!-- Contact -->
+            <div class="col-4 col-lg-3 bg-green cream text-left">
+                <P class="pt-3 mb-1 font-weight-bold">Contact</P>
+                <div class="row">
+                    <div class="col">
+                        <!-- Address -->
+                        <div class="row">
+                            <div class="col-4">
+                                <p class="small py-0 my-0">Address: </p>
+                            </div>
+                            <div class="col-8 px-0 mr-lg-0">
+                                <p class="small py-0 my-0"><small>Winkelcentrum Weidevenne,</small></p>
+                                <p class="small py-0 my-0"><small>Van Damplein 11, 1448 NB</small></p>
+                                <p class="small py-0 my-0"><small>Purmerend</small></p>
+                            </div>
+                        </div>
+                        <!-- Phone -->
+                        <div class="row">
+                            <div class="col-4">
+                                <p class="small py-0 my-0">Phone: </p>
+                            </div>
+                            <div class="col-8 px-0 mr-lg-0">
+                                <p class="small py-0 my-0"><small>+31 633 891 442</small></p>
+                            </div>
+                        </div>
+                        <!-- Email -->
+                        <div class="row">
+                            <div class="col-4">
+                                <p class="small py-0 my-0">Email: </p>
+                            </div>
+                            <div class="col-8 px-0 mr-lg-0">
+                                <p class="small py-0 my-0"><small>lafraschetta@example.com</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Social media -->
+                <div class="row pt-3">
+                    <div class="col-1">
+                        <a href="https://www.facebook.com/" class="text-decoration-none hvr-grow" target="_blank" rel="noopener">
+                            <i class="fab fa-facebook-square cream social-icons" aria-hidden="true"></i>
+                            <span class="sr-only">Facebook</span>
+                        </a>
+                    </div>
+                    <div class="col-1">
+                        <a href="https://www.instagram.com/" class="text-decoration-none hvr-grow" target="_blank" rel="noopener">
+                            <i class="fab fa-instagram cream social-icons" aria-hidden="true"></i>
+                            <span class="sr-only">Instagram</span>
+                        </a>
+                    </div>
+                </div>
+            </div>  
+            <!-- Opening Hours -->
+            <div class="col-3 col-lg-2 cream text-left">
+                <P class="pt-3 mb-1 font-weight-bold">Opening Hours</P>
+                <p class="small py-0 my-0"><small>Monday: 13:00 - 17:30</small></p>
+                <p class="small py-0 my-0"><small>Tuesday: 09:30 - 17:30</small></p>
+                <p class="small py-0 my-0"><small>Wednesday: 09:30 - 17:30</small></p>
+                <p class="small py-0 my-0"><small>Thursday: 09:30 - 17:30</small></p>
+                <p class="small py-0 my-0"><small>Friday: 09:30 - 21:00</small></p>
+                <p class="small py-0 my-0"><small>Monday: 09:30 - 17:00</small></p>
+                <p class="small py-0 my-0"><small>Closed</small></p>
+            </div>
+        </div>
+    </div>
+</div>
