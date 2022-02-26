@@ -267,38 +267,52 @@ The diagram below illustrates the database structure used in this project.
 * [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 * [Python](https://www.python.org/)
 
-### Workspace
-
-* [Gitpod](https://gitpod.io/) was used as a virtual IDE workspace to build this site.
-
-### Version Control
-
-* [Git](https://git-scm.com/) was used for version control by utilizing the Gitpod terminal to add and commit to Git and push to GitHub.
-* [GitHub](https://github.com/) is used to store the code for this project after being pushed from Git.
-
-### Wireframing
-
-* [Balsamiq](https://balsamiq.com/) was used to create the wireframes during the design process.
-
-### Responsive Design
-
-* 
-
 ### Site Design
 
-* 
+* [Font Awesome](https://fontawesome.com/) was used to add the icons.
+* [Coolers.co](https://coolors.co/a71313-3c3cdf-0f0f0f-ffffff-198754-ffca02) was used to generate the colour palette in the readme.
+* [Google Fonts](https://fonts.google.com/) was used to import the _Suwannaphum_ and _Dancing Script_ font used within the site.
+* [Favicon.io](https://favicon.io/favicon-converter/) was used to generate a favicon for the site using the site's logo.
 
-### Database Design Technologies
+### Hosting
+* [GitHub](https://github.com/) is used to store the code for this project after being pushed from Git.
+* [Heroku](https://www.heroku.com) was used to deploy the live site.
 
+### Databases platform and cloud storage
+* [SQlite](https://www.sqlite.org/index.html) is the SQL database engine provided by default as part of Django and used during development.
+* [Heroku Postgres](https://devcenter.heroku.com/articles/heroku-postgresql) is the SQL database service provided directly by Heroku for storing the site's data.
+* [Amazon AWS S3](https://s3.console.aws.amazon.com/s3) was used to host this project's images and static files.
+
+### Frameworks and Libraries 
+
+* [Django](https://www.djangoproject.com/) was used as a Python web framework for its rapid development and clean, pragmatic design
+* [pip](https://pip.pypa.io/en/stable/) was used to install the required dependencies for this site.
+* [Django-countries](https://pypi.org/project/django-countries/) was used for its pre-built country field containing all the valid country codes.
+* [Crispy forms](https://django-crispy-forms.readthedocs.io/en/latest/) was used to manage rendering behaviour and layout of Django forms.
+* [Gunicorn](https://gunicorn.org/) was used for WSGI HTTP Server to support deployment of Django application.
+* [Jinja](https://jinja.palletsprojects.com/en/3.0.x/) was used to auto-populate the site with the contents of the database.
+* [Stripe.js](https://stripe.com/docs/js) library was used for handling Stripe payment objects.
+* [Bootstrap](https://getbootstrap.com/) was used to create a beautiful, responsive website.
+* [jQuery](https://jquery.com/) was used to make the DOM traversal easier within the JavaScript.
+
+### Other Technologies
+
+* [Git](https://git-scm.com/) was used for version control by utilizing the Gitpod terminal to add and commit to Git and push to GitHub.
 * [drawSQL](https://drawsql.app/) was used to design the schema of the relational database.
-
-### Frameworks, Libraries and Others
-
-* 
+* [Balsamiq](https://balsamiq.com/) was used to create the wireframes during the design process.
+* [Am I Responsive Design](http://ami.responsivedesign.is/) was used for the screenshot in this repository's README.md and TESTING.md.
+* [Google DevTools](https://developer.chrome.com/docs/devtools/) was used to check site responsiveness, and as a general debugger.
+* [Lighthouse](https://developers.google.com/web/tools/lighthouse/) was used to check the site's Performance, Accessibility, Best Practices, and SEO.
+* [Tinyjpg.com](https://tinyjpg.com/) was used to compress the images.
+* [Gitpod](https://gitpod.io/) was used as a virtual IDE workspace to build this site.
 
 ### Testing
 
-* 
+* [W3C Markup Validation Service](https://validator.w3.org/) was used to test that the HTML is valid.
+* [W3C CSS Validation Service](http://jigsaw.w3.org/css-validator/) was used to test that the CSS is valid.
+* [JSHint](https://jshint.com/) was used to test that the JavaScript is valid.
+* [PEP8](http://pep8online.com/) was used to validate the python syntax.
+
 
 [Back to Top](#la-fraschetta)
 
