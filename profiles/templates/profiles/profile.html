@@ -75,10 +75,19 @@
             </div>
         </div>
     </section>
-
+    <div class="btt-button border-green green bg-cream">
+        <a class="btt-link d-flex h-100">
+            <i class="fas fa-arrow-up mx-auto my-auto"></i>
+        </a>
+    </div>
 {% endblock %}
 
 {% block postloadjs %}
     {{ block.super }}
+    <script>
+        $('.btt-link').click(function(e) {
+            window.scrollTo(0,0);
+        });
+    </script>
     <script src="{% static 'profiles/js/countryfield.js' %}"></script>
 {% endblock %}

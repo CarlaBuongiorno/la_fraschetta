@@ -19,7 +19,7 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container mb-2">
+    <section class="container mb-2">
         <div class="row">
             <div class="col my-4 text-center">
                 <hr>
@@ -134,6 +134,11 @@
                 </form>
             </div>
         </div>
+    </section>
+    <div class="btt-button border-green green bg-cream">
+        <a class="btt-link d-flex h-100">
+            <i class="fas fa-arrow-up mx-auto my-auto"></i>
+        </a>
     </div>
     <div id="loading-overlay">
         <p class="green loading-spinner">
@@ -149,4 +154,9 @@
     {{ stripe_public_key|json_script:"id_stripe_public_key" }}
     {{ client_secret|json_script:"id_client_secret" }}
     <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
+    <script>
+        $('.btt-link').click(function(e) {
+            window.scrollTo(0,0);
+        });
+    </script>
 {% endblock %}
