@@ -358,7 +358,7 @@ hr {
     height: 42px;
     width: 42px;
     position: fixed;
-    bottom: 10px;
+    bottom: 330px;
     right: 20px;
     z-index: 9999;
 }
@@ -569,6 +569,10 @@ hr {
     
     #gallery {
         column-count: 3;
+    }
+
+    .btt-button {
+        bottom: 200px;
     }
 }
 
