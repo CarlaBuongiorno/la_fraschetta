@@ -524,6 +524,7 @@ All testing and project barriers and solutions has been documented here - [TESTI
 * [w3schools](https://www.w3schools.com/css/tryit.asp?filename=trycss_ex_images_card) for creating cards with a hovering effect for the Categories section on the _Home_ page.
 * [Django For Everybody - Full Python University Course](https://www.youtube.com/watch?v=o0XbHvKxw7Y&t=20867s) for better understanding of Django framework.
 * [Bootstrap](https://getbootstrap.com/) throughout the site, to create a beautiful, responsive site.
+* [CSS Tricks](https://css-tricks.com/a-clever-sticky-footer-technique/) for keeping the footer at the bottom of the page.
 
 ### Media
 
