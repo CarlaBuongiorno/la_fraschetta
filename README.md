@@ -141,15 +141,25 @@ The wireframes for desktop, mobile and tablet for this project can be found belo
 * [Add Categories](documentation/wireframes/add_category.png)
 * [Add Products](documentation/wireframes/add_product.png)
 
+While the project relied on these wireframes, there are some differences between the wireframes and the final product due to time constraints and change of mind for different/better UI.
+
 
 ## Features
 
 * Home
   * Hero Image
   * List of Categories that lead to the Categorized Products when clicked
+  * ![Home](documentation/screenshots/home.png)
+
+* Navigation Bar
+  * ![Navigarion Bar](documentation/screenshots/navbar.png)
+
+* Footer
+  * ![Footer](documentation/screenshots/footer.png)
 
 * Our Story
   * Gallery
+  * ![Gallery](documentation/screenshots/gallery.png)
 
 * View a List of Products
   * Sort the List of Products by:
@@ -157,6 +167,7 @@ The wireframes for desktop, mobile and tablet for this project can be found belo
     * _Category_ (A - Z / Z - A)
     * _Price_ (low - high / high - low)
     * _Ratings_ (low - high / high - low)
+    * ![Sort By Name In Category](documentation/screenshots/sort-by-price.png)
 
 * View a List of Categorized Products
   * Sort the Categorized List of Products by:
@@ -164,39 +175,50 @@ The wireframes for desktop, mobile and tablet for this project can be found belo
     * _Category_ (A - Z / Z - A)
     * _Price_ (low - high / high - low)
     * _Ratings_ (low - high / high - low)
+    * ![Sort By Name In Category](documentation/screenshots/sort-by-name-in-category.png)
 
-* View the number of ratings and average rating for each product on All Products (Categorized Products) page
+* View the number of ratings and average rating for each product on All Products and Categorized Products page
+  * ![Ratings on All Products](documentation/screenshots/ratings-all-products.png)
 
 * View Product Details and stock availibility
+  * ![Product Details and two items availible](documentation/screenshots/details.png)
 
 * Add Products to Shopping Cart
 * Update quantity and delete Products from Shopping Cart
+  * ![Add, Update, Delete Products from Cart](documentation/screenshots/add-update-delete-cart.png)
 
 * Make purchases of the products in the Shopping Cart
   * If the payment fails, the user is directed back to the checkout form and is shown a message that the payment failed.
   * If the payment succeeds, the user will be sent a confirmation email containsing the full order details and order number. The user will be redirected to the checkout success page and a message will display, informing the user that the payment succeeded, containing the order details and order number.
   * Ability for a registered user to save their details upon purchase for ease of future purchases
+  * ![Checkout Fail and Success](documentation/screenshots/checkout-success.png)
 
 * Profile
   * Update Profile
   * Purchases get saved to a Order History on a registered user's Profile
+  * ![Update Profile and Order History](documentation/screenshots/update-profile.png)
 
 * Register/Sign In
 * Sign Out
 * Email Verification
+  * ![Register, Sign In, Sign Out, Verify Email](documentation/screenshots/account.png)
 
 * Wishlist (for the logged in user)
   * Add or remove items from the Wishlist
   * Display wishlisted items with a red heart on All Products (Categorized Products) page
+  * ![Wishlist](documentation/screenshots/add-to-wishlist.png)
 
 * Diplay of Reviews with Username and the Date it was added, for each Product 
 * Add Reviews (for the logged in user)
+  * ![Reviews](documentation/screenshots/reviews.png)
 
 * Store owner has the ability to add Categories
 * Store owner has the ability to add / edit and delete Products
+  * ![Add, Update, Delete Products/Categories](documentation/screenshots/add-product.png)
 
 * 404 Page Not Found
 * 500 Internal Server Error
+  * ![404 Page Not Found](documentation/screenshots/iphone375/error404.png)
 
 ---
 
@@ -209,6 +231,7 @@ The wireframes for desktop, mobile and tablet for this project can be found belo
 * The ability for the store owner to edit and delete Categories.
 * A 'Confirm to delete' modal, allowing the store owner to confirm deletion of a product.or category in order to avoid accidental deletion.
 * Pagination
+* Contact Page
 
 [Back to Top](#la-fraschetta)
 

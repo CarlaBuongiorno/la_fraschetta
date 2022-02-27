@@ -1,6 +1,6 @@
 # **Testing And Project Barrier Solutions**
 
-[Return to README.md](https://github.com/CarlaBuongiorno/la-fraschetta/blob/master/README.md)
+[Return to README.md](https://github.com/CarlaBuongiorno/la_fraschetta/blob/master/README.md)
 
 [View the live site here](https://la-fraschetta.herokuapp.com/)
 
