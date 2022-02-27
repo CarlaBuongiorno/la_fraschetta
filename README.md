@@ -216,6 +216,9 @@ While the project relied on these wireframes, there are some differences between
 * Store owner has the ability to add / edit and delete Products
   * ![Add, Update, Delete Products/Categories](documentation/screenshots/add-product.png)
 
+* Contact Form
+  * ![Contact Form](documentation/screenshots/contact.png)
+
 * 404 Page Not Found
 * 500 Internal Server Error
   * ![404 Page Not Found](documentation/screenshots/iphone375/error404.png)

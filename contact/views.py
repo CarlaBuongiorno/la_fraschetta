@@ -1,8 +1,8 @@
 from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
 from django.core.mail import send_mail
-from .forms import ContactForm
 from django.conf import settings
+from .forms import ContactForm
 
 
 # Credit -> https://docs.djangoproject.com/en/4.0/topics/forms/
@@ -18,7 +18,7 @@ def contact(request):
             email = form.cleaned_data['email']
             subject = form.cleaned_data['subject']
             message = form.cleaned_data['message']
-            recipients = [settings.EMAIL_HOST_USER,]
+            recipients = [settings.EMAIL_HOST_USER, ]
 
             send_mail(f'You have received a message from {name}: {email}',
                       subject, message, [recipients])
