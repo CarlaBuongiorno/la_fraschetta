@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load bag_tools %}
 
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
@@ -14,7 +15,7 @@
         <div class="row">
             <div class="col"></div>
         </div>
-    </div>
+    </div> 
 {% endblock %}
 
 {% block content %}
@@ -44,10 +45,13 @@
                     <div class="col-6">
                         <p class="mb-1 mt-0 small green-muted">Items</p>
                     </div>
-                    <div class="col-3">
+                    <div class="col-2 pl-0">
                         <p class="mb-1 mt-0 small green-muted">Qty</p>
                     </div>
-                    <div class="col-3 text-right">
+                    <div class="col-2 pl-0">
+                        <p class="mb-1 mt-0 small green-muted">Each</p>
+                    </div>
+                    <div class="col-2 text-right pl-0">
                         <p class="mb-1 mt-0 small green-muted">Subtotal</p>
                     </div>
                 </div>
@@ -63,18 +67,23 @@
                                 {% endif %}
                             </div>
                         </div>
-                        <div class="col-3">
+                        <div class="col-3 pl-0">
                             <p class="small green">
                                 {{ item.product.name }}
                             </p>
                         </div>
-                        <div class="col-3">
+                        <div class="col-2 pl-0">
                             <p class="small green">
                                 {{ item.quantity }}
                             </p>
                         </div>
-                        <div class="col-3 text-right">
-                            <p class="small green">€{{ item.product.price }}</p>
+                        <div class="col-2 pl-0">
+                            <p class="small green">
+                                €{{ item.product.price }}
+                            </p>
+                        </div>
+                        <div class="col-2 text-right pl-0">
+                            <p class="small green">€{{ item.product.price | calc_subtotal:item.quantity }}</p>
                         </div>
                     </div>
                     <hr class="green-muted mt-2">
