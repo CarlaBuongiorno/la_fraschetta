@@ -25,10 +25,10 @@
         <div class="row pb-5">
             <div class="col-12 col-lg-6">
                 <p class="green-muted">If you have any questions about La Fraschetta and our products, please fill out the form below and we will get back to you.</p>
-                <form action="{% url 'contact' %}" class="mt-3" method="POST">
+                <form action="{% url 'contact' %}" class="mt-3 green" method="POST">
                     {% csrf_token %}
                     {{ form|crispy }}
-                    <button class="btn btn-green float-right">Send Message</button>
+                    <button type="submit" class="btn btn-green float-right">Send Message</button>
                 </form>
             </div>
         </div>
