@@ -27,7 +27,7 @@
             <!-- Edit Product -->
             <div class="col-12 col-md-6">
                 <h4 class="green">Edit a Product</h4>
-                <form action="{% url 'edit_product' product.id %}" method="POST" class="form mb-2 green" enctype="multipart/form-data">
+                <form action="{% url 'edit_product' product.id %}" method="POST" class="form mb-2 green site-font" enctype="multipart/form-data" id="edit-product-form">
                     {% csrf_token %}
                     {% for field in form %}
                         {% if field.name != 'image' %}

@@ -526,6 +526,12 @@ hr {
     border-color: #990b16;
 }
 
+#category-form .form-control,
+#product-form .form-control,
+#edit-product-form .form-control {
+    color: #0f5520;
+    border: 1px solid #0f5520;
+}
 /* ------------------------------------ Gallery */
 
 #gallery {
