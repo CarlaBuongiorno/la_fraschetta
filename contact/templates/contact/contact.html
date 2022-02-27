@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_title %}
+    Contact
+{% endblock %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <section class="container mb-2">
+        <div class="row">
+            <div class="col my-4 text-center">
+                <hr>
+                <h2>Contact</h2>
+                <hr>
+            </div>
+        </div>
+        <div class="row pb-5">
+            <div class="col-12 col-lg-6">
+                <p class="green-muted">If you have any questions about La Fraschetta and our products, please fill out the form below and we will get back to you.</p>
+                <form action="{% url 'contact' %}" class="mt-3" method="POST">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <button class="btn btn-green float-right">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <div class="btt-button border-green green bg-cream">
+        <a class="btt-link d-flex h-100">
+            <i class="fas fa-arrow-up mx-auto my-auto"></i>
+        </a>
+    </div>
+{% endblock %}
