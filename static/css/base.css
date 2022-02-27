@@ -6,8 +6,15 @@ html {
 }
 
 body {
+    height: 100%;
     margin: 0;
     padding: 0;
+}
+
+/* Credit -> https://css-tricks.com/a-clever-sticky-footer-technique/ */
+body > footer {
+  position: sticky;
+  top: 100vh;
 }
 
 h1,
