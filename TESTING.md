@@ -199,58 +199,85 @@
 
 ### W3C Markup Validation Service:
 * The HTML for this site was validated by running each page through the [W3C HTML Markup Validator](https://validator.w3.org/) and returned no errors.
-    * [Home](documentation/screenshots/w3c-html/home.png)
-    * [Our Story](documentation/screenshots/w3c-html/our-story.png)
-    * [Products](documentation/screenshots/w3c-html/products.png)
-    * [Product Details](documentation/screenshots/w3c-html/product-details.png)
-    * [Profile](documentation/screenshots/w3c-html/profile.png)
-    * [Wishlist](documentation/screenshots/w3c-html/wishlist.png)
-    * [Shopping Cart](documentation/screenshots/w3c-html/shopping-cart.png)
-    * [Checkout](documentation/screenshots/w3c-html/checkout.png)
-    * [Checkout Success](documentation/screenshots/w3c-html/checkout-success.png)
+    * Home
+        * ![Home](documentation/screenshots/w3c-html/home.png)
+    * Our Story
+        * ![Our Story](documentation/screenshots/w3c-html/our-story.png)
+    * Products
+        * ![Products](documentation/screenshots/w3c-html/products.png)
+    * Product Details
+        * ![Product Details](documentation/screenshots/w3c-html/product-details.png)
+    * Profile
+        * ![Profile](documentation/screenshots/w3c-html/profile.png)
+    * Wishlist
+        * ![Wishlist](documentation/screenshots/w3c-html/wishlist.png)
+    * Shopping Cart
+        * ![Shopping Cart](documentation/screenshots/w3c-html/shopping-cart.png)
+    * Checkout
+        * ![Checkout](documentation/screenshots/w3c-html/checkout.png)
+    * Checkout Success
+        * ![Checkout Success](documentation/screenshots/w3c-html/checkout-success.png)
 
 
 ---
 
 ### W3C CSS Validation Service:
 * The CSS for this site was validated by running each page through the [W3C CSS Validator]() via direct input and returned no errors.
-    * [Home](documentation/screenshots/w3c-css/home.png)
-    * [Our Story](documentation/screenshots/w3c-css/our-story.png)
-    * [Products](documentation/screenshots/w3c-css/products.png)
-    * [Product Details](documentation/screenshots/w3c-css/product-details.png)
-    * [Profile](documentation/screenshots/w3c-css/profile.png)
-    * [Wishlist](documentation/screenshots/w3c-css/wishlist.png)
-    * [Shopping Cart](documentation/screenshots/w3c-css/shopping-cart.png)
-    * [Checkout](documentation/screenshots/w3c-css/checkout.png)
-    * [Checkout Success](documentation/screenshots/w3c-css/checkout-success.png)
-    * [Add Category](documentation/screenshots/w3c-css/add-category.png)
-    * [Add Product](documentation/screenshots/w3c-css/add-product.png)
-    * [Edit Product](documentation/screenshots/w3c-css/edit-product.png)
+    * Home
+        * ![Home](documentation/screenshots/w3c-css/home.png)
+    * Our Story
+        * ![Our Story](documentation/screenshots/w3c-css/our-story.png)
+    * Products
+        * ![Products](documentation/screenshots/w3c-css/products.png)
+    * Product Details
+        * ![Product Details](documentation/screenshots/w3c-css/product-details.png)
+    * Profile
+        * ![Profile](documentation/screenshots/w3c-css/profile.png)
+    * Wishlist
+        * ![Wishlist](documentation/screenshots/w3c-css/wishlist.png)
+    * Shopping Cart
+        * ![Shopping Cart](documentation/screenshots/w3c-css/shopping-cart.png)
+    * Checkout
+        * ![Checkout](documentation/screenshots/w3c-css/checkout.png)
+    * Checkout Success
+        * ![Checkout Success](documentation/screenshots/w3c-css/checkout-success.png)
+    * Add Category
+        * ![Add Category](documentation/screenshots/w3c-css/add-category.png)
+    * Add Product
+        * ![Add Product](documentation/screenshots/w3c-css/add-product.png)
+    * Edit Product
+        * ![Edit Product](documentation/screenshots/w3c-css/edit-product.png)
 
 ---
 
 ### JSHint:
 * All javascript files were tested with [JSHint](https://jshint.com/) and returned no errors.
-    * [Product and Category Image](documentation/screenshots/w3c-css/image.png)
-    * [Bag](documentation/screenshots/w3c-css/bag.png)
-    * [Country Fields Functionality](documentation/screenshots/w3c-css/countryfield.png)
-    * [Quantity Input Field](documentation/screenshots/w3c-css/product-qty.png)
-    * [Sort](documentation/screenshots/w3c-css/sort.png)
-    * [Stripe Payments](documentation/screenshots/w3c-css/stripe-payments.png)
-        * Errors highlighted in 'stripe_elements.js' pertain to Stripe import.
+    * Product and Category Image
+        * ![Product and Category Image](documentation/screenshots/js-hint/image.png)
+    * Bag
+        * ![Bag](documentation/screenshots/js-hint/bag.png)
+    * Country Fields Functionality
+        * ![Country Fields Functionality](documentation/screenshots/js-hint/countryfield.png)
+    * Quantity Input Field
+        * ![Quantity Input Field](documentation/screenshots/js-hint/product-qty.png)
+    * Sort
+        * ![Sort](documentation/screenshots/js-hint/sort.png)
+    * Stripe Payments
+        * ![Stripe Payments](documentation/screenshots/js-hint/stripe-payments.png)
+            * Errors highlighted in 'stripe_elements.js' pertain to Stripe import.
 
 ---
 
 ### PEP8:
 * All python files were tested with [PEP8 online](http://pep8online.com/) and returned no errors.
     * Some lines are too long and cannot be broken up, therefore `# noqa:` is used in order for Flake8 to ignore them.
-        * [Products views.py PEP8 Check](documentation/screenshots/pep8/pep8.png)
+        * ![Products views.py PEP8 Check](documentation/screenshots/pep8/pep8.png)
 
 * The python extention was also used to test Python for PEP8 compliance with it's built in linting.
     * Errors that related to files that were auto generated by Django were left untouched.
     * ./checkout/app.py - 'checkout.signals' imported but unused
         * The import is used to let Django know there is a signals module, listening for changes to automatically update the totals.
-            * [Flake8](documentation/screenshots/pep8/flake8.png)
+            * ![Flake8](documentation/screenshots/pep8/flake8.png)
 
 [Back to Top](#testing-and-project-barrier-solutions)
 
@@ -495,6 +522,6 @@ Changing this to just `grand_total=grand_total`, the error went away and payment
 
 ### Known Bugs
 
-* 
+* There are no known bugs that I am aware of.
 
 [Back to Top](#testing-and-project-barrier-solutions)
