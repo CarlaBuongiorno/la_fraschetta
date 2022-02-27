@@ -207,18 +207,21 @@
                                             data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
                                             <span class="icon">
                                                 <i class="fas fa-minus"></i>
+                                                <span class="sr-only">Decrement quantity</span>
                                             </span>
                                         </button>
                                     </div>
                                     <input class="form-control qty_input green" type="number"
                                         name="quantity" value="1" min="1" max="{{ product.stock }}"
                                         data-item_id="{{ product.id }}"
-                                        id="id_qty_{{ product.id }}">
+                                        id="id_qty_{{ product.id }}" aria-label="Quantity">
+                                    <label class="sr-only" for="id_qty_{{ item.item_id }}">{{ item.quantity }}</label>
                                     <div class="input-group-append">
                                         <button class="increment-qty btn bg-green cream"
                                             data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
                                             <span class="icon">
                                                 <i class="fas fa-plus"></i>
+                                                <span class="sr-only">Increment quantity</span>
                                             </span>
                                         </button>
                                     </div>
