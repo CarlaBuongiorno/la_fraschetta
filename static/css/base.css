@@ -533,6 +533,17 @@ hr {
     line-height: 0;
 }
 
+#contact-form .form-control {
+    color: #0f5520;
+}
+
+/* ------------------------------------ Contact */
+
+#contact-form input::placeholder,
+#contact-form textarea::placeholder {
+    color: #6c9c79;
+}
+
 /* ------------------------------------ Media Queries */
 
 @media (max-width: 992px) {
