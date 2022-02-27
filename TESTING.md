@@ -467,13 +467,13 @@ The site was tested on the following physical devices:
 
 ### Lighthouse
 
-* Google Lighthouse was run on different pages returning different results. Below is an extract of the reports for the 'Home' page, 'Product Details' page and 'Checkout Success' page:
+* Google Lighthouse was run on different pages returning different results. Below is an extract of the reports for the 'Home' page, 'Product Details' page and 'Shopping Cart' page:
     * Home
         * ![Home](documentation/screenshots/lighthouse/home.png)
     * Product Details
         * ![Product Details](documentation/screenshots/lighthouse/product-details.png)
-    * Checkout Success
-        * ![Checkout Success](documentation/screenshots/lighthouse/checkout-success.png)
+    * Shopping Cart
+        * ![Bag](documentation/screenshots/lighthouse/bag.png)
 
 
 [Back to Top](#testing-and-project-barrier-solutions)
