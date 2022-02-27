@@ -20,7 +20,7 @@ class CategoryForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         self.fields['backend_name'].widget.attrs['autofocus'] = True
         for field_name, field in self.fields.items():
-            field.widget.attrs['class'] = 'border-green'
+            field.widget.attrs['class'] = 'border-green, green'
 
 
 class ProductForm(forms.ModelForm):
@@ -46,4 +46,4 @@ class ProductForm(forms.ModelForm):
 
         self.fields['category'].choices = friendly_names
         for field_name, field in self.fields.items():
-            field.widget.attrs['class'] = 'border-green'
+            field.widget.attrs['class'] = 'border-green, green'
