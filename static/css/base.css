@@ -15,6 +15,7 @@ body {
 body > footer {
   position: sticky;
   top: 100vh;
+  clear: right;
 }
 
 h1,
@@ -355,11 +356,12 @@ hr {
 }
 
 .btt-button {
+    float: right;
     height: 42px;
-    width: 42px;
-    position: fixed;
-    bottom: 330px;
+    position: sticky;
+    bottom: 20px;
     right: 20px;
+    width: 42px;
     z-index: 9999;
 }
 
@@ -571,9 +573,10 @@ hr {
         column-count: 3;
     }
 
-    .btt-button {
-        bottom: 200px;
-    }
+    /* .btt-button {
+        bottom: 60px;
+        right: 10px;
+    } */
 }
 
 @media (min-width: 992px) {
