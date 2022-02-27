@@ -2,7 +2,7 @@
 
 [View the live site here](https://la-fraschetta.herokuapp.com/)
 
-This website was built to fulfill the requirements of the Code Institute Milestone 4 Project. It is an e-commerce site designed for the future __La Fraschetta__ store owner's, Natasha Buongiorno and Simone Ottaviani.
+This website was built to fulfill the requirements of the Code Institute Milestone 4 Project. It is an e-commerce site designed for the future __La Fraschetta__ store owners, Natasha Buongiorno and Simone Ottaviani.
 
 Using the principles of UX design, this fully responsive website was developed using HTML, CSS, Bootstrap, JavaScript, jQuery, Python, Django, and it uses a SQL database through PostgreSQL, allowing the store owners to easily add, edit or delete the products that they have to sell.
 
@@ -527,7 +527,10 @@ All testing and project barriers and solutions has been documented here - [TESTI
 
 ### Media
 
-  * The images used in this site were obtained from Pexels, Unsplash, and Pixabay. All of these sites are completely copyright-free. Below are all the photographers whose work are featured in this website:
+  * The site logo was designed by Natasha Buongiorno for this site.
+  * The hero image, categories - 'Desserts' and 'Prepared Meals', product - 'Tiramisu', and all images on the _Our Story_ page were all photos taken by Natasha Buongiorno from [Buongiorno Photography](https://natashabuongiorno.wixsite.com/portfolio) and have been provided by her as the future owner of this store.
+
+  * Many images used in this site were obtained from Unsplash, Stock Free Images and Dreamstime.com. All of these sites are completely copyright-free. Below are all the photographers whose work are featured in this website:
 
 * #### Product Items
 
@@ -628,7 +631,7 @@ All testing and project barriers and solutions has been documented here - [TESTI
     * [Olive Oil](https://unsplash.com/photos/uOBApnN_K7w)
       * Photo by [Roberta Sorge](https://unsplash.com/@robertina?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
     * [Pickles](https://www.dreamstime.com/vegetables-bottle-stock-image-image-free-613821)
-      *  Photo by [613821 © Mylightscapes](https://www.dreamstime.com/mylightscapes_info) on [Dreamstime.com](https://www.dreamstime.com/)
+      *  Photo by [Mylightscapes](https://www.dreamstime.com/mylightscapes_info) on [Dreamstime.com](https://www.dreamstime.com/)
 
   * Pasta & RIce
     * [Farfalle](https://unsplash.com/photos/uZTAsq5-fMY)     	
@@ -676,8 +679,17 @@ All testing and project barriers and solutions has been documented here - [TESTI
     * [Cheese & Dairy](https://unsplash.com/photos/kPqaqug998Y)			
       * Photo by[Waldemar Brandt](https://unsplash.com/@waldemarbrandt67w?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
+### Content
+
+* The site __slogan__ and __Our Story__ page was written by Natasha Buongiorno. 
+* All __Products__ and __Categories__ details (_names_, _descriptions_, _prices_) were created by Luigina Argentin.
+
 ### Acknowledgements
 
-* 
+* Tutors and students of Code Institute and the Code Institute Slack Community for their helpfulness and assistance when needed.
+* My sister (Natasha) and her husband (Simone) for giving me the opportunity to design and create the initial website for _La Fraschetta_, a Delicatessen in which they wish to open in the near future.
+* My aunt (Luigina) for the time, effort, and love she put in to finding all the product and category images and writting the details for each, for this site.
+* My family, my husband for his devoted support, and my 5 year old for his patience while mom spent much of her time and attention on a computer screen.
+* Lastly, I would like to say a huge __Thank You__ to my mentor, __Tim Nelson__, for all his assistance, feedback, support, and pure dedication to helping me succeed with this project. I am so blessed to have had Tim Nelson as my mentor at Code Institute.
 
 [Back to Top](#la-fraschetta)
