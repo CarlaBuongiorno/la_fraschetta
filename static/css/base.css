@@ -290,9 +290,8 @@ input[name='q']::placeholder {
     text-decoration: none;
 }
 
-.categories a h5:hover {
-    font-family: 'Dancing Script', cursive;
-    font-size: 1.75rem;
+.categories h5:hover {
+    color:#990b16;
 }
 
 /* ------------------------------------ products page */
@@ -347,6 +346,26 @@ hr {
 .back-to-category-link a:hover {
     color: #990b16;
     text-decoration: none;
+}
+
+/*  from hover.css */
+
+/* Grow */
+.hvr-grow {
+    display: inline-block;
+    /* vertical-align: middle; */
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+    transform: scale(1.4);
 }
 
 /* ------------------------------------------ Other buttons */

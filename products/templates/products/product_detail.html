@@ -39,7 +39,7 @@
                                 </a>
                             {% else %}
                                 <span class="d-none d-lg-inline-block green">Add to Wishlist: </span>
-                                <a class="wishlist_btn" href="{% if user.is_authenticated %}{% url 'add_to_wishlist' product.id %}{% else %}{% url 'account_login' %}{% endif %}">
+                                <a class="wishlist_btn hvr-grow" href="{% if user.is_authenticated %}{% url 'add_to_wishlist' product.id %}{% else %}{% url 'account_login' %}{% endif %}">
                                     <i class="hover-heart-red far fa-heart fa-lg ml-1 mt-3 green"></i>
                                 </a>
                             {% endif %}
