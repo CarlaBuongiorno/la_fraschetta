@@ -20,11 +20,8 @@ def contact(request):
             message = form.cleaned_data['message']
             recipients = [settings.EMAIL_HOST_USER, ]
 
-            send_mail(f'You have received a message from {name}: {email}',
-                      message,
-                      settings.EMAIL_HOST_USER,
-                      [recipients]
-                      )
+            send_mail('TEST', 'Test message', 'lafraschetta@example.com', [recipients])
+        
             messages.success(
                 request, 'Your message has been sent!')
             # redirect to contact page
