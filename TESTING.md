@@ -218,6 +218,7 @@
     * Checkout Success
         * ![Checkout Success](documentation/screenshots/w3c-html/checkout-success.png)
 
+* When the __Add Category__, __Add Product__, and __Edit Product__ pages are run through the HTML validator, an error returns saying that there is a duplicate `id` in the 'Select Image' form field. This is a known issue that I plan on dissecting and fixing later.
 
 ---
 
@@ -522,6 +523,7 @@ Changing this to just `grand_total=grand_total`, the error went away and payment
 
 ### Known Bugs
 
-* There are no known bugs that I am aware of.
+* When the __Add Category__, __Add Product__, and __Edit Product__ pages are run through the HTML validator, an error returns saying that there is a duplicate `id` in the 'Select Image' form field. This is a known issue that I plan on dissecting and fixing later.
+* There are no other known bugs that I am aware of.
 
 [Back to Top](#testing-and-project-barrier-solutions)
