@@ -551,6 +551,7 @@ All testing and project barriers and solutions has been documented here - [TESTI
 * [Django For Everybody - Full Python University Course](https://www.youtube.com/watch?v=o0XbHvKxw7Y&t=20867s) for better understanding of Django framework.
 * [Bootstrap](https://getbootstrap.com/) throughout the site, to create a beautiful, responsive site.
 * [CSS Tricks](https://css-tricks.com/a-clever-sticky-footer-technique/) for keeping the footer at the bottom of the page.
+* [hover.css](https://github.com/IanLunn/Hover#a-copy-and-paste-an-effect) for making icons grow on hover.
 
 ### Media
 
