@@ -18,17 +18,9 @@ def contact(request):
             email = form.cleaned_data['email']
             subject = form.cleaned_data['subject']
             message = form.cleaned_data['message']
-            recipients = [settings.EMAIL_HOST_USER, ]
-
-            # send_mail(
-            #     subject,
-            #     body,
-            #     email,
-            #     [settings.DEFAULT_FROM_EMAIL],
-            # )
 
             send_mail(
-                f"Message from {name}, {email}",
+                f'Message from {name}, {email} about {subject}',
                 message,
                 settings.EMAIL_HOST_USER,
                 [settings.EMAIL_HOST_USER]
